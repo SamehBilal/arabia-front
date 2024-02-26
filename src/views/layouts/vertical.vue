@@ -90,7 +90,7 @@ export default {
             <slot />
           </div>
         </div>
-        <Footer />
+        <Footer :year="currentYear" />
       </div>
       <Rightsidebar />
     </div>
