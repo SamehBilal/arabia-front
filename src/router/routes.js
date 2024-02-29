@@ -88,6 +88,22 @@ export default [
         component: () => import('../views/pages/users/index.vue')
     },
     {
+        path: '/roles',
+        name: 'Roles',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/roles/index.vue')
+    },
+    {
+        path: '/permissions',
+        name: 'Permissions',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/permissions/index.vue')
+    },
+    {
         path: '/chat',
         name: 'Chat',
         meta: {
