@@ -10,7 +10,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['auth/loggedIn']) {
                     // Redirect to the home page instead
-                    next({ name: 'home' });
+                    next({ name: 'users' });
                 } else {
                     // Continue to the login page
                     next();
@@ -27,7 +27,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['auth/loggedIn']) {
                     // Redirect to the home page instead
-                    next({ name: 'home' });
+                    next({ name: 'users' });
                 } else {
                     // Continue to the login page
                     next();
@@ -44,7 +44,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['auth/loggedIn']) {
                     // Redirect to the home page instead
-                    next({ name: 'home' });
+                    next({ name: 'users' });
                 } else {
                     // Continue to the login page
                     next();
@@ -67,21 +67,21 @@ export default [
                     (route) => route.push('/login')
                 );
                 // Navigate back to previous page, or home as a fallback
-                next(authRequiredOnPreviousRoute ? { name: 'home' } : { ...routeFrom });
+                next(authRequiredOnPreviousRoute ? { name: 'users' } : { ...routeFrom });
             },
         },
     },
     {
         path: '/',
-        name: 'Dashboard',
+        name: 'Users',
         meta: {
             authRequired: true,
         },
-        component: () => import('../views/pages/dashboard/index.vue')
+        component: () => import('../views/pages/users/index.vue')
     },
     {
         path: '/users',
-        name: 'Users',
+        name: 'Users2',
         meta: {
             authRequired: true,
         },

@@ -61,11 +61,11 @@ export default {
 
 <template>
   <div>
-    <div class="home-btn d-none d-sm-block">
+    <!-- <div class="home-btn d-none d-sm-block">
       <router-link to="/">
         <i class="mdi mdi-home-variant h2 text-white"></i>
       </router-link>
-    </div>
+    </div> -->
     <div>
       <div class="container-fluid p-0">
         <div class="row g-0">
@@ -83,7 +83,7 @@ export default {
                         </div>
 
                         <h4 class="font-size-18 mt-4">Reset Password</h4>
-                        <p class="text-muted">Reset your password to Nazox.</p>
+                        <p class="text-muted">Reset your password to Arabia Talents.</p>
                       </div>
 
                       <div class="p-2 mt-5">
@@ -108,8 +108,7 @@ export default {
                           <router-link tag="a" to="/login" class="font-weight-medium text-primary">Log in</router-link>
                         </p>
                         <p>
-                          © 2024 Nazox. Crafted with
-                          <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                          {{ new Date().getFullYear() }} © Arabia Talents.
                         </p>
                       </div>
                     </div>

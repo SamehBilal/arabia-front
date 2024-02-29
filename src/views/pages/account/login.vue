@@ -7,9 +7,10 @@ import {
 
 export default {
   data() {
+    //admin@themesdesign.in
     return {
-      email: "admin@themesdesign.in",
-      password: "123456",
+      email: "",
+      password: "",
       submitted: false
     };
   },
@@ -53,7 +54,7 @@ export default {
                 this.isAuthError = false;
                 // Redirect to the originally requested page, or to the home page
                 this.$router.push(
-                  this.$route.query.redirectFrom || { name: "home" }
+                  this.$route.query.redirectFrom || { name: "users" }
                 );
               })
               .catch(error => {
@@ -81,11 +82,11 @@ export default {
 
 <template>
   <div>
-    <div class="home-btn d-none d-sm-block">
+    <!-- <div class="home-btn d-none d-sm-block">
       <router-link to="/">
         <i class="mdi mdi-home-variant h2 text-white"></i>
       </router-link>
-    </div>
+    </div> -->
     <div>
       <div class="container-fluid p-0">
         <div class="row g-0">
@@ -97,13 +98,13 @@ export default {
                     <div>
                       <div class="text-center">
                         <div>
-                          <router-link to="/" class="logo">
-                            <img src="@/assets/images/logo-dark.png" height="20" alt="logo" />
+                          <router-link to="/users" class="logo">
+                            <img src="@/assets/images/logo-dark.png" height="40" alt="logo" />
                           </router-link>
                         </div>
 
                         <h4 class="font-size-18 mt-4">Welcome Back !</h4>
-                        <p class="text-muted">Sign in to continue to Nazox.</p>
+                        <p class="text-muted">Sign in to continue to Arabia Talents.</p>
                       </div>
 
                       <div class="p-2 mt-5">
@@ -143,8 +144,7 @@ export default {
                           <router-link tag="a" to="/register" class="font-weight-medium text-primary">Register</router-link>
                         </p>
                         <p>
-                          © 2024 Nazox. Crafted with
-                          <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                          {{ new Date().getFullYear() }} © Arabia Talents.
                         </p>
                       </div>
                     </div>

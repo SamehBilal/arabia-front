@@ -21,7 +21,7 @@ const router = createRouter({
 // Before each route evaluates...
 router.beforeEach((routeTo, routeFrom, next) => {
   // set page title
-  document.title = routeTo.name ? routeTo.name + ' | Nazox - Vuejs Admin & Dashboard Template' : 'Nazox - Vuejs Admin & Dashboard Template';
+  document.title = routeTo.name ? routeTo.name + ' | Arabia Talents - Dashboard' : 'Arabia Talents - Dashboard';
   if (import.meta.env.VITE_VUE_APP_DEFAULT_AUTH === "firebase") {
     // Check if auth is required on this route
     // (including nested routes).

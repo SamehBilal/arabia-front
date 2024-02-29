@@ -15,7 +15,7 @@ export default {
       title: "Users",
       items: [
         {
-          text: "Ecommerce"
+          text: "Dashboard"
         },
         {
           text: "Users",
@@ -220,15 +220,15 @@ export default {
               <table class="table table-centered datatable dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                 <thead class="thead-light">
                   <tr>
-                    <th style="width: 20px;">
+                    <!-- <th style="width: 20px;">
                       <div class="form-check custom-checkbox">
                         <input type="checkbox" class="form-check-input" id="customercheck" />
                       </div>
-                    </th>
+                    </th> -->
                     <th>User</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Wallet Balance</th>
+                    <!-- <th>Wallet Balance</th> -->
                     <th>Joining Date</th>
                     <th>Status</th>
                     <th style="width: 120px;">Action</th>
@@ -236,18 +236,18 @@ export default {
                 </thead>
                 <tbody>
                   <tr v-for="(item, index) in customersData" :key="index">
-                    <td>
+                    <!-- <td>
                       <div class="form-check custom-checkbox">
                         <input type="checkbox" class="form-check-input" :id="`customercheck${index}`" />
                       </div>
-                    </td>
+                    </td> -->
                     <td>{{ item.name }}</td>
                     <td>{{ item.email }}</td>
                     <td>{{ item.phone }}</td>
-                    <td>{{ item.balance }}</td>
+                    <!-- <td>{{ item.balance }}</td> -->
                     <td>{{ item.date }}</td>
                     <Btd>
-                          <div class="badge font-size-12" :class="{
+                          <div class="badge font-size-12 text-black" :class="{
                             'bg-success-subtle text-success': `${item.active}` === true,
                             'bg-warning-subtle text-warning': `${item.active}` === false
                           }">{{ item.active ? 'Active':'Inactive' }}</div>
@@ -270,7 +270,7 @@ export default {
       </div>
     </div>
     <!-- Modal -->
-    <BModal id="modal-1" v-model="showmodal" title="Add Customer" title-class="text-dark font-18" hide-footer>
+    <BModal id="modal-1" v-model="showmodal" title="Add User" title-class="text-dark font-18" hide-footer>
       <form @submit.prevent="handleSubmit">
         <div class="mb-3">
           <label class="form-label" for="name">Name</label>
@@ -284,14 +284,14 @@ export default {
           <label class="form-label" for="position">Phone</label>
           <input id="position" v-model="customers.phone" type="text" class="form-control" placeholder="Enter phone number" />
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
           <label class="form-label" for="company">Balance</label>
           <input id="company" v-model="customers.balance" type="text" class="form-control" placeholder="Enter balance" />
         </div>
         <div class="mb-3">
           <label class="form-label" for="position">Joining Date</label>
           <input id="position" v-model="customers.date" type="text" class="form-control" placeholder="Enter Joining Date" />
-        </div>
+        </div> -->
         <div class="text-end">
           <button type="submit" class="btn btn-success">Save</button>
           <BButton class="ms-1" variant="danger" @click="hideModal">Cancel</BButton>

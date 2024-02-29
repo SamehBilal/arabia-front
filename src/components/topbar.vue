@@ -393,19 +393,19 @@ export default {
             <div class="row no-gutters">
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/github.png" alt="Github" />
+                  <img src="@/assets/images/brands/user.png" alt="Github" />
                   <span>{{ $t("navbar.dropdown.site.list.github") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/bitbucket.png" alt="bitbucket" />
-                  <span>{{ $t("navbar.dropdown.site.list.github") }}</span>
+                  <img src="@/assets/images/brands/client.png" alt="bitbucket" />
+                  <span>{{ $t("navbar.dropdown.site.list.bitbucket") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/dribbble.png" alt="dribbble" />
+                  <img src="@/assets/images/brands/file-case.png" alt="dribbble" />
                   <span>{{ $t("navbar.dropdown.site.list.dribbble") }}</span>
                 </a>
               </div>
@@ -414,19 +414,19 @@ export default {
             <div class="row no-gutters">
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/dropbox.png" alt="dropbox" />
+                  <img src="@/assets/images/brands/video.png" alt="slack" />
                   <span>{{ $t("navbar.dropdown.site.list.dropbox") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/mail_chimp.png" alt="mail_chimp" />
+                  <img src="@/assets/images/brands/cosplay.png" alt="mail_chimp" />
                   <span>{{ $t("navbar.dropdown.site.list.mailchimp") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/slack.png" alt="slack" />
+                  <img src="@/assets/images/brands/jobs.png" alt="dropbox" />
                   <span>{{ $t("navbar.dropdown.site.list.slack") }}</span>
                 </a>
               </div>
@@ -449,7 +449,7 @@ export default {
         <BDropdown variant="white" right menu-class="dropdown-menu-lg dropdown-menu-end p-0" toggle-class="header-item noti-icon">
           <template #button-content>
             <i class="ri-notification-3-line"></i>
-            <span class="noti-dot"></span>
+            <!-- <span class="noti-dot"></span> -->
           </template>
           <div class="p-3">
             <div class="row align-items-center">
@@ -466,7 +466,7 @@ export default {
             </div>
           </div>
           <simplebar style="max-height: 230px">
-            <a href class="text-reset notification-item">
+            <!-- <a href class="text-reset notification-item">
               <div class="d-flex">
                 <div class="avatar-xs me-3">
                   <span class="avatar-title bg-primary rounded-circle font-size-16">
@@ -507,12 +507,12 @@ export default {
                   </div>
                 </div>
               </div>
-            </a>
+            </a> -->
             <a href class="text-reset notification-item">
               <div class="d-flex">
                 <div class="avatar-xs me-3">
                   <span class="avatar-title bg-success rounded-circle font-size-16">
-                    <i class="ri-checkbox-circle-line"></i>
+                    <i class="ri-user-3-line"></i>
                   </span>
                 </div>
                 <div class="flex-1">
@@ -531,7 +531,7 @@ export default {
                 </div>
               </div>
             </a>
-            <a href class="text-reset notification-item">
+            <!-- <a href class="text-reset notification-item">
               <div class="d-flex">
                 <img src="@/assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic" />
                 <div class="flex-1">
@@ -549,7 +549,7 @@ export default {
                   </div>
                 </div>
               </div>
-            </a>
+            </a> -->
           </simplebar>
           <div class="p-2 border-top">
             <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
@@ -562,9 +562,9 @@ export default {
         <BDropdown variant="white" right toggle-class="header-item" menu-class="dropdown-menu-end" class="d-inline-block user-dropdown">
           <template #button-content>
             <img class="rounded-circle header-profile-user" src="@/assets/images/users/avatar-2.jpg" alt="Header Avatar" />
-            <span class="d-none d-xl-inline-block ms-1">{{
-              $t("navbar.dropdown.kevin.text")
-            }}</span>
+            <span class="d-none d-xl-inline-block ms-1">
+              <!-- {{ $t("navbar.dropdown.kevin.text")}} -->
+              Sameh</span>
             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
           </template>
           <!-- item-->
