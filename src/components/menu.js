@@ -34,228 +34,79 @@ export const menuItems = [
         // },
         link: '/notifications'
     },
+    // {
+    //     id: 3,
+    //     label: "menuitems.users.text",
+    //     isTitle: true
+    // },
     {
-        id: 3,
-        label: "menuitems.users.text",
-        isTitle: true
-    },
-    {
-        id: 4,
+        id: 16,
         label: 'menuitems.users.text',
         icon: 'ri-user-3-line',
-        subItems: [
-            {
-                id: 5,
-                label: 'menuitems.users.list.users',
-                link: '/users'
-            },
-            {
-                id: 6,
-                label: 'menuitems.users.list.adduser',
-                link: '/users/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.users.list.trash',
-                link: '/users-trash'
-            },
-        ]
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/users'
+    },
+    // {
+    //     id: 4,
+    //     label: 'menuitems.users.text',
+    //     icon: 'ri-user-3-line',
+    //     subItems: [
+    //         {
+    //             id: 6,
+    //             label: 'menuitems.users.list.adduser',
+    //             link: '/users/create'
+    //         },
+    //         {
+    //             id: 5,
+    //             label: 'menuitems.users.list.users',
+    //             link: '/users'
+    //         },
+    //         // {
+    //         //     id: 7,
+    //         //     label: 'menuitems.users.list.trash',
+    //         //     link: '/users-trash'
+    //         // },
+    //     ]
+    // },
+    // {
+    //     id: 8,
+    //     label: 'menuitems.roles.text',
+    //     icon: 'ri-contacts-line',
+    //     subItems: [
+    //         {
+    //             id: 9,
+    //             label: 'menuitems.roles.list.rolesandpermissions',
+    //             link: '/roles'
+    //         },
+    //         {
+    //             id: 10,
+    //             label: 'menuitems.roles.list.addrole',
+    //             link: '/roles/create'
+    //         },
+    //     ]
+    // },
+    {
+        id: 8,
+        label: 'menuitems.roles.list.rolesandpermissions',
+        icon: 'ri-user-settings-line',
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/roles'
     },
     {
         id: 8,
-        label: 'menuitems.roles.text',
-        icon: 'ri-contacts-line',
-        subItems: [
-            {
-                id: 9,
-                label: 'menuitems.roles.list.roles',
-                link: '/roles'
-            },
-            {
-                id: 10,
-                label: 'menuitems.roles.list.addrole',
-                link: '/roles/create'
-            },
-        ]
-    },
-    {
-        id: 11,
-        label: 'menuitems.permissions.text',
-        icon: 'ri-user-settings-line',
-        subItems: [
-            {
-                id: 12,
-                label: 'menuitems.permissions.list.permissions',
-                link: '/permissions'
-            },
-            {
-                id: 13,
-                label: 'menuitems.permissions.list.addpermission',
-                link: '/permissions/create'
-            },
-        ]
-    },
-    {
-        id: 14,
-        label: 'menuitems.log.text',
-        icon: 'ri-time-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/log'
-    },
-    {
-        id: 15,
-        label: 'menuitems.settings.text',
-        icon: 'ri-settings-2-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/settings'
-    },
-    {
-        id: 17,
-        label: "menuitems.structure.text",
-        isTitle: true
-    },
-    {
-        id: 18,
-        label: 'menuitems.icons.text',
-        icon: 'ri-brush-line',
-        subItems: [
-            {
-                id: 19,
-                label: 'menuitems.icons.list.icons',
-                link: '/icons'
-            },
-            {
-                id: 20,
-                label: 'menuitems.icons.list.addicon',
-                link: '/icons/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.icons.list.trash',
-                link: '/icons-trash'
-            },
-        ]
-    },
-    {
-        id: 18,
-        label: 'menuitems.menus.text',
-        icon: 'ri-function-line',
-        subItems: [
-            {
-                id: 19,
-                label: 'menuitems.menus.list.menus',
-                link: '/menus'
-            },
-            {
-                id: 20,
-                label: 'menuitems.menus.list.addmenu',
-                link: '/menus/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.menus.list.trash',
-                link: '/menus-trash'
-            },
-        ]
-    },
-    {
-        id: 21,
-        label: 'menuitems.sections.text',
-        icon: 'ri-checkbox-multiple-blank-line',
-        subItems: [
-            {
-                id: 22,
-                label: 'menuitems.sections.list.sections',
-                link: '/sections'
-            },
-            {
-                id: 23,
-                label: 'menuitems.sections.list.addsection',
-                link: '/sections/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.sections.list.trash',
-                link: '/sections-trash'
-            },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.pages.text',
-        icon: 'ri-side-bar-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.pages.list.pages',
-                link: '/pages'
-            },
-            {
-                id: 26,
-                label: 'menuitems.pages.list.addpage',
-                link: '/pages/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.pages.list.trash',
-                link: '/pages-trash'
-            },
-        ]
-    },
-    {
-        id: 17,
-        label: "menuitems.content.text",
-        isTitle: true
-    },
-    {
-        id: 24,
-        label: 'menuitems.talents.text',
-        icon: 'ri-user-5-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.talents.list.talents',
-                link: '/talents'
-            },
-            {
-                id: 26,
-                label: 'menuitems.talents.list.addtalent',
-                link: '/talents/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.talents.list.trash',
-                link: '/talents-trash'
-            },
-        ]
-    },
-    {
-        id: 24,
         label: 'menuitems.clients.text',
         icon: 'ri-team-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.clients.list.clients',
-                link: '/clients'
-            },
-            {
-                id: 26,
-                label: 'menuitems.clients.list.addclient',
-                link: '/clients/create'
-            },
-            {
-                id: 7,
-                label: 'menuitems.clients.list.trash',
-                link: '/clients-trash'
-            },
-        ]
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/clients'
     },
     {
         id: 24,
@@ -272,11 +123,11 @@ export const menuItems = [
                 label: 'menuitems.services.list.addservice',
                 link: '/services/create'
             },
-            {
-                id: 7,
-                label: 'menuitems.services.list.trash',
-                link: '/services-trash'
-            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.services.list.trash',
+            //     link: '/services-trash'
+            // },
         ]
     },
     {
@@ -294,11 +145,235 @@ export const menuItems = [
                 label: 'menuitems.case_studies.list.addcase_studie',
                 link: '/case-studies/create'
             },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.case_studies.list.trash',
+            //     link: '/case-studies-trash'
+            // },
+        ]
+    },
+    // {
+    //     id: 11,
+    //     label: 'menuitems.permissions.text',
+    //     icon: 'ri-user-settings-line',
+    //     subItems: [
+    //         {
+    //             id: 12,
+    //             label: 'menuitems.permissions.list.permissions',
+    //             link: '/permissions'
+    //         },
+    //         {
+    //             id: 13,
+    //             label: 'menuitems.permissions.list.addpermission',
+    //             link: '/permissions/create'
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 14,
+    //     label: 'menuitems.log.text',
+    //     icon: 'ri-time-line',
+    //     // badge: {
+    //     //     variant: "success",
+    //     //     text: "menuitems.dashboard.badge"
+    //     // },
+    //     link: '/log'
+    // },
+    // {
+    //     id: 15,
+    //     label: 'menuitems.settings.text',
+    //     icon: 'ri-settings-2-line',
+    //     // badge: {
+    //     //     variant: "success",
+    //     //     text: "menuitems.dashboard.badge"
+    //     // },
+    //     link: '/settings'
+    // },
+    {
+        id: 17,
+        label: "menuitems.structure.text",
+        isTitle: true
+    },
+    {
+        id: 18,
+        label: 'menuitems.icons.text',
+        icon: 'ri-brush-line',
+        subItems: [
+            
             {
-                id: 7,
-                label: 'menuitems.case_studies.list.trash',
-                link: '/case-studies-trash'
+                id: 20,
+                label: 'menuitems.icons.list.addicon',
+                link: '/icons/create'
             },
+            {
+                id: 19,
+                label: 'menuitems.icons.list.icons',
+                link: '/icons'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.icons.list.trash',
+            //     link: '/icons-trash'
+            // },
+        ]
+    },
+    {
+        id: 18,
+        label: 'menuitems.menus.text',
+        icon: 'ri-function-line',
+        subItems: [
+            {
+                id: 19,
+                label: 'menuitems.menus.list.menus',
+                link: '/menus'
+            },
+            {
+                id: 20,
+                label: 'menuitems.menus.list.addmenu',
+                link: '/menus/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.menus.list.trash',
+            //     link: '/menus-trash'
+            // },
+        ]
+    },
+    {
+        id: 21,
+        label: 'menuitems.sections.text',
+        icon: 'ri-checkbox-multiple-blank-line',
+        subItems: [
+            {
+                id: 22,
+                label: 'menuitems.sections.list.sections',
+                link: '/sections'
+            },
+            {
+                id: 23,
+                label: 'menuitems.sections.list.addsection',
+                link: '/sections/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.sections.list.trash',
+            //     link: '/sections-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.pages.text',
+        icon: 'ri-side-bar-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.pages.list.pages',
+                link: '/pages'
+            },
+            {
+                id: 26,
+                label: 'menuitems.pages.list.addpage',
+                link: '/pages/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.pages.list.trash',
+            //     link: '/pages-trash'
+            // },
+        ]
+    },
+    {
+        id: 17,
+        label: "menuitems.talents.list.head",
+        isTitle: true
+    },
+    {
+        id: 24,
+        label: 'menuitems.talents.text',
+        icon: 'ri-menu-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.talents.list.talents',
+                link: '/talents'
+            },
+            {
+                id: 26,
+                label: 'menuitems.talents.list.addtalent',
+                link: '/talents/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.influencers.list.trash',
+            //     link: '/influencers-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.influencers.text',
+        icon: 'ri-folder-user-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.influencers.list.influencers',
+                link: '/influencers'
+            },
+            {
+                id: 26,
+                label: 'menuitems.influencers.list.addinfluencer',
+                link: '/influencers/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.influencers.list.trash',
+            //     link: '/influencers-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.cosplayers.text',
+        icon: 'ri-user-5-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.cosplayers.list.cosplayers',
+                link: '/cosplayers'
+            },
+            {
+                id: 26,
+                label: 'menuitems.cosplayers.list.addcosplayer',
+                link: '/cosplayers/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.cosplayers.list.trash',
+            //     link: '/cosplayers-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.on_air.text',
+        icon: ' ri-mic-2-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.on_air.list.on_air',
+                link: '/on-air'
+            },
+            {
+                id: 26,
+                label: 'menuitems.on_air.list.addon_air',
+                link: '/on-air/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.talents.list.trash',
+            //     link: '/talents-trash'
+            // },
         ]
     },
 ]

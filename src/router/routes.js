@@ -73,6 +73,22 @@ export default [
     },
     {
         path: '/',
+        name: 'Dashboard',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/dashboard/index.vue')
+    },
+    {
+        path: '/messages',
+        name: 'Messages',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/messages/index.vue')
+    },
+    {
+        path: '/users',
         name: 'Users',
         meta: {
             authRequired: true,
@@ -80,12 +96,76 @@ export default [
         component: () => import('../views/pages/users/index.vue')
     },
     {
-        path: '/users',
-        name: 'Users2',
+        path: '/clients',
+        name: 'Clients',
         meta: {
             authRequired: true,
         },
-        component: () => import('../views/pages/users/index.vue')
+        component: () => import('../views/pages/brands/index.vue')
+    },
+    {
+        path: '/talents',
+        name: 'Talents',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/index.vue')
+    },
+    {
+        path: '/talents/create',
+        name: 'AddTalent',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/update.vue')
+    },
+    {
+        path: '/influencers',
+        name: 'Influencers',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/influencers/index.vue')
+    },
+    {
+        path: '/influencers/create',
+        name: 'AddInfluencer',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/influencers/update.vue')
+    },
+    {
+        path: '/cosplayers/',
+        name: 'Cosplayers',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/cosplayers/index.vue')
+    },
+    {
+        path: '/cosplayers/create',
+        name: 'AddCosplayers',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/cosplayers/update.vue')
+    },
+    {
+        path: '/on-air/',
+        name: 'On-air',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/on-air/index.vue')
+    },
+    {
+        path: '/on-air/create',
+        name: 'AddOn-air',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/on-air/update.vue')
     },
     {
         path: '/roles',

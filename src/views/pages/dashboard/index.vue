@@ -34,7 +34,7 @@ export default {
       title: "Dashboard",
       items: [
         {
-          text: "Nazox"
+          text: "Arabia Talents"
         },
         {
           text: "Dashboard",
@@ -54,29 +54,31 @@ export default {
         <Stat />
         <RevenueAnalytics />
       </div>
-      <div class="col-xl-4">
-        <SalesAnalytics />
-        <EarningReport />
-      </div>
-    </div>
-    <div class="row">
       <div class="col-lg-4">
         <Sources />
+        <EarningReport />
       </div>
-      <div class="col-lg-4">
-        <RecentActivity />
-      </div>
-      <div class="col-lg-4">
-        <RevenueLocation />
-      </div>
+      <!-- <div class="col-xl-4">
+        <SalesAnalytics />
+        <EarningReport />
+      </div> -->
     </div>
     <div class="row">
+      
       <div class="col-lg-4">
-        <Chat />
+        <RecentActivity />
       </div>
       <div class="col-lg-8">
         <Transaction />
       </div>
     </div>
+    <!-- <div class="row"> -->
+      <!-- <div class="col-lg-4">
+        <Chat />
+      </div> -->
+      <!-- <div class="col-lg-4">
+        <RevenueLocation />
+      </div> -->
+    <!-- </div> -->
   </Layout>
 </template>

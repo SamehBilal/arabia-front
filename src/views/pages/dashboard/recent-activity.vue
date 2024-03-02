@@ -42,7 +42,7 @@ export default {
           date: "02 Apr, 2024 ",
           time: "12:07 am",
           title: "Responded to need “In-Kind Opportunity”"
-        }
+        },
       ]
     };
   },
@@ -65,7 +65,7 @@ export default {
 
       <h4 class="card-title mb-4">Recent Activity Feed</h4>
 
-      <simplebar style="max-height: 330px;">
+      <simplebar style="max-height: 400px;">
         <ul class="list-unstyled activity-wid">
           <li class="activity-list" v-for="(data, index) in activityData" :key="index">
             <div class="activity-icon avatar-xs">

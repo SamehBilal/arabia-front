@@ -125,8 +125,8 @@
     "users": {
       "text": "Users",
       "list": {
-        "users": "Users",
-        "adduser": "Add User",
+        "users": "List",
+        "adduser": "Create",
         "trash": "Trash"
       }
     },
@@ -135,6 +135,7 @@
       "list": {
         "roles": "Roles",
         "addrole": "Add Role",
+        "rolesandpermissions": "Roles & Permissions",
         "trash": "Trash"
       }
     },
@@ -164,64 +165,89 @@
     "icons": {
       "text": "Icons",
       "list": {
-        "icons": "Icons",
-        "addicon": "Add Icon",
+        "icons": "List",
+        "addicon": "Create",
         "trash": "Trash"
       }
     },
     "menus": {
       "text": "Menus",
       "list": {
-        "menus": "Menus",
-        "addmenu": "Add Menu",
+        "menus": "List",
+        "addmenu": "Create",
         "trash": "Trash"
       }
     },
     "sections": {
       "text": "Sections",
       "list": {
-        "sections": "Sections",
-        "addsection": "Add Section",
+        "sections": "List",
+        "addsection": "Create",
         "trash": "Trash"
       }
     },
     "pages": {
       "text": "Pages",
       "list": {
-        "pages": "Pages",
-        "addsection": "Add Page",
+        "pages": "List",
+        "addpage": "Create",
         "trash": "Trash"
       }
     },
     "services": {
       "text": "Services",
       "list": {
-        "services": "Services",
-        "addservice": "Add Service",
+        "services": "List",
+        "addservice": "Create",
+        "trash": "Trash"
+      }
+    },
+    "influencers": {
+      "text": "Influencers",
+      "list": {
+        "influencers": "List",
+        "addinfluencer": "Create",
+        "trash": "Trash"
+      }
+    },
+    "cosplayers": {
+      "text": "Cosplayers",
+      "list": {
+        "cosplayers": "List",
+        "addcosplayer": "Create",
+        "trash": "Trash"
+      }
+    },
+    "on_air": {
+      "text": "On Air",
+      "list": {
+        "on_air": "List",
+        "addon_air": "Create",
         "trash": "Trash"
       }
     },
     "clients": {
       "text": "Clients",
       "list": {
-        "clients": "Clients",
-        "addclient": "Add Client",
+        "clients": "List",
+        "addclient": "Create",
         "trash": "Trash"
       }
     },
     "talents": {
-      "text": "Talents",
+      "text": "All Talents",
       "list": {
-        "talents": "Talents",
-        "addtalent": "Add Talent",
-        "trash": "Trash"
+        "talents": "List",
+        "addtalent": "Create",
+        "trash": "Trash",
+        "head": "Talents"
       }
     },
     "case_studies": {
       "text": "Case Studies",
       "list": {
-        "case_studies": "Case Studies",
-        "addcase_studie": "Add Case Studie",
+        "case_studies": "List",
+        "addcase_studie": "Create",
         "trash": "Trash"
       }
     },

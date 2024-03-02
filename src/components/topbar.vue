@@ -394,19 +394,19 @@ export default {
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/user.png" alt="Github" />
-                  <span>{{ $t("navbar.dropdown.site.list.github") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.github") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/client.png" alt="bitbucket" />
-                  <span>{{ $t("navbar.dropdown.site.list.bitbucket") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.bitbucket") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/file-case.png" alt="dribbble" />
-                  <span>{{ $t("navbar.dropdown.site.list.dribbble") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.dribbble") }}</span>
                 </a>
               </div>
             </div>
@@ -415,19 +415,19 @@ export default {
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/video.png" alt="slack" />
-                  <span>{{ $t("navbar.dropdown.site.list.dropbox") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.dropbox") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/cosplay.png" alt="mail_chimp" />
-                  <span>{{ $t("navbar.dropdown.site.list.mailchimp") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.mailchimp") }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
                   <img src="@/assets/images/brands/jobs.png" alt="dropbox" />
-                  <span>{{ $t("navbar.dropdown.site.list.slack") }}</span>
+                  <span style="font-weight: bolder;">{{ $t("navbar.dropdown.site.list.slack") }}</span>
                 </a>
               </div>
             </div>
@@ -574,7 +574,7 @@ export default {
           </BDropdownItem>
           <!-- <BDropdownItem href="#">
             <i class="ri-wallet-2-line align-middle me-1"></i>
-            {{ $t("navbar.dropdown.kevin.list.mywallet") }}
+            {{ $t("navbar.dropdown.kevin.list.mywallet") }}\
           </BDropdownItem> -->
           <BDropdownItem class="d-block" href="#">
             <span class="badge badge-success float-end mt-1">11</span>
@@ -600,7 +600,7 @@ export default {
       </div>
     </div>
   </header>
-</template>
+</template>]
 
 <style lang="scss" scoped>
 .notify-item {

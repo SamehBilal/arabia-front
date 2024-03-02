@@ -1,6 +1,7 @@
 <script>
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header.vue";
+import Multiselect from "@vueform/multiselect";
 import { required, email, helpers } from "@vuelidate/validators";
 /**
  * Users Component
@@ -8,10 +9,17 @@ import { required, email, helpers } from "@vuelidate/validators";
 export default {
   components: {
     Layout,
-    PageHeader
+    PageHeader,
+    Multiselect
   },
   data() {
     return {
+      options: [
+        "Owner",
+        "Admin",
+        "Editor",
+        "Visitor",
+      ],
       title: "Users",
       items: [
         {
@@ -175,7 +183,9 @@ export default {
           balance,
           phone,
           date,
-          active
+          active,
+          password,
+          password_confirmation
         });
         this.showmodal = false;
       }
@@ -241,7 +251,7 @@ export default {
                         <input type="checkbox" class="form-check-input" :id="`customercheck${index}`" />
                       </div>
                     </td> -->
-                    <td>{{ item.name }}</td>
+                    <td><img src="@/assets/images/product/man.png" style="height: 32px;margin-right: 10px;" alt class="img-rounded" />{{ item.name }}</td>
                     <td>{{ item.email }}</td>
                     <td>{{ item.phone }}</td>
                     <!-- <td>{{ item.balance }}</td> -->
@@ -273,25 +283,30 @@ export default {
     <BModal id="modal-1" v-model="showmodal" title="Add User" title-class="text-dark font-18" hide-footer>
       <form @submit.prevent="handleSubmit">
         <div class="mb-3">
-          <label class="form-label" for="name">Name</label>
-          <input id="name" v-model="customers.name" type="text" class="form-control" placeholder="Enter name" />
+          <label class="form-label" for="name">Full Name</label>
+          <input id="name" v-model="customers.name" type="text" class="form-control" placeholder="Enter fullname" required />
         </div>
         <div class="mb-3">
           <label class="form-label" for="exampleInputEmail1">Email</label>
-          <input id="email" v-model="customers.email" type="email" name="email" class="form-control" placeholder="Enter email" />
+          <input id="email" v-model="customers.email" type="email" name="email" class="form-control" placeholder="Enter email" required />
         </div>
         <div class="mb-3">
-          <label class="form-label" for="position">Phone</label>
+          <label class="form-label" for="position">Phone <small>(Optional)</small></label>
           <input id="position" v-model="customers.phone" type="text" class="form-control" placeholder="Enter phone number" />
         </div>
-        <!-- <div class="mb-3">
-          <label class="form-label" for="company">Balance</label>
-          <input id="company" v-model="customers.balance" type="text" class="form-control" placeholder="Enter balance" />
+        <div class="mb-3">
+          <label class="form-label" for="password">Password</label>
+          <input id="password" v-model="customers.password" type="password" class="form-control" placeholder="Enter password" required/>
         </div>
         <div class="mb-3">
-          <label class="form-label" for="position">Joining Date</label>
-          <input id="position" v-model="customers.date" type="text" class="form-control" placeholder="Enter Joining Date" />
-        </div> -->
+          <label class="form-label" for="confirmation">Confirm Password</label>
+          <input id="confirmation" v-model="customers.password_confirmation" type="password" class="form-control" placeholder="Enter password confirmation" required/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Role</label>
+
+          <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
+        </div>
         <div class="text-end">
           <button type="submit" class="btn btn-success">Save</button>
           <BButton class="ms-1" variant="danger" @click="hideModal">Cancel</BButton>

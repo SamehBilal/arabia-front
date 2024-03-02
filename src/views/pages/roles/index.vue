@@ -1,6 +1,7 @@
 <script>
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header.vue";
+import Multiselect from "@vueform/multiselect";
 import { required, email, helpers } from "@vuelidate/validators";
 /**
  * Users Component
@@ -8,10 +9,18 @@ import { required, email, helpers } from "@vuelidate/validators";
 export default {
   components: {
     Layout,
-    PageHeader
+    PageHeader,
+    Multiselect
   },
   data() {
     return {
+      options: [
+        "View Users",
+        "Create Users",
+        "Show Users",
+        "Edit Users",
+        "Delete Users",
+      ],
       title: "Roles",
       items: [
         {
@@ -24,17 +33,18 @@ export default {
       ],
       customersData: [
         {
-          name: "Super admin",
+          name: "Owner",
         },
         {
           name: "Admin",
         },
         {
-          name: "Staff",
-        },
-        {
           name: "Editor",
         },
+        {
+          name: "Visitor",
+        },
+       
       ],
       customers: {
         name: "",
@@ -147,6 +157,11 @@ export default {
         <div class="mb-3">
           <label class="form-label" for="name">Name</label>
           <input id="name" v-model="customers.name" type="text" class="form-control" placeholder="Enter name" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Permissions</label>
+
+          <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
         </div>
         <div class="text-end">
           <button type="submit" class="btn btn-success">Save</button>
