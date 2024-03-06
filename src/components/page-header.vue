@@ -26,7 +26,7 @@ export default {
 
           <div class="page-title-right">
               <ol class="breadcrumb m-0">
-                  <li class="breadcrumb-item"><a href="javascript: void(0);">{{ items[0].text }}</a></li>
+                  <li class="breadcrumb-item"><a :href="`${items[0].href }`">{{ items[0].text }}</a></li>
                   <li class="breadcrumb-item active">{{ items[1].text }}</li>
               </ol>
           </div>

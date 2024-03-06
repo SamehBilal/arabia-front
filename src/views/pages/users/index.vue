@@ -37,7 +37,7 @@ export default {
           phone: "580-464-4694",
           balance: "$ 3245",
           date: "06 Apr, 2024",
-          active: true
+          role: "Editor"
         },
         {
           name: "Angelyn Hardin",
@@ -45,7 +45,7 @@ export default {
           phone: "913-248-2690",
           balance: "$ 2435",
           date: "05 Apr, 2024",
-          active: true
+          role: "Admin"
         },
         {
           name: "Carrie Thompson",
@@ -53,7 +53,7 @@ export default {
           phone: "734-819-9286",
           balance: "$ 2653",
           date: "04 Apr, 2024",
-          active: false
+          role: "Editor"
         },
         {
           name: "Kathleen Haller",
@@ -61,7 +61,7 @@ export default {
           phone: "313-742-3333",
           balance: "$ 2135",
           date: "03 Apr, 2024",
-          active: true
+          role: "Owner"
         },
         {
           name: "Martha Beasley",
@@ -69,7 +69,7 @@ export default {
           phone: "301-330-5745",
           balance: "$ 2698",
           date: "02 Apr, 2024",
-          active: true
+          role: "Admin"
         },
         {
           name: "Kathryn Hudson",
@@ -77,7 +77,7 @@ export default {
           phone: "414-453-5725",
           balance: "$ 2758",
           date: "02 Apr, 2024",
-          active: true
+          role: "Admin"
         },
         {
           name: "Robert Bott",
@@ -85,7 +85,7 @@ export default {
           phone: "712-237-9899",
           balance: "$ 2836",
           date: "01 Apr, 2024",
-          active: true
+          role: "Editor"
         },
         {
           name: "Mary McDonald",
@@ -93,7 +93,7 @@ export default {
           phone: "317-510-25554",
           balance: "$ 3245",
           date: "31 Mar, 2024",
-          active: true
+          role: "Admin"
         },
         {
           name: "Keith Rainey",
@@ -101,7 +101,7 @@ export default {
           phone: "214-712-1810",
           balance: "$ 3125",
           date: "30 Mar, 2024",
-          active: true
+          role: "Admin"
         },
         {
           name: "Anthony Russo",
@@ -109,7 +109,7 @@ export default {
           phone: "412-371-8864",
           balance: "$ 2456",
           date: "30 Mar, 2024",
-          active: true
+          role: "Editor"
         },
         {
           name: "Donna Betz",
@@ -117,7 +117,7 @@ export default {
           phone: "626-583-5779",
           balance: "$ 3423",
           date: "29 Mar, 2024",
-          active: true
+          role: "Owner"
         },
         {
           name: "Angie Andres",
@@ -125,7 +125,7 @@ export default {
           phone: "213-494-4527",
           balance: "$ 3245",
           date: "28 Apr, 2024",
-          active: true
+          role: "Editor"
         }
       ],
       customers: {
@@ -137,7 +137,23 @@ export default {
         active: "",
       },
       submitted: false,
-      showmodal: false
+      showmodal: false,
+      totalRows: 1,
+      tabIndex: 1,
+      currentPage: 1,
+      perPage: 10,
+      pageOptions: [10, 25, 50, 100],
+      filter: null,
+      filterOn: [],
+      sortBy: "name",
+      sortDesc: false,
+      fields: [
+        { key: "name", sortable: true, label: "Name" },
+        { key: "email", sortable: true, label: "Email" },
+        { key: "created_at", sortable: true, label: "Created at" },
+        { key: "role", sortable: true, label: "Role" },
+        { key: "action", label: "Action" }
+      ]
     };
   },
   validations: {
@@ -157,6 +173,18 @@ export default {
     date: {
       required: helpers.withMessage("Date is required", required),
     },
+  },
+  computed: {
+    /**
+     * Total no. of records
+     */
+    rows() {
+      return this.customersData.length;
+    }
+  },
+  mounted() {
+    // Set the initial number of items
+    this.totalRows = this.customersData.length;
   },
   methods: {
     /**
@@ -209,7 +237,7 @@ export default {
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
-    }
+    },
   }
 };
 </script>
@@ -235,13 +263,7 @@ export default {
                         <input type="checkbox" class="form-check-input" id="customercheck" />
                       </div>
                     </th> -->
-                    <th>User</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <!-- <th>Wallet Balance</th> -->
-                    <th>Joining Date</th>
-                    <th>Status</th>
-                    <th style="width: 120px;">Action</th>
+                    <th v-for="(label) in fields">{{ label.label }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -253,18 +275,17 @@ export default {
                     </td> -->
                     <td><img src="@/assets/images/product/man.png" style="height: 32px;margin-right: 10px;" alt class="img-rounded" />{{ item.name }}</td>
                     <td>{{ item.email }}</td>
-                    <td>{{ item.phone }}</td>
-                    <!-- <td>{{ item.balance }}</td> -->
                     <td>{{ item.date }}</td>
-                    <Btd>
-                          <div class="badge font-size-12 text-black" :class="{
-                            'bg-success-subtle text-success': `${item.active}` === true,
-                            'bg-warning-subtle text-warning': `${item.active}` === false
-                          }">{{ item.active ? 'Active':'Inactive' }}</div>
-                          
-                    </Btd>
                     <td>
-                      <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
+                          <div class="badge font-size-12" :class="{
+      'bg-dark-subtle text-dark': `${item.role}` === 'Owner',
+      'bg-info-subtle text-info': `${item.role}` === 'Admin',
+      'bg-secondary-subtle text-secondary': `${item.role}` === 'Editor',
+      'bg-warning-subtle text-warning': `${item.role}` === 'Visitor',
+    }">{{ item.role }}</div>
+                        </td>
+                    <td>
+                      <a href="javascript:void(0);" class="me-3 text-primary" @click="showmodal = true" v-b-tooltip.hover title="Edit">
                         <i class="mdi mdi-pencil font-size-18"></i>
                       </a>
                       <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
@@ -275,6 +296,16 @@ export default {
                 </tbody>
               </table>
             </div>
+            <div class="row">
+              <div class="col">
+                <div class="dataTables_paginate paging_simple_numbers float-end">
+                  <ul class="pagination pagination-rounded mb-0">
+                    <!-- pagination -->
+                    <BPagination v-model="currentPage" :total-rows="rows" :per-page="perPage" />
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -284,7 +315,7 @@ export default {
       <form @submit.prevent="handleSubmit">
         <div class="mb-3">
           <label class="form-label" for="name">Full Name</label>
-          <input id="name" v-model="customers.name" type="text" class="form-control" placeholder="Enter fullname" required />
+          <input id="name" v-model="customers.name" type="text" class="form-control" placeholder="Enter full name" required />
         </div>
         <div class="mb-3">
           <label class="form-label" for="exampleInputEmail1">Email</label>

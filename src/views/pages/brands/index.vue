@@ -26,7 +26,8 @@ export default {
       title: "Clients",
       items: [
         {
-          text: "Dashboard"
+          text: "Dashboard",
+          href: "/"
         },
         {
           text: "Clients",
@@ -39,6 +40,7 @@ export default {
           title: "EA",
           name: "Wayne McClain",
           products: 86,
+          date: "04 Apr, 2024",
           balance: "$12,456"
         },
         {
@@ -46,6 +48,7 @@ export default {
           title: "Epic",
           name: "David Marshall",
           products: 72,
+          date: "04 Apr, 2024",
           balance: "$10,352"
         },
         {
@@ -53,6 +56,7 @@ export default {
           title: "Activision",
           name: "Katia Stapleton",
           products: 75,
+          date: "04 Apr, 2024",
           balance: "$9,963"
         },
         {
@@ -60,6 +64,7 @@ export default {
           title: "Lafayette",
           name: "Andrew Bivens",
           products: 65,
+          date: "04 Apr, 2024",
           balance: "$14,568"
         },
         {
@@ -67,6 +72,7 @@ export default {
           title: "Packer",
           name: "Mae Rankin",
           products: 82,
+          date: "04 Apr, 2024",
           balance: "$16,445"
         },
         {
@@ -74,6 +80,7 @@ export default {
           title: "Micro Design",
           name: " Brian Correa",
           products: 71,
+          date: "04 Apr, 2024",
           balance: "$11,523"
         },
         {
@@ -81,6 +88,7 @@ export default {
           title: "Keeney's",
           name: "Dean Odom",
           products: 66,
+          date: "04 Apr, 2024",
           balance: "$13,478"
         },
         {
@@ -88,6 +96,7 @@ export default {
           title: "Tech Hifi",
           name: "John McLeroy",
           products: 58,
+          date: "04 Apr, 2024",
           balance: "$14,654"
         },
         {
@@ -95,6 +104,7 @@ export default {
           title: "Nedick's",
           name: "Wayne McClain",
           products: 86,
+          date: "04 Apr, 2024",
           balance: "$12,456"
         },
         {
@@ -102,6 +112,7 @@ export default {
           title: "Brendle's",
           name: "David Marshall",
           products: 72,
+          date: "04 Apr, 2024",
           balance: "$10,352"
         },
         {
@@ -109,6 +120,7 @@ export default {
           title: "Tech Hifi",
           name: "Katia Stapleton",
           products: 75,
+          date: "04 Apr, 2024",
           balance: "$9,963"
         },
         {
@@ -116,6 +128,7 @@ export default {
           title: "Lafayette",
           name: "Andrew Bivens",
           products: 65,
+          date: "04 Apr, 2024",
           balance: "$14,568"
         },
         {
@@ -123,6 +136,7 @@ export default {
           title: "Packer",
           name: "Mae Rankin",
           products: 82,
+          date: "04 Apr, 2024",
           balance: "$16,445"
         },
         {
@@ -130,6 +144,7 @@ export default {
           title: "Micro Design",
           name: " Brian Correa",
           products: 71,
+          date: "04 Apr, 2024",
           balance: "$11,523"
         },
         {
@@ -137,6 +152,7 @@ export default {
           title: "Keeney's",
           name: "Dean Odom",
           products: 66,
+          date: "04 Apr, 2024",
           balance: "$13,478"
         },
         {
@@ -144,6 +160,7 @@ export default {
           title: "Tech Hifi",
           name: "John McLeroy",
           products: 58,
+          date: "04 Apr, 2024",
           balance: "$14,654"
         }
       ],
@@ -341,9 +358,9 @@ export default {
                 <h5 class="text-truncate">
                   <a href="#" class="text-dark">{{ data.title }}</a>
                 </h5>
-                <!-- <p class="text-muted">
-                  <i class="mdi mdi-account me-1"></i> {{ data.name }}
-                </p> -->
+                <p class="text-muted">
+                  <i class="mdi mdi-calendar me-1"></i> {{ data.date }}
+                </p>
               </div>
             </div>
             <hr class="my-4" />
@@ -351,13 +368,17 @@ export default {
               <div class="col-6">
                 <p class="text-muted mb-2">
                   <a href="javascript:void(0);" @click="showmodal = true">
-                    Edit
+                    <i class="mdi mdi-pencil me-1"></i> Edit
                   </a>
                 </p>
                 <!-- <h5>{{ data.products }}</h5> -->
               </div>
               <div class="col-6">
-                <p class="text-muted mb-2">Delete</p>
+                <p class="text-muted mb-2">
+                  <a href="javascript:void(0);" >
+                    <i class="mdi mdi-trash-can me-1"></i> Delete
+                  </a>
+                </p>
                 <!-- <h5>{{ data.balance }}</h5> -->
               </div>
             </div>

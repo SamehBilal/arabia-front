@@ -187,13 +187,7 @@ export default {
                       <BTr v-for="(transaction) in ordersData" :key="index">
                         <BTd><img src="@/assets/images/product/img-2.png" style="height: 32px;margin-right: 10px;" alt class="img-rounded" />{{ transaction.billingname }}</BTd>
                         <BTd>{{ transaction.date }}</BTd>
-                        <BTd><span style="margin-right: 30px;">{{ transaction.orderid}} </span>
-                          <img src="@/assets/images/product/tik-tok.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                          <img src="@/assets/images/product/youtube.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                          <img src="@/assets/images/product/instagram.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded" />
-                          <img src="@/assets/images/product/facebook.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                          <img src="@/assets/images/product/snapchat.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                        </BTd>
+                        <BTd><span style="margin-right: 30px;">{{ transaction.orderid}} </span></BTd>
                         <BTd>
                           <div class="badge font-size-12" :class="{
                             'bg-success-subtle text-success': `${transaction.paymentstatus}` === 'Active',

@@ -102,7 +102,7 @@ export default {
             </div>
             <!-- Table -->
             <div class="table-responsive mb-0">
-              <BTable :items="tableData" :fields="fields" responsive="sm" :per-page="perPage" :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter" :filter-included-fields="filterOn" @filtered="onFiltered"></BTable>
+              <BTable :items="tableData" :fields="fields" :total-rows="rows" responsive="sm" :per-page="perPage" :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter" :filter-included-fields="filterOn" @filtered="onFiltered"></BTable>
             </div>
             <div class="row">
               <div class="col">

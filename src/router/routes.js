@@ -104,12 +104,12 @@ export default [
         component: () => import('../views/pages/brands/index.vue')
     },
     {
-        path: '/talents',
-        name: 'Talents',
+        path: '/talent-overview',
+        name: 'talentOverview',
         meta: {
             authRequired: true,
         },
-        component: () => import('../views/pages/talents/index.vue')
+        component: () => import('../views/pages/talents/overview.vue')
     },
     {
         path: '/talents/create',

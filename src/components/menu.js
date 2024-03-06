@@ -99,34 +99,83 @@ export const menuItems = [
         link: '/roles'
     },
     {
+        id: 17,
+        label: "menuitems.talents.list.head",
+        isTitle: true
+    },
+    {
         id: 8,
-        label: 'menuitems.clients.text',
-        icon: 'ri-team-line',
+        label: 'menuitems.talents.list.overview',
+        icon: ' ri-pie-chart-line',
         // badge: {
         //     variant: "success",
         //     text: "menuitems.dashboard.badge"
         // },
-        link: '/clients'
+        link: '/talent-overview'
     },
     {
         id: 24,
-        label: 'menuitems.services.text',
-        icon: 'ri-artboard-2-line',
+        label: 'menuitems.influencers.text',
+        icon: 'ri-folder-user-line',
         subItems: [
             {
                 id: 25,
-                label: 'menuitems.services.list.services',
-                link: '/services'
+                label: 'menuitems.influencers.list.influencers',
+                link: '/influencers'
             },
             {
                 id: 26,
-                label: 'menuitems.services.list.addservice',
-                link: '/services/create'
+                label: 'menuitems.influencers.list.addinfluencer',
+                link: '/influencers/create'
             },
             // {
             //     id: 7,
-            //     label: 'menuitems.services.list.trash',
-            //     link: '/services-trash'
+            //     label: 'menuitems.influencers.list.trash',
+            //     link: '/influencers-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.cosplayers.text',
+        icon: 'ri-user-5-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.cosplayers.list.cosplayers',
+                link: '/cosplayers'
+            },
+            {
+                id: 26,
+                label: 'menuitems.cosplayers.list.addcosplayer',
+                link: '/cosplayers/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.cosplayers.list.trash',
+            //     link: '/cosplayers-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.on_air.text',
+        icon: ' ri-mic-2-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.on_air.list.on_air',
+                link: '/on-air'
+            },
+            {
+                id: 26,
+                label: 'menuitems.on_air.list.addon_air',
+                link: '/on-air/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.talents.list.trash',
+            //     link: '/talents-trash'
             // },
         ]
     },
@@ -152,43 +201,6 @@ export const menuItems = [
             // },
         ]
     },
-    // {
-    //     id: 11,
-    //     label: 'menuitems.permissions.text',
-    //     icon: 'ri-user-settings-line',
-    //     subItems: [
-    //         {
-    //             id: 12,
-    //             label: 'menuitems.permissions.list.permissions',
-    //             link: '/permissions'
-    //         },
-    //         {
-    //             id: 13,
-    //             label: 'menuitems.permissions.list.addpermission',
-    //             link: '/permissions/create'
-    //         },
-    //     ]
-    // },
-    // {
-    //     id: 14,
-    //     label: 'menuitems.log.text',
-    //     icon: 'ri-time-line',
-    //     // badge: {
-    //     //     variant: "success",
-    //     //     text: "menuitems.dashboard.badge"
-    //     // },
-    //     link: '/log'
-    // },
-    // {
-    //     id: 15,
-    //     label: 'menuitems.settings.text',
-    //     icon: 'ri-settings-2-line',
-    //     // badge: {
-    //     //     variant: "success",
-    //     //     text: "menuitems.dashboard.badge"
-    //     // },
-    //     link: '/settings'
-    // },
     {
         id: 17,
         label: "menuitems.structure.text",
@@ -284,95 +296,34 @@ export const menuItems = [
         ]
     },
     {
-        id: 17,
-        label: "menuitems.talents.list.head",
-        isTitle: true
+        id: 8,
+        label: 'menuitems.clients.text',
+        icon: 'ri-team-line',
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/clients'
     },
     {
         id: 24,
-        label: 'menuitems.talents.text',
-        icon: 'ri-menu-line',
+        label: 'menuitems.services.text',
+        icon: 'ri-artboard-2-line',
         subItems: [
             {
                 id: 25,
-                label: 'menuitems.talents.list.talents',
-                link: '/talents'
+                label: 'menuitems.services.list.services',
+                link: '/services'
             },
             {
                 id: 26,
-                label: 'menuitems.talents.list.addtalent',
-                link: '/talents/create'
+                label: 'menuitems.services.list.addservice',
+                link: '/services/create'
             },
             // {
             //     id: 7,
-            //     label: 'menuitems.influencers.list.trash',
-            //     link: '/influencers-trash'
-            // },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.influencers.text',
-        icon: 'ri-folder-user-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.influencers.list.influencers',
-                link: '/influencers'
-            },
-            {
-                id: 26,
-                label: 'menuitems.influencers.list.addinfluencer',
-                link: '/influencers/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.influencers.list.trash',
-            //     link: '/influencers-trash'
-            // },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.cosplayers.text',
-        icon: 'ri-user-5-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.cosplayers.list.cosplayers',
-                link: '/cosplayers'
-            },
-            {
-                id: 26,
-                label: 'menuitems.cosplayers.list.addcosplayer',
-                link: '/cosplayers/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.cosplayers.list.trash',
-            //     link: '/cosplayers-trash'
-            // },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.on_air.text',
-        icon: ' ri-mic-2-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.on_air.list.on_air',
-                link: '/on-air'
-            },
-            {
-                id: 26,
-                label: 'menuitems.on_air.list.addon_air',
-                link: '/on-air/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.talents.list.trash',
-            //     link: '/talents-trash'
+            //     label: 'menuitems.services.list.trash',
+            //     link: '/services-trash'
             // },
         ]
     },

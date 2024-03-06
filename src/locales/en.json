@@ -240,7 +240,8 @@
         "talents": "List",
         "addtalent": "Create",
         "trash": "Trash",
-        "head": "Talents"
+        "head": "Talents",
+        "overview": "Talents Overview"
       }
     },
     "case_studies": {

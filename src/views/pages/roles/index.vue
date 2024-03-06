@@ -24,7 +24,8 @@ export default {
       title: "Roles",
       items: [
         {
-          text: "Dashboard"
+          text: "Dashboard",
+          href: "/"
         },
         {
           text: "Roles",
@@ -136,7 +137,7 @@ export default {
                     </td> -->
                     <td>{{ item.name }}</td>
                     <td>
-                      <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
+                      <a href="javascript:void(0);" @click="showmodal = true" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
                         <i class="mdi mdi-pencil font-size-18"></i>
                       </a>
                       <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">

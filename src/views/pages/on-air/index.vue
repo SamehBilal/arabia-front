@@ -24,91 +24,80 @@ export default {
       ],
       ordersData: [
         {
-          orderid: "30M",
           date: "28 Mar, 2024",
-          billingname: "Frank Dean",
+          name: "Frank Dean",
           total: "$164",
-          type: "Casters",
+          role: "Casters",
           paymentstatus: "Inactive"
         },
         {
-          orderid: "25M",
           date: "28 Mar, 2024",
-          billingname: "Eddy Torres",
+          name: "Eddy Torres",
           total: "$141",
-          type: "Hosts",
+          role: "Hosts",
           paymentstatus: "Active"
         },
         {
-          orderid: "15M",
           date: "29 Mar, 2024",
-          billingname: "Jamison Clark",
+          name: "Jamison Clark",
           total: "$123",
-          type: "Analysts",
+          role: "Analysts",
           paymentstatus: "Active"
         },
         {
-          orderid: "13.5M",
           date: "30 Mar, 2024",
-          billingname: "Jewel Buckley",
+          name: "Jewel Buckley",
           total: "$112",
-          type: "Hosts",
+          role: "Hosts",
           paymentstatus: "Active"
         },
         {
-          orderid: "13.2M",
           date: "31 Mar, 2024",
-          billingname: "Jeffrey Waltz",
+          name: "Jeffrey Waltz",
           total: "$105",
-          type: "Casters",
+          role: "Casters",
           paymentstatus: "Inactive"
         },
         {
-          orderid: "13M",
           date: "01 Apr, 2024",
-          billingname: "Jefferson Allen",
+          name: "Jefferson Allen",
           total: "$160",
-          type: "Analysts",
+          role: "Analysts",
           paymentstatus: "Active"
         },
         {
-          orderid: "12.5M",
           date: "02 Apr, 2024",
-          billingname: "Paul Jones",
+          name: "Paul Jones",
           total: "$183",
-          type: "Hosts",
+          role: "Hosts",
           paymentstatus: "Active"
         },
         {
-          orderid: "12M",
           date: "03 Apr, 2024",
-          billingname: "Donald Bailey",
+          name: "Donald Bailey",
           total: "$146",
-          type: "Hosts",
+          role: "Hosts",
           paymentstatus: "Active"
         },
         {
-          orderid: "10M",
           date: "03 Apr, 2024",
-          billingname: "Jimmy Barker",
+          name: "Jimmy Barker",
           total: "$165",
-          type: "Analysts",
+          role: "Analysts",
           paymentstatus: "Inactive"
         },
         {
-          orderid: "9M",
           date: "04 Apr, 2024",
-          billingname: "Walter Brown",
+          name: "Walter Brown",
           total: "$172",
-          type: "Casters",
+          role: "Casters",
           paymentstatus: "Active"
         },
         {
-          orderid: "8M",
           date: "06 Apr, 2024",
-          billingname: "James Hamilton",
+          name: "James Hamilton",
           total: "$152",
-          type: "Hosts",
+          role: "Hosts",
           paymentstatus: "Active"
         }
       ],
@@ -119,13 +108,12 @@ export default {
       pageOptions: [10, 25, 50, 100],
       filter: null,
       filterOn: [],
-      sortBy: "orderid",
+      sortBy: "name",
       sortDesc: false,
       fields: [
         { key: "name", sortable: true, label: "Name" },
         { key: "created_at", sortable: true, label: "Created at" },
-        { key: "total_followers", sortable: true, label: "Total Followers" },
-        { key: "type", sortable: true, label: "Type" },
+        { key: "role", sortable: true, label: "Role" },
         { key: "status", sortable: true, label: "Status" },
         { key: "action", label: "Action" }
       ]
@@ -182,13 +170,16 @@ export default {
                     <div id="tickets-table_filter" class="dataTables_filter text-md-end">
                       <label class="d-inline-flex align-items-center">
                         Search:
-                        <BFormInput v-model="filter" type="search" class="form-control form-control-sm ms-2"/>
+                        <BFormInput v-model="filter" type="search" class="form-control form-control-sm ms-2" />
                       </label>
                     </div>
                   </div>
                   <!-- End search -->
                 </div>
                 <div class="table-responsive">
+                  <BTable :items="ordersData" :fields="fields" responsive="sm" :per-page="perPage"
+                    :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter"
+                    :filter-included-fields="filterOn" @filtered="onFiltered" :total-rows="rows"></BTable>
                   <BTableSimple class="table-centered datatable dt-responsive nowrap" sortBy="Payment Status">
                     <BThead class="table-light">
                       <BTr>
@@ -197,27 +188,22 @@ export default {
                     </BThead>
                     <BTbody>
                       <BTr v-for="(transaction) in ordersData" :key="index">
-                        <BTd><img src="@/assets/images/product/img-5.png" style="height: 32px;margin-right: 10px;" alt class="img-rounded" />{{ transaction.billingname }}</BTd>
+                        <BTd><img src="@/assets/images/product/img-5.png" style="height: 32px;margin-right: 10px;" alt
+                            class="img-rounded" />{{ transaction.name }}</BTd>
                         <BTd>{{ transaction.date }}</BTd>
-                        <BTd><span style="margin-right: 30px;">{{ transaction.orderid}} </span>
-                          <img src="@/assets/images/product/twitch.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                          <img src="@/assets/images/product/youtube.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
-                          <img src="@/assets/images/product/instagram.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded" />
-                          <img src="@/assets/images/product/facebook.png" style="height: 32px;margin-right: 3px;" alt class="img-rounded " />
+                        <BTd>
+                          <div class="badge font-size-12" :class="{
+      'bg-dark-subtle text-dark': `${transaction.role}` === 'Hosts',
+      'bg-info-subtle text-info': `${transaction.role}` === 'Casters',
+      'bg-secondary-subtle text-secondary': `${transaction.role}` === 'Analysts'
+    }">{{ transaction.role }}</div>
                         </BTd>
                         <BTd>
                           <div class="badge font-size-12" :class="{
-                            'bg-dark-subtle text-dark': `${transaction.type}` === 'Hosts',
-                            'bg-info-subtle text-info': `${transaction.type}` === 'Casters',
-                            'bg-secondary-subtle text-secondary': `${transaction.type}` === 'Analysts'
-                          }">{{ transaction.type }}</div>
-                        </BTd>
-                        <BTd>
-                          <div class="badge font-size-12" :class="{
-                            'bg-success-subtle text-success': `${transaction.paymentstatus}` === 'Active',
-                            'bg-danger-subtle text-danger': `${transaction.paymentstatus}` === 'Inactive'
-                          }">{{ transaction.paymentstatus }}</div>
-                          
+      'bg-success-subtle text-success': `${transaction.paymentstatus}` === 'Active',
+      'bg-danger-subtle text-danger': `${transaction.paymentstatus}` === 'Inactive'
+    }">{{ transaction.paymentstatus }}</div>
+
                         </BTd>
                         <BTd>
                           <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">

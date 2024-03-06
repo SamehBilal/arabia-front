@@ -157,7 +157,7 @@ export default {
       ],
       options1: [
         "Facebook",
-        "Twitter",
+        "X",
         "Instagram",
         "Tiktok",
         "Twitch",
@@ -394,39 +394,103 @@ export default {
             <BForm class="needs-validation" @submit.prevent="formSubmit">
               <BRow>
                 <BCol md="12">
+                  <BRow>
+                    <BCol md="6">
+                      <div class="mb-3">
+                        <label>Image</label>
+                        <!-- file upload -->
+                        <DropZone />
+                      </div>
+                    </BCol>
+                    <BCol md="6">
+                      <div class="mb-3">
+                        <label>Full name</label>
+                        <BFormInput v-model="form.fname" placeholder="Full name" :class="{
+                            'is-invalid': submitted && v$.form.fname.$error,
+                            'is-valid': submitted && !v$.form.fname.$error,
+                          }" />
+                        <div v-if="submitted && v$.form.fname.$error" class="invalid-feedback">
+                          <span v-if="v$.form.fname.required.$message">
+                            {{ v$.form.fname.required.$message }}
+                          </span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label>Slug</label>
+                        <BFormInput v-model="form.slug" placeholder="Slug" :class="{
+                          'is-invalid': submitted && v$.form.slug.$error,
+                          'is-valid': submitted && !v$.form.slug.$error,
+                        }" />
+                        <div v-if="submitted && v$.form.slug.$error" class="invalid-feedback">
+                          <span v-if="v$.form.slug.required.$message">
+                            {{ v$.form.slug.required.$message }}
+                          </span>
+                        </div>
+                      </div>
+                    </BCol>
+                  </BRow>
+                  <BRow>
+                <BCol md="4">
                   <div class="mb-3">
-                    <label>Image</label>
-                    <!-- file upload -->
-                    <DropZone />
-                  </div>
-                  <div class="mb-3">
-                    <label>Full name</label>
-                    <BFormInput v-model="form.fname" placeholder="Full name" :class="{
-                      'is-invalid': submitted && v$.form.fname.$error,
-                      'is-valid': submitted && !v$.form.fname.$error,
-
-                    }" />
-                    <div v-if="submitted && v$.form.fname.$error" class="invalid-feedback">
-                      <span v-if="v$.form.fname.required.$message">
-                        {{ v$.form.fname.required.$message }}
-                      </span>
+                    <label>Platform</label>
+                    <Multiselect v-model="form.city" :class="{
+                      'is-invalid': submitted && v$.form.city.$error,
+                      'is-valid': submitted && !v$.form.city.$error,
+                    }" :options="options1"></Multiselect>
+                    
+                    <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
+                      <span v-if="v$.form.city.required.$message">{{
+                        v$.form.city.required.$message
+                      }}</span>
                     </div>
                   </div>
+                </BCol>
+                <BCol md="2">
                   <div class="mb-3">
-                    <label>Slug</label>
-                    <BFormInput v-model="form.slug" placeholder="Slug" :class="{
-                      'is-invalid': submitted && v$.form.slug.$error,
-                      'is-valid': submitted && !v$.form.slug.$error,
-
+                    <label>Stats</label>
+                    <BFormInput v-model="form.state" placeholder="Stats" :class="{
+                      'is-invalid': submitted && v$.form.state.$error,
+                      'is-valid': submitted && !v$.form.state.$error,
                     }" />
-                    <div v-if="submitted && v$.form.slug.$error" class="invalid-feedback">
-                      <span v-if="v$.form.slug.required.$message">
-                        {{ v$.form.slug.required.$message }}
-                      </span>
+                    <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
+                      <span v-if="v$.form.state.required.$message">{{
+                        v$.form.state.required.$message
+                      }}</span>
                     </div>
                   </div>
+                </BCol>
+                <BCol md="4">
                   <div class="mb-3">
-                    <label>Type</label>
+                    <label>Link</label>
+                    <BFormInput v-model="form.url" placeholder="Link" :class="{
+                      'is-invalid': submitted && v$.form.url.$error,
+                      'is-valid': submitted && !v$.form.url.$error,
+                    }" />
+                    <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
+                      <span v-if="v$.form.url.required.$message">{{
+                        v$.form.url.required.$message
+                      }}</span>
+                    </div>
+                  </div>
+                </BCol>
+                <BCol md="2">
+                  <div class="mb-3">
+                    <label>Action</label>
+                    <div>
+                        <BButtonGroup class="btn-group-example mb-3">
+                          <BButton variant="primary" class="w-xs">
+                            <i class="mdi mdi-plus"></i>
+                          </BButton>
+                          <BButton variant="light" class="w-xs">
+                            <i class="mdi mdi-minus"></i>
+                          </BButton>
+                        </BButtonGroup>
+                      </div>
+                  </div>
+                </BCol>
+              </BRow>
+                  <div class="mb-3">
+                    <label>Role</label>
                     <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
                   </div>
 
@@ -654,68 +718,14 @@ export default {
                     </div>
                     </BCol>
                   </BRow>
+                  <div class="mb-3">
+                      <label>Gallery <small>(Options)</small></label>
+                      <!-- file upload -->
+                      <DropZone />
+                    </div>
                 </BCol>
               </BRow>
-              <BRow>
-                <BCol md="4">
-                  <div class="mb-3">
-                    <label>Platform</label>
-                    <Multiselect v-model="form.city" :class="{
-                      'is-invalid': submitted && v$.form.city.$error,
-                      'is-valid': submitted && !v$.form.city.$error,
-                    }" :options="options1"></Multiselect>
-                    
-                    <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
-                      <span v-if="v$.form.city.required.$message">{{
-                        v$.form.city.required.$message
-                      }}</span>
-                    </div>
-                  </div>
-                </BCol>
-                <BCol md="2">
-                  <div class="mb-3">
-                    <label>Stats</label>
-                    <BFormInput v-model="form.state" placeholder="Stats" :class="{
-                      'is-invalid': submitted && v$.form.state.$error,
-                      'is-valid': submitted && !v$.form.state.$error,
-                    }" />
-                    <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
-                      <span v-if="v$.form.state.required.$message">{{
-                        v$.form.state.required.$message
-                      }}</span>
-                    </div>
-                  </div>
-                </BCol>
-                <BCol md="4">
-                  <div class="mb-3">
-                    <label>Link</label>
-                    <BFormInput v-model="form.url" placeholder="Link" :class="{
-                      'is-invalid': submitted && v$.form.url.$error,
-                      'is-valid': submitted && !v$.form.url.$error,
-                    }" />
-                    <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
-                      <span v-if="v$.form.url.required.$message">{{
-                        v$.form.url.required.$message
-                      }}</span>
-                    </div>
-                  </div>
-                </BCol>
-                <BCol md="2">
-                  <div class="mb-3">
-                    <label>Action</label>
-                    <div>
-                        <BButtonGroup class="btn-group-example mb-3">
-                          <BButton variant="primary" class="w-xs">
-                            <i class="mdi mdi-plus"></i>
-                          </BButton>
-                          <BButton variant="light" class="w-xs">
-                            <i class="mdi mdi-minus"></i>
-                          </BButton>
-                        </BButtonGroup>
-                      </div>
-                  </div>
-                </BCol>
-              </BRow>
+              
               <BButton variant="primary" type="submit">Submit form</BButton>
             </BForm>
           </BCardBody>
@@ -726,7 +736,7 @@ export default {
         <BCard no-body>
           <BCardBody>
             <div class="mb-3">
-              <label>Gallery</label>
+              <label>Cover</label>
               <!-- file upload -->
               <DropZone />
             </div>
