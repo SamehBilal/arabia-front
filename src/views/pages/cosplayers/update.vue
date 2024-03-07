@@ -494,16 +494,16 @@ export default {
                               </label>
                             </div>
                           </div>
-                          <div class="col-lg-2 col-sm-2">
+                          <div class="col-lg-2 col-sm-2" @click="showmodal = true">
                             <div>
                               <label class="card-radio-label mb-3">
                                 <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input"
                                   checked />
 
                                 <div class="card-radio">
-                                  <!-- <img src="@/assets/images/companies/img-3.png" alt
-                                    class="align-middle me-2 avatar-sm" /> -->
-                                  <span>Add Brand</span>
+                                  <img src="@/assets/images/companies/plus.png" alt
+                                    class="align-middle me-2 avatar-sm" />
+                                  <span class="">Add</span>
                                 </div>
                               </label>
                             </div>
@@ -852,27 +852,17 @@ export default {
     </BRow>
 
     <!-- Modal -->
-    <BModal id="modal-1" v-model="showmodal" title="Add Tournament" title-class="text-dark font-18" hide-footer>
+    <BModal id="modal-1" v-model="showmodal" title="Add Brand" title-class="text-dark font-18" hide-footer>
       <form @submit.prevent="handleSubmit">
         <div class="mb-3">
-          <label class="form-label" for="name">Tournament Title</label>
+          <label class="form-label" for="name">Brand Title</label>
           <input id="name" v-model="customers.name" type="text" class="form-control"
             placeholder="Enter tournament title" required />
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="exampleInputEmail1">URL <small>(Optional)</small></label>
-          <input id="email" v-model="customers.email" type="email" name="email" class="form-control"
-            placeholder="URL" />
         </div>
         <div class="mb-3">
           <label>Icon</label>
           <!-- file upload -->
           <DropZone />
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Position</label>
-
-          <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
         </div>
         <div class="text-end">
           <button type="submit" class="btn btn-success">Save</button>

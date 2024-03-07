@@ -180,28 +180,6 @@ export const menuItems = [
         ]
     },
     {
-        id: 24,
-        label: 'menuitems.case_studies.text',
-        icon: 'ri-file-edit-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.case_studies.list.case_studies',
-                link: '/case-studies'
-            },
-            {
-                id: 26,
-                label: 'menuitems.case_studies.list.addcase_studie',
-                link: '/case-studies/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.case_studies.list.trash',
-            //     link: '/case-studies-trash'
-            // },
-        ]
-    },
-    {
         id: 17,
         label: "menuitems.structure.text",
         isTitle: true
@@ -324,6 +302,28 @@ export const menuItems = [
             //     id: 7,
             //     label: 'menuitems.services.list.trash',
             //     link: '/services-trash'
+            // },
+        ]
+    },
+    {
+        id: 24,
+        label: 'menuitems.case_studies.text',
+        icon: 'ri-file-edit-line',
+        subItems: [
+            {
+                id: 25,
+                label: 'menuitems.case_studies.list.case_studies',
+                link: '/case-studies'
+            },
+            {
+                id: 26,
+                label: 'menuitems.case_studies.list.addcase_studie',
+                link: '/case-studies/create'
+            },
+            // {
+            //     id: 7,
+            //     label: 'menuitems.case_studies.list.trash',
+            //     link: '/case-studies-trash'
             // },
         ]
     },

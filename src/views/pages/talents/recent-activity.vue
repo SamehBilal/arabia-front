@@ -9,39 +9,40 @@ export default {
       activityData: [
         {
           icon: "ri-edit-2-fill",
+          image: "ri-edit-2-fill",
           date: "28 Apr, 2024 ",
           time: "12:07 am",
-          title: "Responded to need “Volunteer Activities”"
+          title: "Frank Dean “On-air”"
         },
         {
           icon: "ri-user-2-fill",
           date: "21 Apr, 2024 ",
           time: "08:01 pm",
-          title: "Added an interest “Volunteer Activities”"
+          title: "Eddy Torres “Influencer”"
         },
         {
           icon: "ri-bar-chart-fill",
           date: "17 Apr, 2024 ",
           time: "05:10 pm",
-          title: "Responded to need “In-Kind Opportunity”"
+          title: "Jamison Clark “On-air”"
         },
         {
           icon: "ri-calendar-2-fill",
           date: "07 Apr, 2024",
           time: "12:47 pm",
-          title: "Created need “Volunteer Activities”"
+          title: "Jewel Buckley “Cosplayer"
         },
         {
           icon: "ri-edit-2-fill",
           date: "05 Apr, 2024 ",
           time: "03:09 pm",
-          title: "Attending the event “Some New Event”"
+          title: "Jeffrey Waltz “On-air”"
         },
         {
           icon: "ri-user-2-fill",
           date: "02 Apr, 2024 ",
           time: "12:07 am",
-          title: "Responded to need “In-Kind Opportunity”"
+          title: "Jefferson Allen “On-air”"
         },
       ]
     };
@@ -57,20 +58,21 @@ export default {
     <div class="card-body">
       <BDropdown v-model="show" dropleft toggle-class="arrow-none card-drop text-dark font-size-20 px-0" variant="white" size="sm" menu-class="dropdown-menu-end p-0" class="float-end" >
         <template #button-content>  <i class="mdi mdi-dots-vertical"></i> </template>
-        <BDropdownItem href="#">Sales Report</BDropdownItem>
-        <BDropdownItem href="#">Export Report</BDropdownItem>
-        <BDropdownItem href="#">Profit</BDropdownItem>
-        <BDropdownItem href="#">Action</BDropdownItem>
+        <BDropdownItem href="#">All</BDropdownItem>
+        <BDropdownItem href="#">Influencers</BDropdownItem>
+        <BDropdownItem href="#">Cosplayers</BDropdownItem>
+        <BDropdownItem href="#">On-Air</BDropdownItem>
       </BDropdown>
 
-      <h4 class="card-title mb-4">Recent Activity Feed</h4>
+      <h4 class="card-title mb-4">Recent Talents</h4>
 
       <simplebar style="max-height: 300px;">
         <ul class="list-unstyled activity-wid">
           <li class="activity-list" v-for="(data, index) in activityData" :key="index">
             <div class="activity-icon avatar-xs">
               <span class="avatar-title bg-soft-primary text-primary rounded-circle">
-                <i :class="`${data.icon}`"></i>
+                <img src="@/assets/images/product/img-1.png" style="height: 32px;margin-right: 10px;" alt class="img-rounded" />
+                <!-- <i :class="`${data.icon}`"></i> -->
               </span>
             </div>
             <div>

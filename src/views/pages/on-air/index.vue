@@ -24,81 +24,81 @@ export default {
       ],
       ordersData: [
         {
-          date: "28 Mar, 2024",
+          created_at: "28 Mar, 2024",
           name: "Frank Dean",
-          total: "$164",
+          total_followers: "$164",
           role: "Casters",
-          paymentstatus: "Inactive"
+          status: "Inactive"
         },
         {
-          date: "28 Mar, 2024",
+          created_at: "28 Mar, 2024",
           name: "Eddy Torres",
-          total: "$141",
+          total_followers: "$141",
           role: "Hosts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "29 Mar, 2024",
+          created_at: "29 Mar, 2024",
           name: "Jamison Clark",
-          total: "$123",
+          total_followers: "$123",
           role: "Analysts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "30 Mar, 2024",
+          created_at: "30 Mar, 2024",
           name: "Jewel Buckley",
-          total: "$112",
+          total_followers: "$112",
           role: "Hosts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "31 Mar, 2024",
+          created_at: "31 Mar, 2024",
           name: "Jeffrey Waltz",
-          total: "$105",
+          total_followers: "$105",
           role: "Casters",
-          paymentstatus: "Inactive"
+          status: "Inactive"
         },
         {
-          date: "01 Apr, 2024",
+          created_at: "01 Apr, 2024",
           name: "Jefferson Allen",
-          total: "$160",
+          total_followers: "$160",
           role: "Analysts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "02 Apr, 2024",
+          created_at: "02 Apr, 2024",
           name: "Paul Jones",
-          total: "$183",
+          total_followers: "$183",
           role: "Hosts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "03 Apr, 2024",
+          created_at: "03 Apr, 2024",
           name: "Donald Bailey",
-          total: "$146",
+          total_followers: "$146",
           role: "Hosts",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "03 Apr, 2024",
+          created_at: "03 Apr, 2024",
           name: "Jimmy Barker",
-          total: "$165",
+          total_followers: "$165",
           role: "Analysts",
-          paymentstatus: "Inactive"
+          status: "Inactive"
         },
         {
-          date: "04 Apr, 2024",
+          created_at: "04 Apr, 2024",
           name: "Walter Brown",
-          total: "$172",
+          total_followers: "$172",
           role: "Casters",
-          paymentstatus: "Active"
+          status: "Active"
         },
         {
-          date: "06 Apr, 2024",
+          created_at: "06 Apr, 2024",
           name: "James Hamilton",
-          total: "$152",
+          total_followers: "$152",
           role: "Hosts",
-          paymentstatus: "Active"
+          status: "Active"
         }
       ],
       totalRows: 1,
@@ -176,46 +176,35 @@ export default {
                   </div>
                   <!-- End search -->
                 </div>
-                <div class="table-responsive">
-                  <BTable :items="ordersData" :fields="fields" responsive="sm" :per-page="perPage"
-                    :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter"
-                    :filter-included-fields="filterOn" @filtered="onFiltered" :total-rows="rows"></BTable>
-                  <BTableSimple class="table-centered datatable dt-responsive nowrap" sortBy="Payment Status">
-                    <BThead class="table-light">
-                      <BTr>
-                        <BTh v-for="(label) in fields">{{ label.label }}</BTh>
-                      </BTr>
-                    </BThead>
-                    <BTbody>
-                      <BTr v-for="(transaction) in ordersData" :key="index">
-                        <BTd><img src="@/assets/images/product/img-5.png" style="height: 32px;margin-right: 10px;" alt
-                            class="img-rounded" />{{ transaction.name }}</BTd>
-                        <BTd>{{ transaction.date }}</BTd>
-                        <BTd>
-                          <div class="badge font-size-12" :class="{
-      'bg-dark-subtle text-dark': `${transaction.role}` === 'Hosts',
-      'bg-info-subtle text-info': `${transaction.role}` === 'Casters',
-      'bg-secondary-subtle text-secondary': `${transaction.role}` === 'Analysts'
-    }">{{ transaction.role }}</div>
-                        </BTd>
-                        <BTd>
-                          <div class="badge font-size-12" :class="{
-      'bg-success-subtle text-success': `${transaction.paymentstatus}` === 'Active',
-      'bg-danger-subtle text-danger': `${transaction.paymentstatus}` === 'Inactive'
-    }">{{ transaction.paymentstatus }}</div>
-
-                        </BTd>
-                        <BTd>
-                          <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
+                <div class="table-responsive mb-0">
+                  <BTable class="table-centered datatable dt-responsive nowrap" :items="ordersData" :fields="fields" :total-rows="rows" responsive="sm" :per-page="perPage" :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter" :filter-included-fields="filterOn" @filtered="onFiltered">
+                    <template v-slot:cell(name)="ordersData">
+                      <img src="@/assets/images/product/img-5.png" style="height: 32px;margin-right: 10px;" alt
+                            class="img-rounded" /> 
+                      <span>{{ ordersData.item.name }}</span>
+                    </template>
+                    <template v-slot:cell(role)="ordersData">
+                      <div class="badge font-size-12" :class="{
+                          'bg-dark-subtle text-dark': `${ordersData.item.role}` === 'Hosts',
+                          'bg-info-subtle text-info': `${ordersData.item.role}` === 'Casters',
+                          'bg-secondary-subtle text-secondary': `${ordersData.item.role}` === 'Analysts'
+                        }">{{ ordersData.item.role }}</div>
+                    </template>
+                    <template v-slot:cell(status)="ordersData">
+                      <div class="badge font-size-12" :class="{
+                            'bg-success-subtle text-success': `${ordersData.item.status}` === 'Active',
+                            'bg-warning-subtle text-danger': `${ordersData.item.status}` === 'Inactive'
+                          }">{{ ordersData.item.status }}</div>
+                    </template>
+                    <template v-slot:cell(action)="ordersData">
+                      <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
                             <i class="mdi mdi-pencil font-size-18"></i>
                           </a>
                           <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
                             <i class="mdi mdi-trash-can font-size-18"></i>
                           </a>
-                        </BTd>
-                      </BTr>
-                    </BTbody>
-                  </BTableSimple>
+                    </template>
+                  </BTable>
                 </div>
                 <div class="row">
                   <div class="col">

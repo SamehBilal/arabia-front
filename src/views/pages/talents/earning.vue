@@ -84,13 +84,10 @@ export default {
     <div class="card-body">
       <BDropdown v-model="show" dropend toggle-class="arrow-none card-drop text-dark font-size-20 px-0" variant="white" size="sm" menu-class="dropdown-menu-end p-0" class="float-end" >
         <template #button-content>  <i class="mdi mdi-dots-vertical"></i> </template>
-        <BDropdownItem href="#">Sales Report</BDropdownItem>
-        <BDropdownItem href="#">Export Report</BDropdownItem>
-        <BDropdownItem href="#">Profit</BDropdownItem>
         <BDropdownItem href="#">Action</BDropdownItem>
       </BDropdown>
 
-      <h4 class="card-title mb-4">Earning Reports</h4>
+      <h4 class="card-title mb-4">Talents Type</h4>
       <div class="text-center">
         <div class="row">
           <div class="col-sm-6">
@@ -98,8 +95,8 @@ export default {
               <div class="mb-3">
                 <apexchart class="apex-charts" height="60" wight="60" dir="ltr" :series="WeeklyEarning.series" :options="WeeklyEarning.chartOptions"></apexchart>
               </div>
-              <p class="text-muted text-truncate mb-2">Weekly Earnings</p>
-              <h5 class="mb-0">$2,523</h5>
+              <p class="text-muted text-truncate mb-2">Inclusive</p>
+              <h5 class="mb-0">60%</h5>
             </div>
           </div>
 
@@ -109,8 +106,8 @@ export default {
                 <apexchart class="apex-charts" height="60" wight="60" dir="ltr" :series="monthlyEarning.series" :options="monthlyEarning.chartOptions"></apexchart>
               </div>
 
-              <p class="text-muted text-truncate mb-2">Monthly Earnings</p>
-              <h5 class="mb-0">$11,235</h5>
+              <p class="text-muted text-truncate mb-2">Exclusive</p>
+              <h5 class="mb-0">40%</h5>
             </div>
           </div>
         </div>

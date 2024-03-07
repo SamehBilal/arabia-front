@@ -344,11 +344,23 @@ export default [
         component: () => import('../views/pages/icons/font-awesome/index.vue')
     },
     {
+        path: '/icons/',
+        name: 'Icons',
+        meta: { authRequired: true },
+        component: () => import('../views/pages/icons/index.vue')
+    },
+    {
+        path: '/icons/create',
+        name: 'CreateIcons',
+        meta: { authRequired: true },
+        component: () => import('../views/pages/icons/update.vue')
+    },
+    /* {
         path: '/icons/dripicons',
         name: 'Dripicons',
         meta: { authRequired: true },
         component: () => import('../views/pages/icons/dripicons.vue')
-    },
+    }, */
     {
         path: '/icons/material-design',
         name: 'Material Design',

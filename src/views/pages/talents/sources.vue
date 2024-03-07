@@ -122,9 +122,6 @@ export default {
     <div class="card-body">
       <BDropdown v-model="show" dropleft toggle-class="arrow-none card-drop text-dark font-size-20 px-0" variant="white" size="sm" menu-class="dropdown-menu-end p-0" class="float-end" >
         <template #button-content>  <i class="mdi mdi-dots-vertical"></i> </template>
-        <BDropdownItem href="#">Sales Report</BDropdownItem>
-        <BDropdownItem href="#">Export Report</BDropdownItem>
-        <BDropdownItem href="#">Profit</BDropdownItem>
         <BDropdownItem href="#">Action</BDropdownItem>
       </BDropdown>
 
@@ -155,7 +152,7 @@ export default {
                   <h5 class="font-size-14 mb-0">Youtube</h5>
                 </td>
                 <td>
-                  <apexchart class="apex-charts" height="35" dir="ltr" :series="source1.series" :options="source1.chartOptions" type="line" width="80"></apexchart>
+                  <apexchart class="apex-charts" height="30" dir="ltr" :series="source1.series" :options="source1.chartOptions" type="line" width="80"></apexchart>
                 </td>
                 <td>
                   <p class="text-muted mb-0">122M</p>
@@ -174,7 +171,7 @@ export default {
                 </td>
 
                 <td>
-                  <apexchart class="apex-charts" height="35" dir="ltr" :series="source2.series" :options="source2.chartOptions" type="line" width="80"></apexchart>
+                  <apexchart class="apex-charts" height="30" dir="ltr" :series="source2.series" :options="source2.chartOptions" type="line" width="80"></apexchart>
                 </td>
                 <td>
                   <p class="text-muted mb-0">36.9M</p>
@@ -192,7 +189,7 @@ export default {
                   <h5 class="font-size-14 mb-0">Facebook</h5>
                 </td>
                 <td>
-                  <apexchart class="apex-charts" height="35" dir="ltr" :series="source3.series" :options="source3.chartOptions" type="line" width="80"></apexchart>
+                  <apexchart class="apex-charts" height="30" dir="ltr" :series="source3.series" :options="source3.chartOptions" type="line" width="80"></apexchart>
                 </td>
                 <td>
                   <p class="text-muted mb-0">36.3M</p>
@@ -210,19 +207,37 @@ export default {
                   <h5 class="font-size-14 mb-0">Instagram</h5>
                 </td>
                 <td>
-                  <apexchart class="apex-charts" height="35" dir="ltr" :series="source3.series" :options="source3.chartOptions" type="line" width="80"></apexchart>
+                  <apexchart class="apex-charts" height="30" dir="ltr" :series="source3.series" :options="source3.chartOptions" type="line" width="80"></apexchart>
                 </td>
                 <td>
                   <p class="text-muted mb-0">12.6M</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="avatar-xs">
+                    <div class="avatar-title rounded-circle bg-light">
+                      <img src="@/assets/images/product/snapchat.png" alt height="20" />
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h5 class="font-size-14 mb-0">Snapchat</h5>
+                </td>
+                <td>
+                  <apexchart class="apex-charts" height="30" dir="ltr" :series="source3.series" :options="source3.chartOptions" type="line" width="80"></apexchart>
+                </td>
+                <td>
+                  <p class="text-muted mb-0">12M</p>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="text-center mt-4">
+        <!-- <div class="text-center mt-4">
           <a href="#" class="btn btn-primary btn-sm">View more</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

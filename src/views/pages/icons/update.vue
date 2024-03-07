@@ -1,48 +1,278 @@
 <script>
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header.vue";
+import DropZone from "@/components/dropzone.vue";
+import useVuelidate from "@vuelidate/core";
+import Multiselect from "@vueform/multiselect";
+
+import {
+  required,
+  helpers,
+  email,
+  minLength,
+  sameAs,
+  maxLength,
+  minValue,
+  maxValue,
+  numeric,
+  url,
+  alphaNum,
+} from "@vuelidate/validators";
+
 
 /**
  * Dripicons component
  */
 export default {
   page: {
-    title: "Dripicons",
+    title: "Add Icon",
     meta: [{ name: "description" }]
   },
-  components: { Layout, PageHeader },
+  components: { Layout, PageHeader,DropZone,Multiselect },
   data() {
     return {
-      title: "Dripicons",
+      title: "Add Icon",
       items: [
         {
-          text: "Icons",
+          text: "Dashboard",
           href: "/"
         },
         {
-          text: "Dripicons",
+          text: "Add Icon",
           active: true
         }
-      ]
+      ],
+      options: [
+        "Social Media",
+        "Website",
+        "tournament",
+      ],
+      form: {
+        fname: "",
+        slug: "",
+        lname: "",
+        city: "",
+        state: "",
+        zipcode: "",
+      },
+      tooltipform: {
+        fname: "",
+        slug: "",
+        lname: "",
+        username: "",
+        city: "",
+        state: "",
+      },
+      range: {
+        minlen: "",
+        maxlength: "",
+        between: "",
+        minval: "",
+        maxval: "",
+        rangeval: "",
+        expr: "",
+      },
+      typeform: {
+        name: "",
+        password: "",
+        confirmPassword: "",
+        email: "",
+        url: "",
+        digit: "",
+        number: "",
+        alphanum: "",
+        textarea: "",
+      },
+      submitted: false,
+      submitform: false,
+      submit: false,
+      typesubmit: false
     };
-  }
+  },
+  setup() {
+    return { v$: useVuelidate() };
+  },
+  validations: {
+    form: {
+      fname: {
+        required: helpers.withMessage("Full Name is required", required),
+      },
+      slug: {
+        required: helpers.withMessage("Slug is required", required),
+      },
+      lname: {
+        required: helpers.withMessage("Last Name is required", required),
+      },
+      city: { required: helpers.withMessage("Platform is required", required) },
+      state: { required: helpers.withMessage("State is required", required) },
+      zipcode: {
+        required: helpers.withMessage("Zipcode is required", required),
+      },
+    },
+    tooltipform: {
+      fname: { required: helpers.withMessage("FUll name is required", required) },
+      slug: { required: helpers.withMessage("Slug is required", required) },
+      lname: { required: helpers.withMessage("Lname is required", required) },
+      username: {
+        required: helpers.withMessage("Username is required", required),
+      },
+      city: { required: helpers.withMessage("Platform is required", required) },
+      state: { required: helpers.withMessage("State is required", required) },
+    },
+    range: {
+      minlen: {
+        required: helpers.withMessage("Minlen is required", required),
+        minLength: minLength(6),
+      },
+      maxlength: {
+        required: helpers.withMessage("Maxlength is required", required),
+        maxLength: maxLength(6),
+      },
+      between: {
+        required: helpers.withMessage("Between is required", required),
+        minLength: minLength(5),
+        maxLength: maxLength(10),
+      },
+      minval: {
+        required: helpers.withMessage("Minval is required", required),
+        minValue: minValue(6),
+      },
+      maxval: {
+        required: helpers.withMessage("Maxval is required", required),
+        maxValue: maxValue(6),
+      },
+      rangeval: {
+        required: helpers.withMessage("Rangeval is required", required),
+        minValue: minValue(6),
+        maxValue: maxValue(100),
+      },
+      expr: { required: helpers.withMessage("Expr is required", required) },
+    },
+    typeform: {
+      name: { required: helpers.withMessage("Name is required", required) },
+      password: {
+        required: helpers.withMessage("Password is required", required),
+        minLength: minLength(6),
+      },
+      confirmPassword: {
+        required: helpers.withMessage("ConfirmPassword is required", required),
+        sameAsPassword: sameAs("password"),
+      },
+      email: {
+        required: helpers.withMessage("Email is required", required),
+        email,
+      },
+      url: { required: helpers.withMessage("Url is required", required), url },
+      digit: {
+        required: helpers.withMessage("Digit is required", required),
+        numeric,
+      },
+      number: {
+        required: helpers.withMessage("Number is required", required),
+        numeric,
+      },
+      alphanum: {
+        required: helpers.withMessage("Alphanum is required", required),
+        alphaNum,
+      },
+      textarea: {
+        required: helpers.withMessage("Textarea is required", required),
+      },
+    },
+  },
+  methods: {
+    // eslint-disable-next-line no-unused-vars
+    formSubmit(e) {
+      this.submitted = true;
+      // stop here if form is invalid
+      this.v$.$touch();
+    },
+
+    tooltipForm() {
+      this.submitform = true;
+      this.v$.$touch();
+    },
+
+    /**
+     * Range validation form submit
+     */
+    // eslint-disable-next-line no-unused-vars
+    rangeform(e) {
+      this.submit = true;
+      // stop here if form is invalid
+      this.v$.$touch();
+    },
+    /**
+     * Validation type submit
+     */
+    // eslint-disable-next-line no-unused-vars
+    typeForm(e) {
+      this.typesubmit = true;
+      // stop here if form is invalid
+      this.v$.$touch();
+    },
+    /**
+     * Modal form submit
+     */
+    // eslint-disable-next-line no-unused-vars
+    handleSubmit(e) {
+      this.submitted = true;
+
+      // stop here if form is invalid
+      this.$touch;
+      if (this.$invalid) {
+        return;
+      } else {
+        const name = this.customers.name;
+        const balance = this.customers.balance;
+        const email = this.customers.email;
+        const phone = this.customers.phone;
+        const date = this.customers.date;
+        const active = this.customers.active;
+        this.customersData.push({
+          name,
+          email,
+          balance,
+          phone,
+          date,
+          active,
+          password,
+          password_confirmation
+        });
+        this.showmodal = false;
+      }
+      this.submitted = false;
+      this.customers = {};
+    },
+    /**
+     * hode mondal on close
+     */
+    // eslint-disable-next-line no-unused-vars
+    hideModal(e) {
+      this.submitted = false;
+      this.showmodal = false;
+      this.contacts = {};
+    },
+
+    /**
+     * Filter the data of search
+     */
+  },
 };
 </script>
 
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-    <div class="row">
-      <div class="col-12">
+    <BRow>
+      <BCol lg="9">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Examples</h4>
+            <h4 class="card-title">Add Icon</h4>
             <p class="card-title-desc mb-2">
-              Use
               <code>
-                &lt;i
-                class="dripicons-alarm"&gt;&lt;/i&gt;
-              </code>.
+                copy the icon code to icon name input.
+              </code>
             </p>
 
             <div class="row icon-demo-content">
@@ -649,9 +879,82 @@ export default {
             </div>
           </div>
         </div>
-      </div>
-      <!-- end col -->
-    </div>
+      </BCol>
+      <BCol lg="3">
+        <BCard no-body>
+          <BCardBody>
+            <BTabs justified nav-class="nav-tabs-custom" content-class="p-3 text-muted">
+              <BTab active>
+                <template #title>
+                  <span class="d-inline-block d-sm-none">
+                    <i class="fas fa-home"></i>
+                  </span>
+                  <span class="d-none d-sm-inline-block">Image</span>
+                </template>
+                <div class="mb-3">
+                  <label>Image</label>
+                  <!-- file upload -->
+                  <DropZone />
+                </div>
+              </BTab>
+              <BTab>
+                <template #title>
+                  <span class="d-inline-block d-sm-none">
+                    <i class="far fa-user"></i>
+                  </span>
+                  <span class="d-none d-sm-inline-block">Icon</span>
+                </template>
+                <BRow>
+                <BCol md="12">
+                  <div class="mb-3 position-relative">
+                    <label for="validationTooltipUsername">Icon Code</label>
+                    <BInputGroup>
+                      <BInputGroupPrepend is-text><i class="ri-code-line"></i></BInputGroupPrepend>
+                      <BFormInput v-model="tooltipform.username" placeholder="Icon Code" :class="{
+                          'is-invalid': submitform && v$.tooltipform.username.$error,
+                          'is-valid': submitform && !v$.tooltipform.username.$error,
+                        }" />
+                      <div v-if="submitted && v$.tooltipform.username.$error" class="invalid-feedback">
+                        <span v-if="v$.tooltipform.username.required.$message">{{
+                          v$.tooltipform.username.required.$message }}</span>
+                      </div>
+                    </BInputGroup>
+                  </div>
+                </BCol>
+              </BRow>
+              </BTab>
+              <BRow>
+                <BCol md="12">
+                  <BForm class="needs-validation" @submit.prevent="tooltipForm">
+                    <div class="mb-3 position-relative">
+                    <label for="validationTooltipUsername">Icon Name</label>
+                    <BInputGroup>
+                      <BInputGroupPrepend is-text><i class="ri-brush-line"></i></BInputGroupPrepend>
+                      <BFormInput v-model="tooltipform.username" placeholder="Icon Name" :class="{
+                          'is-invalid': submitform && v$.tooltipform.username.$error,
+                          'is-valid': submitform && !v$.tooltipform.username.$error,
+                        }" />
+                      <div v-if="submitted && v$.tooltipform.username.$error" class="invalid-feedback">
+                        <span v-if="v$.tooltipform.username.required.$message">{{
+                          v$.tooltipform.username.required.$message }}</span>
+                      </div>
+                    </BInputGroup>
+                  </div>
+                    <div class="mb-3">
+                      <label>Type</label>
+                      <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
+                    </div>
+                    <BButton variant="primary" type="submit">Submit form</BButton>
+                  </BForm>
+                  </BCol>
+                  </BRow>
+            </BTabs>
+            
+          </BCardBody>
+        </BCard>
+      </BCol>
+    </BRow>
+    
     <!-- end row -->
   </Layout>
 </template>

@@ -47,29 +47,32 @@ export default {
       </div>
       <h4 class="card-title mb-4">Top talents based on fans</h4>
       <div>
-        <apexchart class="apex-charts" height="350" type="bar" dir="ltr" :series="series" :options="chartOptions"></apexchart>
+        <apexchart class="apex-charts" height="360" type="bar" dir="ltr" :series="series" :options="chartOptions"></apexchart>
       </div>
     </div>
 
     <div class="card-body border-top text-center">
       <div class="row">
         <div class="col-sm-4">
+          <p class="mb-2 text-muted text-truncate">
+            <i class="mdi mdi-circle text-primary font-size-10 me-1"></i> Influencers :
+          </p>
           <div class="d-inline-flex">
-            <h5 class="me-2">$12,253</h5>
+            <h5 class="me-2">90M</h5>
             <div class="text-success">
               <i class="mdi mdi-menu-up font-size-14"></i>2.2 %
             </div>
           </div>
-          <p class="text-muted text-truncate mb-0">This month</p>
+          <!-- <p class="text-muted text-truncate mb-0">Influencers</p> -->
         </div>
 
         <div class="col-sm-4">
           <div class="mt-4 mt-sm-0">
             <p class="mb-2 text-muted text-truncate">
-              <i class="mdi mdi-circle text-primary font-size-10 me-1"></i> This Year :
+              <i class="mdi mdi-circle text-primary font-size-10 me-1"></i> Cosplayers :
             </p>
             <div class="d-inline-flex">
-              <h5 class="mb-0 me-2">$ 34,254</h5>
+              <h5 class="mb-0 me-2">100M</h5>
               <div class="text-success">
                 <i class="mdi mdi-menu-up font-size-14"></i>2.1 %
               </div>
@@ -79,10 +82,13 @@ export default {
         <div class="col-sm-4">
           <div class="mt-4 mt-sm-0">
             <p class="mb-2 text-muted text-truncate">
-              <i class="mdi mdi-circle text-success font-size-10 me-1"></i> Previous Year :
+              <i class="mdi mdi-circle text-success font-size-10 me-1"></i> On-Air :
             </p>
             <div class="d-inline-flex">
-              <h5 class="mb-0">$ 32,695</h5>
+              <h5 class="mb-0">50M</h5>
+              <div class="text-danger">
+                <i class="mdi mdi-menu-down font-size-14"></i>1.1 %
+              </div>
             </div>
           </div>
         </div>

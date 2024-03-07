@@ -28,7 +28,7 @@ export default {
       <div class="col-lg-12">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title mb-4">Doughnut Chart</h4>
+            <h4 class="card-title mb-4">Total Talents</h4>
             <vue-echarts :option="option.doughnutChart" style="height: 300px" />
           </div>
         </div>

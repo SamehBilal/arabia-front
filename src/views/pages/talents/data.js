@@ -489,14 +489,14 @@ const doughnutChart = {
     legend: {
         orient: 'vertical',
         x: 'left',
-        data: ['Laptop', 'Tablet', 'Mobile', 'Others', 'Desktop'],
+        data: ['Influencers', 'Cosplayers', 'On-Air'],
         textStyle: {
             color: '#999'
         }
     },
-    color: ['#556ee6', '#f1b44c', '#f46a6a', '#50a5f1', '#34c38f'],
+    color: [/* '#556ee6',  */'#f1b44c', '#f46a6a',/*  '#50a5f1', */ '#34c38f'],
     series: [{
-        name: 'Total sales',
+        name: 'Total Talents',
         type: 'pie',
         radius: ['50%', '70%'],
         avoidLabelOverlap: false,
@@ -511,25 +511,17 @@ const doughnutChart = {
             show: false
         },
         data: [{
-            value: 335,
-            name: 'Laptop'
+            value: 22,
+            name: 'Influencers'
         },
         {
-            value: 310,
-            name: 'Tablet'
+            value: 12,
+            name: 'Cosplayers'
         },
         {
-            value: 234,
-            name: 'Mobile'
+            value: 49,
+            name: 'On-Air'
         },
-        {
-            value: 135,
-            name: 'Others'
-        },
-        {
-            value: 1548,
-            name: 'Desktop'
-        }
         ]
     }]
 };

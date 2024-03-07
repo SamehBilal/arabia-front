@@ -150,6 +150,7 @@ export default {
         active: "",
       },
       showmodal: false,
+      showmodal2: false,
       options: [
         "Hosts",
         "Casters",
@@ -357,6 +358,7 @@ export default {
           password_confirmation
         });
         this.showmodal = false;
+        this.showmodal2 = false;
       }
       this.submitted = false;
       this.customers = {};
@@ -368,6 +370,7 @@ export default {
     hideModal(e) {
       this.submitted = false;
       this.showmodal = false;
+      this.showmodal2 = false;
       this.contacts = {};
     },
 
@@ -427,9 +430,85 @@ export default {
                           </span>
                         </div>
                       </div>
+                      <div class="mt-4 mt-lg-0">
+                        <h5 class="font-size-14 mb-4">Gender</h5>
+                        <div class="form-check custom-radio mb-3">
+                          <input type="radio" id="customRadio1" name="customRadio" class="form-check-input" />
+                          <label class="form-check-label" for="customRadio1">Female</label>
+                        </div>
+                        <div class="form-check custom-radio custom-control-right">
+                          <input type="radio" id="customRadio2" name="customRadio" class="form-check-input" checked />
+                          <label class="form-check-label" for="customRadio2">Male</label>
+                        </div>
+                      </div>
                     </BCol>
                   </BRow>
                   <BRow>
+                    <BCol md="12">
+                      <div class="mb-3">
+                        <h5 class="font-size-14">Favourite Games</h5>
+
+                        <div class="row">
+                          <div class="col-lg-2 col-sm-2">
+                            <div>
+                              <label class="card-radio-label mb-3">
+                                <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input" />
+
+                                <div class="card-radio">
+                                  <!-- <i class="fab fa-cc-mastercard font-size-24 align-middle me-2"></i> -->
+                                  <img src="@/assets/images/companies/img-1.png" alt
+                                    class="align-middle me-2 avatar-sm" />
+                                  <span>EA</span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-2 col-sm-2">
+                            <div>
+                              <label class="card-radio-label mb-3">
+                                <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input" />
+
+                                <div class="card-radio">
+                                  <img src="@/assets/images/companies/img-2.png" alt
+                                    class="align-middle me-2 avatar-sm" />
+                                  <span>Epic</span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-2 col-sm-2">
+                            <div>
+                              <label class="card-radio-label mb-3">
+                                <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input"
+                                  checked />
+
+                                <div class="card-radio">
+                                  <img src="@/assets/images/companies/img-3.png" alt
+                                    class="align-middle me-2 avatar-sm" />
+                                  <span>Activision</span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 col-sm-2" @click="showmodal2 = true">
+                            <div>
+                              <label class="card-radio-label mb-3">
+                                <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input"
+                                  checked />
+
+                                <div class="card-radio">
+                                  <img src="@/assets/images/companies/plus.png" alt
+                                    class="align-middle me-2 avatar-sm" />
+                                  <span class="">Add</span>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </BCol>
                 <BCol md="4">
                   <div class="mb-3">
                     <label>Platform</label>
@@ -540,51 +619,7 @@ export default {
                     </div>
                   </div> -->
 
-                  <div class="mb-3">
-                    <h5 class="font-size-14">Favourite Games</h5>
-
-                    <div class="row">
-                      <div class="col-lg-4 col-sm-6">
-                        <div>
-                          <label class="card-radio-label mb-3">
-                            <input type="radio" name="pay-method1" id="pay-methodoption4" class="card-radio-input" />
-
-                            <div class="card-radio">
-                              <!-- <i class="fab fa-cc-mastercard font-size-24 align-middle me-2"></i> -->
-                              <img src="@/assets/images/companies/img-1.png" alt class="align-middle me-2 avatar-sm" />
-                              <span>EA</span>
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4 col-sm-6">
-                        <div>
-                          <label class="card-radio-label mb-3">
-                            <input type="radio" name="pay-method1" id="pay-methodoption5" class="card-radio-input" checked />
-
-                            <div class="card-radio">
-                              <img src="@/assets/images/companies/img-2.png" alt class="align-middle me-2 avatar-sm" />
-                              <span>Epic</span>
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4 col-sm-6">
-                        <div>
-                          <label class="card-radio-label mb-3">
-                            <input type="radio" name="pay-method1" id="pay-methodoption6" class="card-radio-input"  />
-
-                            <div class="card-radio">
-                              <img src="@/assets/images/companies/img-3.png" alt class="align-middle me-2 avatar-sm" />
-                              <span>Activision</span>
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                   <div class="mb-3">
                     <h5 class="card-title">Tournaments</h5>
                     <p class="card-title-desc">It will be as simple as occidental in fact</p>
@@ -837,6 +872,27 @@ export default {
           <label class="form-label">Position</label>
 
           <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-success">Save</button>
+          <BButton class="ms-1" variant="danger" @click="hideModal">Cancel</BButton>
+        </div>
+      </form>
+    </BModal>
+    <!-- end modal -->
+
+     <!-- Modal -->
+     <BModal id="modal-2" v-model="showmodal2" title="Add Game" title-class="text-dark font-18" hide-footer>
+      <form @submit.prevent="handleSubmit">
+        <div class="mb-3">
+          <label class="form-label" for="name">Game Title</label>
+          <input id="name" v-model="customers.name" type="text" class="form-control"
+            placeholder="Enter tournament title" required />
+        </div>
+        <div class="mb-3">
+          <label>Icon</label>
+          <!-- file upload -->
+          <DropZone />
         </div>
         <div class="text-end">
           <button type="submit" class="btn btn-success">Save</button>
