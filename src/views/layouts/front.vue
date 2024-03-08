@@ -1,0 +1,56 @@
+<script>
+// import router from "@/router";
+import Header from "../pages/website/header.vue";
+import MainSection from "../pages/website/main-section.vue";
+import Footer from "../pages/website/footer.vue";
+import Partners from "../pages/website/partners.vue";
+import TopFooter from "../pages/website/top-footer.vue";
+
+export default {
+  components: {
+    Header,
+    MainSection,
+    Footer,
+    Partners,
+    TopFooter
+  },
+  data() {
+    { }
+  },
+  computed: {
+    //
+  },
+  methods: {},
+  mounted() {
+    // document.documentElement.setAttribute("dir", "rtl");
+  }
+};
+</script>
+
+<template>
+  <!-- <div class="container"> -->
+    <div class="element-home-page">
+      <div class="element-home-page-v">
+        <Header></Header>
+        <slot />
+        <Partners></Partners>
+        <TopFooter></TopFooter>
+        <Footer></Footer>
+        <!-- <MainSection></MainSection> -->
+        <!-- <vertical v-if="layoutType === 'vertical'" :layout="layoutType">
+      <slot />
+    </vertical>
+
+    <Horizontal v-if="layoutType === 'horizontal'" :layout="layoutType">
+      <slot />
+    </Horizontal> -->
+      </div>
+    </div>
+  <!-- </div> -->
+</template>
+
+
+<style>
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css';
+@import '@/assets/scss/webiste.scss';
+</style>

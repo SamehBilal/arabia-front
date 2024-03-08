@@ -88,6 +88,22 @@ export default [
         component: () => import('../views/pages/messages/index.vue')
     },
     {
+        path: '/front',
+        name: 'Front',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/index.vue')
+    },
+    {
+        path: '/influencers-all',
+        name: 'AllInfluncers',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/influencers.vue')
+    },
+    {
         path: '/users',
         name: 'Users',
         meta: {

@@ -202,7 +202,7 @@ export default {
                           </a>
                           <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
                             <i class="mdi mdi-trash-can font-size-18"></i>
-                          </a>
+                          </a>  
                     </template>
                   </BTable>
                 </div>
