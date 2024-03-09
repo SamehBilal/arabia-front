@@ -35,66 +35,67 @@ a {
   --actionpurple: rgba(136, 108, 255, 1);
   --actionorange: rgba(255, 149, 19, 1);
   --actionred: rgba(239, 55, 55, 1);
+  --mainyellow: rgba(249, 196, 92, 1);
   --mainred: rgba(255, 109, 67, 1);
   --actionturquoise: rgba(97, 220, 223, 1);
   --bg: rgba(244, 247, 248, 1);
   --primary-color-02: rgba(233, 0, 79, 1);
   --mainyellow: rgba(249, 196, 92, 1);
-  --h6-medium-font-family: "Outfit-Medium", Helvetica;
+  --h6-medium-font-family: "Outfit", Helvetica;
   --h6-medium-font-weight: 500;
   --h6-medium-font-size: 22px;
   --h6-medium-letter-spacing: 0px;
   --h6-medium-line-height: 30px;
   --h6-medium-font-style: normal;
-  --h6-regular-font-family: "Outfit-Regular", Helvetica;
+  --h6-regular-font-family: "Outfit", Helvetica;
   --h6-regular-font-weight: 400;
   --h6-regular-font-size: 22px;
   --h6-regular-letter-spacing: 0px;
   --h6-regular-line-height: 32px;
   --h6-regular-font-style: normal;
-  --body-01-font-family: "Outfit-Regular", Helvetica;
+  --body-01-font-family: "Outfit", Helvetica;
   --body-01-font-weight: 400;
   --body-01-font-size: 18px;
   --body-01-letter-spacing: 0px;
   --body-01-line-height: 28px;
   --body-01-font-style: normal;
-  --h1-font-family: "Outfit-Bold", Helvetica;
+  --h1-font-family: "Outfit", Helvetica;
   --h1-font-weight: 700;
   --h1-font-size: 65px;
   --h1-letter-spacing: -1px;
   --h1-line-height: 75px;
   --h1-font-style: normal;
-  --h5-font-family: "Outfit-Medium", Helvetica;
+  --h5-font-family: "Outfit", Helvetica;
   --h5-font-weight: 500;
   --h5-font-size: 24px;
   --h5-letter-spacing: 0px;
   --h5-line-height: 34px;
   --h5-font-style: normal;
-  --h2-font-family: "Outfit-SemiBold", Helvetica;
+  --h2-font-family: "Outfit", Helvetica;
   --h2-font-weight: 600;
   --h2-font-size: 50px;
   --h2-letter-spacing: -1px;
   --h2-line-height: 60px;
   --h2-font-style: normal;
-  --body-02-font-family: "Outfit-Regular", Helvetica;
+  --body-02-font-family: "Outfit", Helvetica;
   --body-02-font-weight: 400;
   --body-02-font-size: 16px;
   --body-02-letter-spacing: 0px;
   --body-02-line-height: 26px;
   --body-02-font-style: normal;
-  --h4-font-family: "Outfit-Medium", Helvetica;
+  --h4-font-family: "Outfit", Helvetica;
   --h4-font-weight: 500;
   --h4-font-size: 36px;
   --h4-letter-spacing: 0px;
   --h4-line-height: 46px;
   --h4-font-style: normal;
-  --h3-font-family: "Outfit-SemiBold", Helvetica;
+  --h3-font-family: "Outfit", Helvetica;
   --h3-font-weight: 600;
   --h3-font-size: 45px;
   --h3-letter-spacing: -1px;
   --h3-line-height: 55px;
   --h3-font-style: normal;
-  --h1-medium-font-family: "Outfit-Medium", Helvetica;
+  --h1-medium-font-family: "Outfit", Helvetica;
   --h1-medium-font-weight: 500;
   --h1-medium-font-size: 65px;
   --h1-medium-letter-spacing: -1px;
@@ -121,7 +122,7 @@ a {
   height: 962px;
   top: 5315px;
   left: 0;
-  background-image: url(./img/rectangle-5507.svg);
+  background-image: url(../img/rectangle-5507.svg);
   background-size: 100% 100%;
 }
 
@@ -167,7 +168,7 @@ a {
   height: 454px;
   top: 350px;
   left: 608px;
-  background-image: url(./img/rectangle-5493-1.svg);
+  background-image: url(../img/rectangle-5493-1.svg);
   background-size: 100% 100%;
 }
 
@@ -177,7 +178,7 @@ a {
   height: 454px;
   top: 350px;
   left: 140px;
-  background-image: url(./img/rectangle-5493.svg);
+  background-image: url(../img/rectangle-5493.svg);
   background-size: 100% 100%;
 }
 
@@ -187,7 +188,7 @@ a {
   height: 454px;
   top: 350px;
   left: 976px;
-  background-image: url(./img/rectangle-5488.svg);
+  background-image: url(../img/rectangle-5488.svg);
   background-size: 100% 100%;
 }
 
@@ -277,7 +278,7 @@ a {
   height: 454px;
   top: 350px;
   left: 1343px;
-  background-image: url(./img/rectangle-5.svg);
+  background-image: url(../img/rectangle-5.svg);
   background-size: 100% 100%;
 }
 
@@ -449,7 +450,7 @@ a {
   width: 319px;
   height: 60px;
   left: 3px;
-  background-image: url(./img/rectangle-10942.svg);
+  background-image: url(../img/rectangle-10942.svg);
   background-size: 100% 100%;
 }
 
@@ -915,7 +916,7 @@ a {
   left: 0;
   background-color: #32353e;
   border-radius: 5px;
-  background-image: url(./img/vector-image.png);
+  background-image: url(../img/vector-image.png);
   background-size: 100% 100%;
 }
 
@@ -1106,7 +1107,7 @@ a {
   height: 346px;
   top: 0;
   left: 0;
-  background-image: url(./img/viedo-image.png);
+  background-image: url(../img/viedo-image.png);
   background-size: 100% 100%;
 }
 
@@ -3652,4 +3653,1536 @@ a {
   line-height: var(--body-02-line-height);
   white-space: nowrap;
   font-style: var(--body-02-font-style);
+}
+
+
+
+.influencers {
+  background-color: #ffffff;
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: center;
+  width: 100%;
+}
+
+.influencers .influencer-influencers-v {
+  background-color: var(--white-color);
+  width: 100%;
+  /* height: 3389px; */
+  position: relative;
+}
+
+.influencers .influencer-group {
+  position: relative;
+  width: 29.3%;
+  height: 120px;
+  margin-top: 136px;
+  top: 0px;
+  left: 578px;
+}
+
+.influencers .influencer-overlap-group-wrapper {
+  position: relative;
+  width: 29.4%;
+  height: 75px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-overlap-group {
+  position: relative;
+  width: 29.3%;
+  height: 75px;
+}
+
+.influencers .influencer-rectangle {
+  position: relative;
+  width: 436px;
+  height: 10px;
+  top: 56px;
+  left: 64px;
+  background-color: #c2dbff;
+}
+
+.influencers .influencer-text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  color: var(--dark);
+  font-size: var(--h1-font-size);
+  text-align: center;
+  letter-spacing: var(--h1-letter-spacing);
+  line-height: var(--h1-line-height);
+  white-space: nowrap;
+  font-style: var(--h1-font-style);
+}
+
+.influencers .influencer-div {
+  position: absolute;
+  width: 19.9%;
+  height: 30px;
+  top: 90px;
+  left: 104px;
+}
+
+.influencers .influencer-homepage {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: var(--paragraph);
+  font-size: var(--h6-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-text-wrapper-2 {
+  position: absolute;
+  top: 0;
+  left: 154px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: var(--paragraph);
+  font-size: var(--h6-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: var(--dark);
+  font-size: var(--h6-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-rectangle-2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  left: 0;
+  background-color: #29ccb1;
+}
+
+.influencers .influencer-vector {
+  left: 138px;
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 12px;
+}
+
+.influencers .influencer-img {
+  left: 234px;
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 12px;
+}
+
+.influencers .influencer-overlap-wrapper {
+  position: relative;
+  width: 974px;
+  height: 264px;
+  bottom: 520px;
+  left: 375px;
+}
+
+.influencers .influencer-overlap {
+  position: relative;
+  width: 970px;
+  height: 264px;
+}
+
+.influencers .influencer-rectangle-3 {
+  position: absolute;
+  width: 970px;
+  height: 236px;
+  top: 28px;
+  left: 0;
+  background-color: #81f7ff;
+  border-radius: 40px;
+}
+
+.influencers .influencer-mask-group {
+  position: absolute;
+  width: 137px;
+  height: 129px;
+  top: 135px;
+  left: 0;
+}
+
+.influencers .influencer-caster {
+  position: absolute;
+  width: 234px;
+  height: 264px;
+  top: 0;
+  left: 691px;
+}
+
+.influencers .influencer-arabia-talents {
+  position: absolute;
+  width: 581px;
+  top: 73px;
+  left: 70px;
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  color: var(--dark);
+  font-size: var(--h4-font-size);
+  letter-spacing: var(--h4-letter-spacing);
+  line-height: var(--h4-line-height);
+  font-style: var(--h4-font-style);
+}
+
+.influencers .influencer-p {
+  position: absolute;
+  top: 185px;
+  left: 70px;
+  font-family: var(--h5-font-family);
+  font-weight: var(--h5-font-weight);
+  color: var(--dark);
+  font-size: var(--h5-font-size);
+  letter-spacing: var(--h5-letter-spacing);
+  line-height: var(--h5-line-height);
+  white-space: nowrap;
+  font-style: var(--h5-font-style);
+}
+
+.influencers .influencer-text-wrapper-4 {
+  position: relative;
+  width: 828px;
+  top: 59px;
+  left: 446px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: var(--paragraph);
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 150px;
+}
+
+.influencers .influencer-div-wrapper {
+  position: relative;
+  width: 260px;
+  height: 255px;
+  bottom: 255px;
+  left: 325px;
+}
+
+.influencers .influencer-overlap-2 {
+  position: relative;
+  height: 255px;
+}
+
+.influencers .influencer-group-wrapper {
+  position: absolute;
+  width: 260px;
+  height: 255px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-group-2 {
+  height: 255px;
+}
+
+.influencers .influencer-rectangle-wrapper {
+  position: relative;
+  width: 260px;
+  height: 255px;
+  background-image: url(../img/rectangle-34.png);
+  background-size: 100% 100%;
+}
+
+.influencers .influencer-rectangle-4 {
+  position: absolute;
+  width: 250px;
+  height: 245px;
+  top: 5px;
+  left: 5px;
+}
+
+.influencers .influencer-group-3 {
+  position: absolute;
+  width: 222px;
+  height: 32px;
+  top: 214px;
+  left: 22px;
+}
+
+.influencers .influencer-text-wrapper-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--h6-regular-font-family);
+  font-weight: var(--h6-regular-font-weight);
+  color: #ffffff;
+  font-size: var(--h6-regular-font-size);
+  text-align: center;
+  letter-spacing: var(--h6-regular-letter-spacing);
+  line-height: var(--h6-regular-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-regular-font-style);
+}
+
+.influencers .influencer-group-4 {
+  position: absolute;
+  width: 58px;
+  height: 32px;
+  top: 0;
+  left: 164px;
+}
+
+.influencers .influencer-element {
+  position: absolute;
+  top: 0;
+  left: 21px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.influencers .influencer-inner-plugin-iframe {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 7px;
+  left: 0;
+}
+
+.influencers .influencer-img-wrapper {
+  position: relative;
+  width: 260px;
+  height: 255px;
+  bottom: 510px;
+  left: 595px;
+  background-image: url(../img/rectangle-34.png);
+  background-size: 100% 100%;
+}
+
+.influencers .influencer-rectangle-5 {
+  position: absolute;
+  width: 250px;
+  height: 245px;
+  top: 5px;
+  left: 5px;
+  object-fit: cover;
+}
+
+.influencers .influencer-overlap-3 {
+  position: relative;
+  width: 697px;
+  height: 424px;
+  top: 0;
+  left: 506px;
+}
+
+.influencers .influencer-group-5 {
+  position: absolute;
+  width: 260px;
+  height: 255px;
+  top: 169px;
+  left: 359px;
+}
+
+.influencers .influencer-group-6 {
+  width: 260px;
+  height: 255px;
+}
+
+.influencers .influencer-group-7 {
+  position: relative;
+  background-image: url(../img/rectangle-34.png);
+  height: 255px;
+  background-size: 100% 100%;
+}
+
+.influencers .influencer-filter-pre-bar {
+  position: relative;
+  width: 666px;
+  height: 106px;
+  top: 0;
+  left: 31px;
+  background-color: #d7ebfd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 13px 1px #0000000a;
+}
+
+.influencers .influencer-frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  padding: 12px 24px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #a6a6a6;
+}
+
+.influencers .influencer-img-2 {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.influencers .influencer-frame-2 {
+  display: flex;
+  width: 240px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #a6a6a6;
+}
+
+.influencers .influencer-text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: #2d3958;
+  font-size: var(--h6-medium-font-size);
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: #00000080;
+  font-size: var(--h6-medium-font-size);
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-group-8 {
+  position: relative;
+  width: 22.8px;
+  height: 22.8px;
+  transform: rotate(90deg);
+}
+
+.influencers .influencer-vuesax-bold-arrow-up-wrapper {
+  width: 23px;
+  transform: rotate(-270deg);
+  position: relative;
+  height: 23px;
+}
+
+.influencers .influencer-vuesax-bold-arrow-up {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.influencers .influencer-frame-3 {
+  position: relative;
+  width: 240px;
+  height: 62px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #a6a6a6;
+}
+
+.influencers .influencer-text-wrapper-8 {
+  position: absolute;
+  top: 15px;
+  left: 32px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: #2d3958;
+  font-size: var(--h6-medium-font-size);
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-text-wrapper-9 {
+  position: absolute;
+  top: 15px;
+  left: 119px;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: #00000080;
+  font-size: var(--h6-medium-font-size);
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-group-9 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 20px;
+  left: 185px;
+  transform: rotate(90deg);
+}
+
+.influencers .influencer-group-10 {
+  transform: rotate(-270deg);
+  position: relative;
+  height: 23px;
+}
+
+.influencers .influencer-frame-4 {
+  display: flex;
+  flex-direction: column;
+  width: 237px;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px;
+  position: absolute;
+  top: 93px;
+  left: 349px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #b1b1b1;
+}
+
+.influencers .influencer-frame-5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.influencers .influencer-img-3 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.influencers .influencer-text-wrapper-10 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.influencers .influencer-text-wrapper-11 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #00000080;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.influencers .influencer-group-11 {
+  position: relative;
+  width: 260px;
+  height: 255px;
+  bottom: 765px;
+  left: 1135px;
+}
+
+.influencers .influencer-group-12 {
+  position: relative;
+  width: 1070px;
+  height: 255px;
+  bottom: 750px;
+  left: 325px;
+}
+
+.influencers .influencer-group-13 {
+  position: relative;
+  background-image: url(../img/rectangle-34-8.png);
+  height: 255px;
+  background-size: 100% 100%;
+}
+
+.influencers .influencer-group-14 {
+  position: absolute;
+  width: 260px;
+  height: 255px;
+  top: 0;
+  left: 270px;
+}
+
+.influencers .influencer-group-15 {
+  position: absolute;
+  width: 260px;
+  height: 255px;
+  top: 0;
+  left: 540px;
+}
+
+.influencers .influencer-group-16 {
+  position: absolute;
+  width: 260px;
+  height: 255px;
+  top: 0;
+  left: 810px;
+}
+
+.influencers .influencer-group-17 {
+  position: relative;
+  width: 1070px;
+  height: 255px;
+  bottom: 735px;
+  left: 325px;
+}
+
+.influencers .influencer-group-18 {
+  background-image: url(../img/rectangle-34.png);
+  height: 255px;
+  background-size: 100% 100%;
+}
+
+.influencers .influencer-iconex-light-up-wrapper {
+  position: relative;
+  width: 250px;
+  height: 245px;
+  top: 5px;
+  left: 5px;
+  background-image: url(../img/rectangle-39-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.influencers .influencer-iconex-light-up {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 208px;
+}
+
+.influencers .influencer-group-19 {
+  position: relative;
+  width: 1070px;
+  height: 255px;
+  bottom: 720px;
+  left: 325px;
+}
+
+.influencers .influencer-frame-6 {
+  display: inline-flex;
+  height: 55px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 600px;
+  left: 771px;
+  background-color: #0083ff;
+  border-radius: 10px;
+}
+
+.influencers .influencer-button {
+  all: unset;
+  box-sizing: border-box;
+  position: relative;
+  width: fit-content;
+  font-family: var(--h6-medium-font-family);
+  font-weight: var(--h6-medium-font-weight);
+  color: #ffffff;
+  font-size: var(--h6-medium-font-size);
+  letter-spacing: var(--h6-medium-letter-spacing);
+  line-height: var(--h6-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--h6-medium-font-style);
+}
+
+.influencers .influencer-group-20 {
+  position: relative;
+  width: 22.8px;
+  height: 22.8px;
+}
+
+.influencers .influencer-group-21 {
+  width: 23px;
+  transform: rotate(90deg);
+  position: relative;
+  height: 23px;
+}
+
+.influencers .influencer-vuesax-bold-arrow-up-2 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.influencers .influencer-group-22 {
+  position: absolute;
+  width: 100%;
+  height: 1090px;
+  top: 2299px;
+  left: 0;
+}
+
+.influencers .influencer-group-23 {
+  position: absolute;
+  width: 1442px;
+  height: 273px;
+  top: 0;
+  left: 240px;
+}
+
+.influencers .influencer-thank-you-for {
+  position: absolute;
+  top: 63px;
+  left: 438px;
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  color: var(--dark);
+  font-size: var(--h4-font-size);
+  text-align: center;
+  letter-spacing: var(--h4-letter-spacing);
+  line-height: var(--h4-line-height);
+  white-space: nowrap;
+  font-style: var(--h4-font-style);
+}
+
+.influencers .influencer-electronic-arts-logo-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 0;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-electronic-arts-logo {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 15px;
+  left: 65px;
+  object-fit: cover;
+}
+
+.influencers .influencer-epicgames-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 500px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-epicgames {
+  position: absolute;
+  width: 52px;
+  height: 60px;
+  top: 20px;
+  left: 74px;
+  object-fit: cover;
+}
+
+.influencers .influencer-huawei-logo-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 750px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-huawei-logo {
+  position: absolute;
+  width: 124px;
+  height: 70px;
+  top: 15px;
+  left: 38px;
+  object-fit: cover;
+}
+
+.influencers .influencer-talabat-logo-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 1000px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-talabat-logo {
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  top: 25px;
+  left: 24px;
+}
+
+.influencers .influencer-pngfind-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 1240px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-pngfind {
+  position: absolute;
+  width: 122px;
+  height: 50px;
+  top: 25px;
+  left: 39px;
+  object-fit: cover;
+}
+
+.influencers .influencer-activision-wrapper {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 173px;
+  left: 250px;
+  background-color: #f4f7f8;
+  border-radius: 12px;
+}
+
+.influencers .influencer-activision {
+  position: absolute;
+  width: 141px;
+  height: 36px;
+  top: 32px;
+  left: 30px;
+  object-fit: cover;
+}
+
+.influencers .influencer-about-our-company-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 0;
+  left: 615px;
+  background-color: #fff1ed;
+}
+
+.influencers .influencer-about-our-company {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--body-01-font-family);
+  font-weight: var(--body-01-font-weight);
+  color: var(--orange-accent);
+  font-size: var(--body-01-font-size);
+  letter-spacing: var(--body-01-letter-spacing);
+  line-height: var(--body-01-line-height);
+  white-space: nowrap;
+  font-style: var(--body-01-font-style);
+}
+
+.influencers .influencer-group-24 {
+  position: absolute;
+  width: 100%;
+  height: 499px;
+  top: 423px;
+  left: 0;
+  background-color: #f9fafb;
+}
+
+.influencers .influencer-overlap-4 {
+  position: relative;
+  width: 1513px;
+  height: 350px;
+  top: 74px;
+  left: 237px;
+}
+
+.influencers .influencer-shapes {
+  position: absolute;
+  width: 1513px;
+  height: 350px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-overlap-group-2 {
+  position: absolute;
+  width: 105px;
+  height: 150px;
+  top: 200px;
+  left: 8px;
+}
+
+.influencers .influencer-element-2 {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 0;
+  left: 41px;
+}
+
+.influencers .influencer-element-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 0;
+}
+
+.influencers .influencer-element-4 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 250px;
+  left: 1425px;
+  background-color: var(--mainyellow);
+  border-radius: 15px/15.02px;
+}
+
+.influencers .influencer-element-5 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 1258px;
+}
+
+.influencers .influencer-element-6 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 88px;
+  left: 1498px;
+  background-color: var(--mainred);
+  border-radius: 7.5px/7.51px;
+}
+
+.influencers .influencer-element-7 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 20px;
+  left: 0;
+  background-color: var(--actionturquoise);
+  border-radius: 7.5px/7.51px;
+}
+
+.influencers .influencer-we-ve-helped-brands {
+  position: absolute;
+  width: 826px;
+  top: 77px;
+  left: 310px;
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  color: var(--dark);
+  font-size: var(--h4-font-size);
+  text-align: center;
+  letter-spacing: var(--h4-letter-spacing);
+  line-height: var(--h4-line-height);
+  font-style: var(--h4-font-style);
+}
+
+.influencers .influencer-are-you-ready-to {
+  position: absolute;
+  top: 184px;
+  left: 332px;
+  font-family: var(--h5-font-family);
+  font-weight: var(--h5-font-weight);
+  color: var(--paragraph);
+  font-size: var(--h5-font-size);
+  text-align: center;
+  letter-spacing: var(--h5-letter-spacing);
+  line-height: var(--h5-line-height);
+  white-space: nowrap;
+  font-style: var(--h5-font-style);
+}
+
+.influencers .influencer-group-25 {
+  position: absolute;
+  width: 140px;
+  height: 49px;
+  top: 260px;
+  left: 647px;
+}
+
+.influencers .influencer-overlap-group-3 {
+  position: relative;
+  width: 138px;
+  height: 49px;
+  background-color: #0083ff;
+  border-radius: 10px;
+}
+
+.influencers .influencer-text-wrapper-12 {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-group-26 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 14px;
+  left: 107px;
+}
+
+.influencers .influencer-group-27 {
+  position: relative;
+  height: 23px;
+  transform: rotate(90deg);
+}
+
+.influencers .influencer-group-28 {
+  position: absolute;
+  width: 100%;
+  height: 168px;
+  top: 922px;
+  left: 0;
+  background-color: #292f3a;
+}
+
+.influencers .influencer-overlap-5 {
+  position: absolute;
+  width: 1440px;
+  height: 93px;
+  top: 41px;
+  left: 240px;
+}
+
+.influencers .influencer-line {
+  width: 626px;
+  left: 0;
+  position: absolute;
+  height: 1px;
+  top: 50px;
+  object-fit: cover;
+}
+
+.influencers .influencer-line-2 {
+  width: 639px;
+  left: 801px;
+  position: absolute;
+  height: 1px;
+  top: 50px;
+  object-fit: cover;
+}
+
+.influencers .influencer-white {
+  width: 207px;
+  height: 93px;
+  left: 608px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.influencers .influencer-copyright {
+  position: absolute;
+  height: 28px;
+  top: 111px;
+  left: 349px;
+  font-family: var(--body-01-font-family);
+  font-weight: var(--body-01-font-weight);
+  color: #f4f7f8;
+  font-size: var(--body-01-font-size);
+  text-align: center;
+  letter-spacing: var(--body-01-letter-spacing);
+  line-height: var(--body-01-line-height);
+  white-space: nowrap;
+  font-style: var(--body-01-font-style);
+}
+
+.influencers .influencer-group-29 {
+  position: absolute;
+  width: 317px;
+  height: 28px;
+  top: 112px;
+  left: 1204px;
+}
+
+.influencers .influencer-text-wrapper-13 {
+  position: absolute;
+  height: 28px;
+  top: 0;
+  left: 0;
+  font-family: var(--body-01-font-family);
+  font-weight: var(--body-01-font-weight);
+  color: #ffffff;
+  font-size: var(--body-01-font-size);
+  text-align: center;
+  letter-spacing: var(--body-01-letter-spacing);
+  line-height: var(--body-01-line-height);
+  white-space: nowrap;
+  font-style: var(--body-01-font-style);
+}
+
+.influencers .influencer-text-wrapper-14 {
+  position: absolute;
+  height: 28px;
+  top: 0;
+  left: 203px;
+  font-family: var(--body-01-font-family);
+  font-weight: var(--body-01-font-weight);
+  color: #ffffff;
+  font-size: var(--body-01-font-size);
+  text-align: center;
+  letter-spacing: var(--body-01-letter-spacing);
+  line-height: var(--body-01-line-height);
+  white-space: nowrap;
+  font-style: var(--body-01-font-style);
+}
+
+.influencers .influencer-group-30 {
+  position: absolute;
+  width: 244px;
+  height: 28px;
+  top: 42px;
+  left: 433px;
+}
+
+.influencers .influencer-text-wrapper-15 {
+  position: absolute;
+  height: 28px;
+  top: 0;
+  left: 138px;
+  font-family: var(--body-01-font-family);
+  font-weight: var(--body-01-font-weight);
+  color: #ffffff;
+  font-size: var(--body-01-font-size);
+  text-align: center;
+  letter-spacing: var(--body-01-letter-spacing);
+  line-height: var(--body-01-line-height);
+  white-space: nowrap;
+  font-style: var(--body-01-font-style);
+}
+
+.influencers .influencer-group-31 {
+  position: absolute;
+  width: 294px;
+  height: 24px;
+  top: 39px;
+  left: 1214px;
+}
+
+.influencers .influencer-img-4 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-group-32 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 54px;
+}
+
+.influencers .influencer-group-33 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 108px;
+}
+
+.influencers .influencer-group-34 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 162px;
+}
+
+.influencers .influencer-tiktok {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 216px;
+}
+
+.influencers .influencer-youtube {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 270px;
+}
+
+.influencers .influencer-overlap-6 {
+  position: absolute;
+  width: 0px;
+  height: 453px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-frame-7 {
+  position: absolute;
+  width: 239px;
+  height: 354px;
+  top: 64px;
+  left: 1440px;
+}
+
+.influencers .influencer-group-35 {
+  position: absolute;
+  width: 100%;
+  height: 136px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-header {
+  position: absolute;
+  width: 1440px;
+  height: 76px;
+  top: 60px;
+  left: 240px;
+  background-color: transparent;
+}
+
+.influencers .influencer-navbar {
+  position: absolute;
+  width: 728px;
+  height: 25px;
+  top: 26px;
+  left: 383px;
+}
+
+.influencers .influencer-text-wrapper-16 {
+  left: 0;
+  color: #2d3958;
+  position: absolute;
+  top: 0;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-text-wrapper-17 {
+  left: 94px;
+  color: #2d3958;
+  position: absolute;
+  top: 0;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-group-36 {
+  position: absolute;
+  width: 66px;
+  height: 25px;
+  top: 0;
+  left: 210px;
+}
+
+.influencers .influencer-group-37 {
+  position: absolute;
+  width: 106px;
+  height: 25px;
+  top: 0;
+  left: 616px;
+}
+
+.influencers .influencer-frame-8 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  left: 84px;
+}
+
+.influencers .influencer-text-wrapper-18 {
+  left: 337px;
+  color: #0083ff;
+  position: absolute;
+  top: 0;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-text-wrapper-19 {
+  position: absolute;
+  top: 0;
+  left: 495px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  color: #2d3958;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-white-2 {
+  width: 150px;
+  height: 76px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.influencers .influencer-group-38 {
+  position: absolute;
+  width: 140px;
+  height: 49px;
+  top: 14px;
+  left: 1302px;
+}
+
+.influencers .influencer-group-39 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #ebeef6;
+}
+
+.influencers .influencer-language-selections {
+  position: absolute;
+  width: 118px;
+  height: 25px;
+  top: 12px;
+  left: 240px;
+}
+
+.influencers .influencer-text-wrapper-20 {
+  position: absolute;
+  top: 0;
+  left: 27px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: var(--paragraph);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.influencers .influencer-frame-9 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 92px;
+}
+
+.influencers .influencer-group-40 {
+  position: absolute;
+  width: 195px;
+  height: 20px;
+  top: 15px;
+  left: 1485px;
+}
+
+.influencers .influencer-group-41 {
+  position: relative;
+  height: 20px;
+}
+
+.influencers .influencer-group-42 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+
+.influencers .influencer-group-43 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 35px;
+}
+
+.influencers .influencer-tiktok-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 105px;
+}
+
+.influencers .influencer-group-44 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 140px;
+}
+
+.influencers .influencer-youtube-2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 175px;
+}
+
+.influencers .influencer-group-45 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 70px;
+}
+
+.influencers .influencer-group-46 {
+  position: absolute;
+  width: 129px;
+  height: 26px;
+  top: 13px;
+  left: 898px;
+}
+
+.influencers .influencer-toggle {
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  top: 1px;
+  left: 37px;
+}
+
+.influencers .influencer-overlap-group-4 {
+  position: relative;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.influencers .influencer-rectangle-6 {
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.influencers .influencer-oval {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 3px;
+}
+
+.influencers .influencer-text-wrapper-21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--body-02-font-family);
+  font-weight: var(--body-02-font-weight);
+  color: var(--paragraph);
+  font-size: var(--body-02-font-size);
+  letter-spacing: var(--body-02-letter-spacing);
+  line-height: var(--body-02-line-height);
+  white-space: nowrap;
+  font-style: var(--body-02-font-style);
+}
+
+.influencers .influencer-text-wrapper-22 {
+  position: absolute;
+  top: 0;
+  left: 89px;
+  font-family: var(--body-02-font-family);
+  font-weight: var(--body-02-font-weight);
+  color: var(--paragraph);
+  font-size: var(--body-02-font-size);
+  letter-spacing: var(--body-02-letter-spacing);
+  line-height: var(--body-02-line-height);
+  white-space: nowrap;
+  font-style: var(--body-02-font-style);
+}
+
+.influencers .influencer-dots {
+  position: relative;
+  width: 84px;
+  height: 161px;
+  bottom: 2150px;
+  left: 0;
+}
+
+.influencers .influencer-dots-2 {
+  position: relative;
+  width: 81px;
+  height: 161px;
+  bottom: 1200px;
+  left: 1510px;
 }

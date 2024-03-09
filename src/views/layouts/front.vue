@@ -29,8 +29,8 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page">
-      <div class="element-home-page-v">
+    <div class="element-home-page influencers">
+      <div class="element-home-page-v influencers-v">
         <Header></Header>
         <slot />
         <Partners></Partners>
