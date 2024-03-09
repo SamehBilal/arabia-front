@@ -1,5 +1,17 @@
+<script>
+export default {
+    components: {},
+    props: {
+        partners: {
+            type: Boolean,
+            default: true,
+        },
+    },
+}
+</script>
+
 <template>
-    <div class="group-15">
+    <div class="group-15" v-if="partners">
         <div class="frame-4">
           <div class="about-our-company-5">-Clients And Partners-</div>
         </div>

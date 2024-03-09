@@ -9,7 +9,7 @@ export default {
   components: { Layout,PageHeader },
   data() {
     return {
-      title: "Popular Influencers",
+      title: "Professional On-Air Talents",
       items: [
         {
           text: "Homepage"
@@ -18,11 +18,11 @@ export default {
           text: "Talents",
         },
         {
-          text: "Influencers",
+          text: "On-Air Talents",
           active: true
         }
       ],
-      desc: "We pair your brand up with the best social media influencers and content creators available to promote your brand and get you the exposure you want in the region.",
+      desc: "If you are looking to hire commentators, analysts or event hosts for your esports tournament, television show or corporate event, Arabia Talents's dedicated broadcast talent team can help source your ideal talent, and if requested, can advise you on the most suitable talent for your event.",
     };
   },
   methods: {
@@ -238,17 +238,17 @@ export default {
             src="@/assets/img/vuesax-bold-arrow-up-5.png" /></div>
       </div>
     </div>
-    <router-link to="on-air-all">
+    <router-link to="influencers-all">
     <div class="influencer-overlap-wrapper">
       <div class="influencer-overlap">
         <div class="influencer-rectangle-3"></div>
         <img class="influencer-mask-group" src="@/assets/img/inf-mask-group.png" />
-        <img class="influencer-caster" src="@/assets/img/caster.png" />
-        <p class="influencer-arabia-talents">Arabia Talents Features Also Professional On-air Esports Talents.</p>
-        <p class="influencer-p">Hosts - Casters - Analysts</p>
+        <img class="influencer-caster-2" src="@/assets/img/caster-2.png" />
+        <p class="influencer-arabia-talents">Arabia Talents features also influencers and content creators.</p>
+        <p class="influencer-p">Tech - Beauty - Gaming</p>
       </div>
-    </div>
-  </router-link>
+    </div>      
+</router-link>  
     <!-- <img class="influencer-dots" src="@/assets/img/inf-dots.png" />
         <img class="influencer-dots-2" src="@/assets/img/inf-dots-1.png" /> -->
   </Layout>

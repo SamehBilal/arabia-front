@@ -104,6 +104,30 @@ export default [
         component: () => import('../views/pages/website/influencers.vue')
     },
     {
+        path: '/cosplayers-all',
+        name: 'AllCosplayers',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/cosplayers.vue')
+    },
+    {
+        path: '/on-air-all',
+        name: 'AllOnAir',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/on-air.vue')
+    },
+    {
+        path: '/on-air-single',
+        name: 'OnAirProfile',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/on-air-profile.vue')
+    },
+    {
         path: '/users',
         name: 'Users',
         meta: {

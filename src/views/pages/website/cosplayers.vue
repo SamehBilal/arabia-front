@@ -9,7 +9,7 @@ export default {
   components: { Layout,PageHeader },
   data() {
     return {
-      title: "Popular Influencers",
+      title: "Popular Cosplayers",
       items: [
         {
           text: "Homepage"
@@ -18,11 +18,11 @@ export default {
           text: "Talents",
         },
         {
-          text: "Influencers",
+          text: "Cosplayers",
           active: true
         }
       ],
-      desc: "We pair your brand up with the best social media influencers and content creators available to promote your brand and get you the exposure you want in the region.",
+      desc: "We pair your brand up with the best social media cosplayers and content creators available to promote your brand and get you the exposure you want in the region.",
     };
   },
   methods: {
@@ -248,7 +248,7 @@ export default {
         <p class="influencer-p">Hosts - Casters - Analysts</p>
       </div>
     </div>
-  </router-link>
+</router-link>
     <!-- <img class="influencer-dots" src="@/assets/img/inf-dots.png" />
         <img class="influencer-dots-2" src="@/assets/img/inf-dots-1.png" /> -->
   </Layout>

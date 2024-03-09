@@ -14,6 +14,20 @@ export default {
     Partners,
     TopFooter
   },
+  props: {
+    isHeaderMultiple: {
+      type: Boolean,
+      default: true,
+    },
+    isFooterMultiple: {
+      type: Boolean,
+      default: true,
+    },
+    partners: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     { }
   },
@@ -29,13 +43,12 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page influencers">
+    <div class="element-home-page influencers esport">
       <div class="element-home-page-v influencers-v">
-        <Header></Header>
+        <Header :header="isHeaderMultiple"></Header>
         <slot />
-        <Partners></Partners>
-        <TopFooter></TopFooter>
-        <Footer></Footer>
+        <Partners :partners="partners"></Partners>
+        <Footer :footer="isFooterMultiple"></Footer>
         <!-- <MainSection></MainSection> -->
         <!-- <vertical v-if="layoutType === 'vertical'" :layout="layoutType">
       <slot />
