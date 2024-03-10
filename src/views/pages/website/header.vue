@@ -72,6 +72,10 @@ export default {
           </div>
         </div>
       </div>
+      <div class="esport-menus" v-if="header === false">
+        <div class="esport-on-air-talents">On-air Talents</div>
+        <div class="esport-text-wrapper-24">More Influencers</div>
+      </div>
     </header>
   </div>
 </template>

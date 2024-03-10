@@ -128,6 +128,14 @@ export default [
         component: () => import('../views/pages/website/talents/on-air-profile.vue')
     },
     {
+        path: '/influencer-single',
+        name: 'InfluencerProfile',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/influencer-profile.vue')
+    },
+    {
         path: '/users',
         name: 'Users',
         meta: {
