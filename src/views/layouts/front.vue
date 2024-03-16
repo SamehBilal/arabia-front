@@ -43,7 +43,7 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page influencers esport">
+    <div class="element-home-page influencers esport talents">
       <div class="element-home-page-v influencers-v">
         <Header :header="isHeaderMultiple"></Header>
         <slot />

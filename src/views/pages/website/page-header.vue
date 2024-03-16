@@ -32,13 +32,13 @@ export default {
         <div class="influencer-div">
             <div class="influencer-homepage">{{ items[0].text }}</div>
             <div class="influencer-text-wrapper-2">{{ items[1].text }}</div>
-            <div class="influencer-text-wrapper-3">{{ items[2].text }}</div>
+            <div class="influencer-text-wrapper-3" v-if="items[2]">{{ items[2].text }}</div>
             <div class="influencer-rectangle-2"></div>
             <img class="influencer-vector" src="@/assets/img/vector-60.png" />
-            <img class="influencer-img" src="@/assets/img/vector-60.png" />
+            <img class="influencer-img" v-if="items[2]" src="@/assets/img/vector-60.png" />
         </div>
     </div>
-    <p class="influencer-text-wrapper-4">
+    <p class="influencer-text-wrapper-4" v-if="desc">
         {{ desc }}
     </p>
     <!-- end page header -->
