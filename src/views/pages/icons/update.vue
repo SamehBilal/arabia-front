@@ -265,7 +265,7 @@ export default {
   <Layout>
     <PageHeader :title="title" :items="items" />
     <BRow>
-      <BCol lg="9">
+      <!-- <BCol lg="9">
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Add Icon</h4>
@@ -879,8 +879,8 @@ export default {
             </div>
           </div>
         </div>
-      </BCol>
-      <BCol lg="3">
+      </BCol> -->
+      <BCol lg="12">
         <BCard no-body>
           <BCardBody>
             <BTabs justified nav-class="nav-tabs-custom" content-class="p-3 text-muted">

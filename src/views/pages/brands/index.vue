@@ -400,7 +400,7 @@ export default {
     <!-- end row -->
 
     <!-- Modal -->
-    <BModal id="modal-1" v-model="showmodal" title="Add User" title-class="text-dark font-18" hide-footer>
+    <BModal id="modal-1" v-model="showmodal" title="Add Client" title-class="text-dark font-18" hide-footer>
       <form @submit.prevent="handleSubmit">
         <div class="mb-3">
           <label class="form-label" for="name">Name</label>

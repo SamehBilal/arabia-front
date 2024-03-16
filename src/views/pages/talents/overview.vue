@@ -13,6 +13,7 @@ import Chat from "./chat.vue";
 import Transaction from './transaction.vue';
 import barChartCom from './bar-chart.vue';
 import doughnutchart from './doughnutchart.vue';
+import genderchart from './gender-chart.vue';
 import {
   barChart,
 } from "./data-apex";
@@ -34,7 +35,8 @@ export default {
     Chat,
     Transaction,
     barChartCom,
-    doughnutchart
+    doughnutchart,
+    genderchart
   },
   data() {
     return {
@@ -72,11 +74,13 @@ export default {
       </div> -->
     </div>
     <div class="row">
-      
-      <div class="col-lg-5">
+      <div class="col-lg-4">
+        <genderchart />
+      </div>
+      <div class="col-lg-4">
         <RecentActivity />
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-4">
         <doughnutchart />
       </div>
       <!-- <div class="col-lg-8">

@@ -12,6 +12,6 @@ export default {
 
 <template>
     <Layout>
-        Home
+        contact us
     </Layout>
 </template>

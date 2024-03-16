@@ -189,6 +189,11 @@ export default {
                           }">{{ ordersData.item.status }}</div>
                     </template>
                     <template v-slot:cell(action)="ordersData">
+                      <router-link to="influencer-single-1">
+                      <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="View">
+                            <i class="mdi mdi-eye font-size-18"></i>
+                          </a>
+                        </router-link>
                       <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
                             <i class="mdi mdi-pencil font-size-18"></i>
                           </a>

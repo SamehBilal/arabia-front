@@ -76,6 +76,7 @@ export default {
       </div>
     </div>
     <div class="influencer-group-12">
+      <router-link to="influencer-single">
       <div class="influencer-group-wrapper">
         <div class="influencer-group-2">
           <div class="influencer-group-6">
@@ -91,6 +92,8 @@ export default {
           </div>
         </div>
       </div>
+    </router-link>
+    <router-link to="influencer-single">
       <div class="influencer-group-14">
         <div class="influencer-group-2">
           <div class="influencer-group-6">
@@ -99,6 +102,8 @@ export default {
           </div>
         </div>
       </div>
+    </router-link>
+    <router-link to="influencer-single">
       <div class="influencer-group-15">
         <div class="influencer-group-2">
           <div class="influencer-group-6">
@@ -107,6 +112,8 @@ export default {
           </div>
         </div>
       </div>
+    </router-link>
+      <router-link to="influencer-single">
       <div class="influencer-group-16">
         <div class="influencer-group-2">
           <div class="influencer-group-6">
@@ -115,8 +122,10 @@ export default {
           </div>
         </div>
       </div>
+    </router-link>
     </div>
     <div class="influencer-group-12">
+      <router-link to="influencer-single">
       <div class="influencer-group-wrapper">
         <div class="influencer-group-2">
           <div class="influencer-group-6">
@@ -132,6 +141,7 @@ export default {
           </div>
         </div>
       </div>
+    </router-link>
       <div class="influencer-group-14">
         <div class="influencer-group-2">
           <div class="influencer-group-6">

@@ -14,7 +14,7 @@ export default {
     <Layout :isHeaderMultiple="false" :partners="false" :isFooterMultiple="false">
         <div class="esport-overlap">
             <!-- <img class="esport-frame" src="@/assets/img/frame-4@2x.png" /> -->
-            <img class="esport-rectangle" src="@/assets/img/rectangle-4.png" />
+            <img class="esport-rectangle" src="@/assets/img/cover-2.jpg" />
             <div class="esport-influencer-overlap-group-wrapper">
                 <div class="esport-influencer-div-wrapper">
                     <div class="esport-influencer-text-wrapper-2">View Insights</div>
@@ -25,12 +25,12 @@ export default {
                     <div class="esport-contact-me">Contact Me</div>
                 </div>
             </div>
-            <img class="esport-ellipse" src="@/assets/img/ellipse-1@2x.png" />
+            <img class="esport-ellipse" style="border-radius: 50%;" src="@/assets/img/rectangle-39-1.png" />
             <img class="esport-influencer-inner-plugin-iframe" src="@/assets/img/inner-plugin-iframe@2x.png" />
             <p class="esport-text-wrapper">Total Reach: 25.5m</p>
             <div class="esport-group-2">
                 <div class="esport-div-wrapper">
-                    <div class="esport-text-wrapper-2">ferran_torres69</div>
+                    <div class="esport-text-wrapper-2">sameh_bilal147</div>
                 </div>
                 <img class="esport-influencer-img" src="@/assets/img/group-1000003245.svg" />
                 <!-- <div class="ejsport-vector-wrapper">
@@ -60,7 +60,7 @@ export default {
                 <div class="esport-influencer-text-wrapper-5">1.5M</div>
             </div>
             <div class="esport-influencer-overlap-7">
-                <div class="esport-influencer-text-wrapper-5">N/A</div>
+                <div class="esport-influencer-text-wrapper-5">-</div>
                 <img class="esport-influencer-img-2" src="@/assets/img/snapchat.svg" />
             </div>
             <div class="esport-influencer-overlap-8">

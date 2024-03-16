@@ -276,26 +276,26 @@ const pieChart = {
     legend: {
         orient: 'vertical',
         left: 'left',
-        data: ['Laptop', 'Tablet', 'Mobile', 'Others', 'Desktop'],
+        data: ['Male', 'Female',],
         textStyle: {
             color: '#999'
         }
     },
-    color: ['#556ee6', '#f1b44c', '#f46a6a', '#50a5f1', '#34c38f'],
+    color: ['#556ee6', '#f1b44c', /* '#f46a6a', '#50a5f1', '#34c38f' */],
     series: [{
-        name: 'Total sales',
+        name: 'Total Talents (Gender)',
         type: 'pie',
         radius: '55%',
         center: ['50%', '60%'],
         data: [{
-            value: 335,
-            name: 'Laptop'
+            value: 60,
+            name: 'Male'
         },
         {
-            value: 310,
-            name: 'Tablet'
+            value: 40,
+            name: 'Female'
         },
-        {
+        /* {
             value: 234,
             name: 'Mobile'
         },
@@ -306,7 +306,7 @@ const pieChart = {
         {
             value: 1548,
             name: 'Desktop'
-        }
+        } */
         ],
         // itemStyle: {
         //     emphasis: {

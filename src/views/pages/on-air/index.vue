@@ -1,6 +1,7 @@
 <script>
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header.vue";
+import { VueDraggableNext } from 'vue-draggable-next'
 
 /**
  * Orders Component
@@ -8,7 +9,8 @@ import PageHeader from "@/components/page-header.vue";
 export default {
   components: {
     Layout,
-    PageHeader
+    PageHeader,
+    draggable: VueDraggableNext,
   },
   data() {
     return {
@@ -24,6 +26,7 @@ export default {
       ],
       ordersData: [
         {
+          order: 1,
           created_at: "28 Mar, 2024",
           name: "Frank Dean",
           total_followers: "$164",
@@ -31,6 +34,7 @@ export default {
           status: "Inactive"
         },
         {
+          order: 2,
           created_at: "28 Mar, 2024",
           name: "Eddy Torres",
           total_followers: "$141",
@@ -38,6 +42,7 @@ export default {
           status: "Active"
         },
         {
+          order: 3,
           created_at: "29 Mar, 2024",
           name: "Jamison Clark",
           total_followers: "$123",
@@ -45,6 +50,7 @@ export default {
           status: "Active"
         },
         {
+          order: 4,
           created_at: "30 Mar, 2024",
           name: "Jewel Buckley",
           total_followers: "$112",
@@ -52,6 +58,7 @@ export default {
           status: "Active"
         },
         {
+          order: 5,
           created_at: "31 Mar, 2024",
           name: "Jeffrey Waltz",
           total_followers: "$105",
@@ -59,6 +66,7 @@ export default {
           status: "Inactive"
         },
         {
+          order: 6,
           created_at: "01 Apr, 2024",
           name: "Jefferson Allen",
           total_followers: "$160",
@@ -66,6 +74,7 @@ export default {
           status: "Active"
         },
         {
+          order: 7,
           created_at: "02 Apr, 2024",
           name: "Paul Jones",
           total_followers: "$183",
@@ -73,6 +82,7 @@ export default {
           status: "Active"
         },
         {
+          order: 8,
           created_at: "03 Apr, 2024",
           name: "Donald Bailey",
           total_followers: "$146",
@@ -80,26 +90,13 @@ export default {
           status: "Active"
         },
         {
+          order: 9,
           created_at: "03 Apr, 2024",
           name: "Jimmy Barker",
           total_followers: "$165",
           role: "Analysts",
           status: "Inactive"
         },
-        {
-          created_at: "04 Apr, 2024",
-          name: "Walter Brown",
-          total_followers: "$172",
-          role: "Casters",
-          status: "Active"
-        },
-        {
-          created_at: "06 Apr, 2024",
-          name: "James Hamilton",
-          total_followers: "$152",
-          role: "Hosts",
-          status: "Active"
-        }
       ],
       totalRows: 1,
       tabIndex: 1,
@@ -108,9 +105,10 @@ export default {
       pageOptions: [10, 25, 50, 100],
       filter: null,
       filterOn: [],
-      sortBy: "name",
+      sortBy: "order",
       sortDesc: false,
       fields: [
+        { key: "order", sortable: true, label: "Order" },
         { key: "name", sortable: true, label: "Name" },
         { key: "created_at", sortable: true, label: "Created at" },
         { key: "role", sortable: true, label: "Role" },
@@ -125,7 +123,7 @@ export default {
      */
     rows() {
       return this.ordersData.length;
-    }
+    },
   },
   mounted() {
     // Set the initial number of items
@@ -139,7 +137,7 @@ export default {
       // Trigger pagination to update the number of buttons/pages due to filtering
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
-    }
+    },
   }
 };
 </script>
@@ -177,32 +175,49 @@ export default {
                   <!-- End search -->
                 </div>
                 <div class="table-responsive mb-0">
-                  <BTable class="table-centered datatable dt-responsive nowrap" :items="ordersData" :fields="fields" :total-rows="rows" responsive="sm" :per-page="perPage" :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter" :filter-included-fields="filterOn" @filtered="onFiltered">
+                  <BTable id="table" class="table-centered datatable dt-responsive nowrap draggable-table"
+                    :items="ordersData" :fields="fields" :total-rows="rows" responsive="sm" :per-page="perPage"
+                    :current-page="currentPage" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :filter="filter"
+                    :filter-included-fields="filterOn" @filtered="onFiltered">
+                    <!-- <template v-slot:row-details(1)="ordersData">
+                      
+                    </template> -->
+                    <template v-slot:cell(order)="ordersData" style="width: 10px;">
+                      <draggable class="list-group" group="orders" :list="ordersData">
+                        <span><i class="mdi mdi-drag draggable font-size-18"></i> {{ ordersData.item.order }}</span>
+                      </draggable>
+                     
+                    </template>
                     <template v-slot:cell(name)="ordersData">
                       <img src="@/assets/images/product/img-5.png" style="height: 32px;margin-right: 10px;" alt
-                            class="img-rounded" /> 
+                        class="img-rounded" />
                       <span>{{ ordersData.item.name }}</span>
                     </template>
                     <template v-slot:cell(role)="ordersData">
                       <div class="badge font-size-12" :class="{
-                          'bg-dark-subtle text-dark': `${ordersData.item.role}` === 'Hosts',
-                          'bg-info-subtle text-info': `${ordersData.item.role}` === 'Casters',
-                          'bg-secondary-subtle text-secondary': `${ordersData.item.role}` === 'Analysts'
-                        }">{{ ordersData.item.role }}</div>
+      'bg-dark-subtle text-dark': `${ordersData.item.role}` === 'Hosts',
+      'bg-info-subtle text-info': `${ordersData.item.role}` === 'Casters',
+      'bg-secondary-subtle text-secondary': `${ordersData.item.role}` === 'Analysts'
+    }">{{ ordersData.item.role }}</div>
                     </template>
                     <template v-slot:cell(status)="ordersData">
                       <div class="badge font-size-12" :class="{
-                            'bg-success-subtle text-success': `${ordersData.item.status}` === 'Active',
-                            'bg-warning-subtle text-danger': `${ordersData.item.status}` === 'Inactive'
-                          }">{{ ordersData.item.status }}</div>
+      'bg-success-subtle text-success': `${ordersData.item.status}` === 'Active',
+      'bg-warning-subtle text-danger': `${ordersData.item.status}` === 'Inactive'
+    }">{{ ordersData.item.status }}</div>
                     </template>
                     <template v-slot:cell(action)="ordersData">
+                      <router-link to="on-air-single-1">
+                        <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="View">
+                          <i class="mdi mdi-eye font-size-18"></i>
+                        </a>
+                      </router-link>
                       <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="Edit">
-                            <i class="mdi mdi-pencil font-size-18"></i>
-                          </a>
-                          <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
-                            <i class="mdi mdi-trash-can font-size-18"></i>
-                          </a>  
+                        <i class="mdi mdi-pencil font-size-18"></i>
+                      </a>
+                      <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
+                        <i class="mdi mdi-trash-can font-size-18"></i>
+                      </a>
                     </template>
                   </BTable>
                 </div>
@@ -224,3 +239,9 @@ export default {
     </div>
   </Layout>
 </template>
+
+<style>
+.draggable {
+  cursor: grabbing;
+}
+</style>

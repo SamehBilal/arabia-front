@@ -47,22 +47,31 @@ export default {
         <router-link to="front">
           <div class="text-wrapper-42">Home</div>
         </router-link>
-        <a href="#" class="text-wrapper-43">Services</a>
+        <router-link to="services">
+        <div class="text-wrapper-43">Services</div>
+      </router-link>
         <div class="group-72">
-          <router-link to="influencers-all">
+          <router-link to="talents">
             <div class="text-wrapper-42 active">Talents</div>
           </router-link>
           <img class="frames-9" src="@/assets/img/frame-2.svg" />
         </div>
-        <a href="#" class="text-wrapper-44">Case Studies</a>
-        <a href="#" class="text-wrapper-45">About Us</a>
+        <router-link to="case-studies">
+        <div class="text-wrapper-44">Case Studies</div>
+      </router-link>
+      <router-link to="about-us">
+        <div class="text-wrapper-45">About Us</div>
+      </router-link>
         <div class="group-73">
           <a href="#" class="text-wrapper-42">Branches</a>
           <img class="frame-9" src="@/assets/img/frame-2.svg" />
         </div>
       </div>
+      <router-link to="front">
       <img class="white-2" src="@/assets/img/white-1.png" />
+    </router-link>
       <div class="group-74" v-if="header">
+        <router-link to="contact-us">
         <div class="overlap-group-8">
           <div class="text-wrapper-23">Let’s Talk</div>
           <div class="group-18">
@@ -71,10 +80,17 @@ export default {
             </div>
           </div>
         </div>
+      </router-link>
       </div>
       <div class="esport-menus" v-if="header === false">
+      <router-link to="on-air-all">
+
         <div class="esport-on-air-talents">On-air Talents</div>
+        </router-link>
+      <router-link to="influencers-all">
+
         <div class="esport-text-wrapper-24">More Influencers</div>
+        </router-link>
       </div>
     </header>
   </div>

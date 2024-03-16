@@ -1,4 +1,5 @@
 <script>
+import DatePicker from "vue3-datepicker";
 import Layout from "../../layouts/main.vue";
 import PageHeader from "@/components/page-header.vue";
 import appConfig from "@/app.config";
@@ -29,7 +30,7 @@ export default {
     title: "Add Cosplayer",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader, DropZone, Multiselect },
+  components: { DatePicker,Layout, PageHeader, DropZone, Multiselect },
   data() {
     return {
       title: "Add Cosplayer",
@@ -43,6 +44,21 @@ export default {
           active: true
         }
       ],
+      options3: [
+        "Egypt",
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Qatar",
+        "Jordan",
+        "Tunisia",
+        "Libya",
+      ],
+      defaultdate: "",
+      autoClose: "",
+      daterange: "",
+      demoMonth: "",
+      demoYear: "",
+      time: null,
       customersData: [
         {
           name: "Carolyn Harvey",
@@ -427,17 +443,33 @@ export default {
                           </span>
                         </div>
                       </div>
-                      <div class="mt-4 mt-lg-0">
-                        <h5 class="font-size-14 mb-4">Gender</h5>
-                        <div class="form-check custom-radio mb-3">
-                          <input type="radio" id="customRadio1" name="customRadio" class="form-check-input" />
-                          <label class="form-check-label" for="customRadio1">Female</label>
+                      <BRow>
+                        <BCol md="6">
+                        <div class="mt-4 mt-lg-0">
+                          <h5 class="font-size-14 mb-4">Gender</h5>
+                          <div class="form-check custom-radio mb-3">
+                            <input type="radio" id="customRadio1" name="customRadio" class="form-check-input" />
+                            <label class="form-check-label" for="customRadio1">Female</label>
+                          </div>
+                          <div class="form-check custom-radio custom-control-right">
+                            <input type="radio" id="customRadio2" name="customRadio" class="form-check-input" checked />
+                            <label class="form-check-label" for="customRadio2">Male</label>
+                          </div>
                         </div>
-                        <div class="form-check custom-radio custom-control-right">
-                          <input type="radio" id="customRadio2" name="customRadio" class="form-check-input" checked />
-                          <label class="form-check-label" for="customRadio2">Male</label>
+                      </BCol>
+                      <BCol md="6">
+                        <div class="form-group mb-3">
+                          <label>Age</label>
+                          <br />
+                          <date-picker class="form-control" v-model="autoClose" :first-day-of-week="1"
+                            lang="en"></date-picker>
                         </div>
-                      </div>
+                        <div class="mb-3">
+                    <label>Country</label>
+                    <Multiselect v-model="value3" :options="options3" ></Multiselect>
+                  </div>
+                      </BCol>
+                      </BRow>
                       
                     </BCol>
                   </BRow>
@@ -446,6 +478,65 @@ export default {
                     <Multiselect v-model="value1" :options="options" mode="tags"></Multiselect>
                   </div> -->
                   <BRow>
+                    
+                    <BCol md="4">
+                      <div class="mb-3">
+                        <label>Platform</label>
+                        <Multiselect v-model="form.city" :class="{
+      'is-invalid': submitted && v$.form.city.$error,
+      'is-valid': submitted && !v$.form.city.$error,
+    }" :options="options1"></Multiselect>
+
+                        <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
+                          <span v-if="v$.form.city.required.$message">{{
+      v$.form.city.required.$message
+    }}</span>
+                        </div>
+                      </div>
+                    </BCol>
+                    <BCol md="2">
+                      <div class="mb-3">
+                        <label>Stats</label>
+                        <BFormInput v-model="form.state" placeholder="Stats" :class="{
+      'is-invalid': submitted && v$.form.state.$error,
+      'is-valid': submitted && !v$.form.state.$error,
+    }" />
+                        <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
+                          <span v-if="v$.form.state.required.$message">{{
+      v$.form.state.required.$message
+    }}</span>
+                        </div>
+                      </div>
+                    </BCol>
+                    <BCol md="4">
+                      <div class="mb-3">
+                        <label>Link</label>
+                        <BFormInput v-model="form.url" placeholder="Link" :class="{
+      'is-invalid': submitted && v$.form.url.$error,
+      'is-valid': submitted && !v$.form.url.$error,
+    }" />
+                        <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
+                          <span v-if="v$.form.url.required.$message">{{
+      v$.form.url.required.$message
+    }}</span>
+                        </div>
+                      </div>
+                    </BCol>
+                    <BCol md="2">
+                      <div class="mb-3">
+                        <label>Action</label>
+                        <div>
+                          <BButtonGroup class="btn-group-example mb-3">
+                            <BButton variant="primary" class="w-xs">
+                              <i class="mdi mdi-plus"></i>
+                            </BButton>
+                            <BButton variant="light" class="w-xs">
+                              <i class="mdi mdi-minus"></i>
+                            </BButton>
+                          </BButtonGroup>
+                        </div>
+                      </div>
+                    </BCol>
                     <BCol md="12">
                       <div class="mb-3">
                         <h5 class="font-size-14">Brand Collaborations</h5>
@@ -508,64 +599,6 @@ export default {
                               </label>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </BCol>
-                    <BCol md="4">
-                      <div class="mb-3">
-                        <label>Platform</label>
-                        <Multiselect v-model="form.city" :class="{
-      'is-invalid': submitted && v$.form.city.$error,
-      'is-valid': submitted && !v$.form.city.$error,
-    }" :options="options1"></Multiselect>
-
-                        <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
-                          <span v-if="v$.form.city.required.$message">{{
-      v$.form.city.required.$message
-    }}</span>
-                        </div>
-                      </div>
-                    </BCol>
-                    <BCol md="2">
-                      <div class="mb-3">
-                        <label>Stats</label>
-                        <BFormInput v-model="form.state" placeholder="Stats" :class="{
-      'is-invalid': submitted && v$.form.state.$error,
-      'is-valid': submitted && !v$.form.state.$error,
-    }" />
-                        <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
-                          <span v-if="v$.form.state.required.$message">{{
-      v$.form.state.required.$message
-    }}</span>
-                        </div>
-                      </div>
-                    </BCol>
-                    <BCol md="4">
-                      <div class="mb-3">
-                        <label>Link</label>
-                        <BFormInput v-model="form.url" placeholder="Link" :class="{
-      'is-invalid': submitted && v$.form.url.$error,
-      'is-valid': submitted && !v$.form.url.$error,
-    }" />
-                        <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
-                          <span v-if="v$.form.url.required.$message">{{
-      v$.form.url.required.$message
-    }}</span>
-                        </div>
-                      </div>
-                    </BCol>
-                    <BCol md="2">
-                      <div class="mb-3">
-                        <label>Action</label>
-                        <div>
-                          <BButtonGroup class="btn-group-example mb-3">
-                            <BButton variant="primary" class="w-xs">
-                              <i class="mdi mdi-plus"></i>
-                            </BButton>
-                            <BButton variant="light" class="w-xs">
-                              <i class="mdi mdi-minus"></i>
-                            </BButton>
-                          </BButtonGroup>
                         </div>
                       </div>
                     </BCol>

@@ -96,6 +96,46 @@ export default [
         component: () => import('../views/pages/website/index.vue')
     },
     {
+        path: '/services',
+        name: 'ServicesFront',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/services.vue')
+    },
+    {
+        path: '/case-studies',
+        name: 'CaseStudiesFront',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/case-studies.vue')
+    },
+    {
+        path: '/about-us',
+        name: 'AboutUsFront',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/about-us.vue')
+    },
+    {
+        path: '/contact-us',
+        name: 'ContactUsFront',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/contact-us.vue')
+    },
+    {
+        path: '/talents',
+        name: 'TalentsFront',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents.vue')
+    },
+    {
         path: '/influencers-all',
         name: 'AllInfluncers',
         meta: {
@@ -134,6 +174,22 @@ export default [
             authRequired: false,
         },
         component: () => import('../views/pages/website/talents/influencer-profile.vue')
+    },
+    {
+        path: '/on-air-single-1',
+        name: 'OnAirProfile1',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/on-air-profile-1.vue')
+    },
+    {
+        path: '/influencer-single-1',
+        name: 'InfluencerProfile1',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/influencer-profile-1.vue')
     },
     {
         path: '/users',

@@ -12,6 +12,6 @@ export default {
 
 <template>
     <Layout>
-        Home
+        Case studies
     </Layout>
 </template>

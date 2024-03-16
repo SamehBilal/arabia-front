@@ -14,17 +14,17 @@ export default {
     <Layout :isHeaderMultiple="false" :partners="false" :isFooterMultiple="false">
         <div class="esport-overlap">
           <!-- <img class="esport-frame" src="@/assets/img/frame-4@2x.png" /> -->
-          <img class="esport-rectangle" src="@/assets/img/rectangle-4.png" />
+          <img class="esport-rectangle" src="@/assets/img/cover-1.jpg" />
           <div class="esport-group">
             <div class="esport-overlap-group"><div class="esport-contact-me">Contact Me</div></div>
           </div>
-          <img class="esport-ellipse" src="@/assets/img/ellipse-1@2x-4.png" />
+          <img class="esport-ellipse" style="border-radius: 50%;" src="@/assets/img/rectangle-39-8.png" />
           <p class="esport-text-wrapper">Caster | Analyst | Host</p>
           <div class="esport-group-2">
-            <div class="esport-div-wrapper"><div class="esport-text-wrapper-2">Tareq Z. Al-Khtatneh</div></div>
-            <div class="esport-vector-wrapper">
+            <div class="esport-div-wrapper"><div class="esport-text-wrapper-2">Sameh Bilal</div></div>
+            <!-- <div class="esport-vector-wrapper" style="">
               <img class="esport-vector" src="@/assets/img/vector-6@2x.png" />
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="esport-group-wrapper">

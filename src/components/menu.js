@@ -207,7 +207,7 @@ export const menuItems = [
             // },
         ]
     },
-    {
+    /* {
         id: 18,
         label: 'menuitems.menus.text',
         icon: 'ri-function-line',
@@ -222,13 +222,13 @@ export const menuItems = [
                 label: 'menuitems.menus.list.addmenu',
                 link: '/menus/create'
             },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.menus.list.trash',
-            //     link: '/menus-trash'
-            // },
+            {
+                id: 7,
+                label: 'menuitems.menus.list.trash',
+                link: '/menus-trash'
+            },
         ]
-    },
+    }, */
     {
         id: 21,
         label: 'menuitems.sections.text',
