@@ -1,17 +1,33 @@
 <script>
 import Layout from "../../layouts/front.vue";
+import PageHeader from "../../pages/website/page-header.vue";
 
 /**
  * Shops Component
  */
 export default {
-    components: { Layout },
+    components: { Layout, PageHeader },
+    data() {
+        return {
+            title: "About Us",
+            items: [
+                {
+                    text: "Homepage"
+                },
+                {
+                    text: "Services",
+                    active: true
+                },
+            ],
+            desc: "",
+        };
+    },
 };
 
 </script>
 
 <template>
     <Layout>
-        About us
+        <PageHeader :title="title" :items="items" :desc="desc" />
     </Layout>
 </template>
