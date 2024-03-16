@@ -136,13 +136,14 @@ a {
 }
 
 .element-home-page .overlap {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 962px;
-  top: 5315px;
+  top: 0;
   left: 0;
   background-image: url(../img/rectangle-5507.svg);
   background-size: 100% 100%;
+  margin-bottom: 150px;
 }
 
 .element-home-page .section-text {
@@ -186,7 +187,7 @@ a {
   width: 337px;
   height: 454px;
   top: 350px;
-  left: 608px;
+  left: 508px;
   background-image: url(../img/rectangle-5493-1.svg);
   background-size: 100% 100%;
 }
@@ -206,7 +207,7 @@ a {
   width: 337px;
   height: 454px;
   top: 350px;
-  left: 976px;
+  left: 876px;
   background-image: url(../img/rectangle-5488.svg);
   background-size: 100% 100%;
 }
@@ -216,7 +217,7 @@ a {
   width: 106px;
   height: 8px;
   top: 854px;
-  left: 907px;
+  left: 807px;
 }
 
 .element-home-page .rectangle {
@@ -262,7 +263,7 @@ a {
   width: 50px;
   height: 50px;
   top: 552px;
-  left: 160px;
+  left: 60px;
 }
 
 .element-home-page .frame {
@@ -296,7 +297,7 @@ a {
   width: 337px;
   height: 454px;
   top: 350px;
-  left: 1343px;
+  left: 1243px;
   background-image: url(../img/rectangle-5.svg);
   background-size: 100% 100%;
 }
@@ -306,7 +307,7 @@ a {
   width: 50px;
   height: 50px;
   top: 552px;
-  left: 1710px;
+  left: 1610px;
 }
 
 .element-home-page .group-6 {
@@ -314,7 +315,7 @@ a {
   width: 99px;
   height: 32px;
   top: 256px;
-  left: 1583px;
+  left: 1483px;
 }
 
 .element-home-page .see-all {
@@ -353,12 +354,20 @@ a {
   transform: rotate(-90deg);
 }
 
+.element-home-page .overlap-200{
+  position: relative;
+  height: 677px;
+  top: 0;
+  left: 103px;
+  margin-bottom: 150px;
+}
+
 .element-home-page .overlap-wrapper {
-  position: absolute;
+  position: relative;
   width: 671px;
   height: 677px;
-  top: 1056px;
-  left: 203px;
+  top: 0;
+  left: 0;
 }
 
 .element-home-page .overlap-group {
@@ -485,7 +494,7 @@ a {
   position: absolute;
   width: 181px;
   height: 13px;
-  top: 24px;
+  top: 14px;
   left: 92px;
   font-family: "Cuprum", Helvetica;
   font-weight: 700;
@@ -497,12 +506,13 @@ a {
 }
 
 .element-home-page .overlap-5 {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 879px;
-  top: 1858px;
+  top: 0;
   left: 0;
   background-color: #f9fafb;
+  margin-bottom: 100px;
 }
 
 .element-home-page .title {
@@ -512,7 +522,7 @@ a {
   gap: 30px;
   position: absolute;
   top: 168px;
-  left: 550px;
+  left: 450px;
 }
 
 .element-home-page .p {
@@ -535,7 +545,7 @@ a {
   width: 374px;
   height: 417px;
   top: 362px;
-  left: 375px;
+  left: 275px;
 }
 
 .element-home-page .overlap-6 {
@@ -660,7 +670,7 @@ a {
   width: 374px;
   height: 417px;
   top: 362px;
-  left: 1175px;
+  left: 1075px;
 }
 
 .element-home-page .text-wrapper-7 {
@@ -707,7 +717,7 @@ a {
   width: 374px;
   height: 417px;
   top: 362px;
-  left: 775px;
+  left: 675px;
 }
 
 .element-home-page .text-wrapper-8 {
@@ -761,7 +771,7 @@ a {
   position: absolute;
   width: 779px;
   top: 247px;
-  left: 619px;
+  left: 519px;
   font-family: "Outfit", Helvetica;
   font-weight: 400;
   color: #6e7ca0;
@@ -771,10 +781,18 @@ a {
   line-height: 32px;
 }
 
+.element-home-page .rosters-100{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
 .element-home-page .text-wrapper-10 {
-  position: absolute;
-  top: 2949px;
-  left: 736px;
+  position: relative;
+  top: 0;
+  left: 0;
   font-family: var(--h2-font-family);
   font-weight: var(--h2-font-weight);
   color: var(--textheading);
@@ -784,14 +802,15 @@ a {
   line-height: var(--h2-line-height);
   white-space: nowrap;
   font-style: var(--h2-font-style);
+  margin-bottom: 25px;
 }
 
 .element-home-page .overlap-7 {
-  position: absolute;
+  position: relative;
   width: 1002px;
   height: 64px;
-  top: 3029px;
-  left: 459px;
+  top: 0;
+  left: 359px;
 }
 
 .element-home-page .text {
@@ -809,15 +828,16 @@ a {
 }
 
 .element-home-page .about-our-company-wrapper {
-  top: 2887px;
-  left: 890px;
+  top: 0;
+  left: 790px;
   background-color: #eafaf8;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 10px 15px;
-  position: absolute;
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .element-home-page .about-our-company-2 {
@@ -835,12 +855,13 @@ a {
 }
 
 .element-home-page .overlap-8 {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 950px;
-  top: 3629px;
+  top: 0;
   left: 0;
   background-color: #f9fafb;
+  margin-bottom: 100px;
 }
 
 .element-home-page .overlap-9 {
@@ -848,7 +869,7 @@ a {
   width: 745px;
   height: 55px;
   top: 162px;
-  left: 588px;
+  left: 488px;
 }
 
 .element-home-page .rectangle-4 {
@@ -856,7 +877,7 @@ a {
   width: 450px;
   height: 12px;
   top: 39px;
-  left: 291px;
+  left: 191px;
 }
 
 .element-home-page .we-are-ready-to {
@@ -877,7 +898,7 @@ a {
 .element-home-page .text-wrapper-11 {
   width: 967px;
   top: 242px;
-  left: 478px;
+  left: 378px;
   font-weight: 500;
   font-size: 22px;
   text-align: center;
@@ -890,7 +911,7 @@ a {
 
 .element-home-page .frame-2 {
   top: 100px;
-  left: 896px;
+  left: 796px;
   background-color: #f6edff;
   display: inline-flex;
   align-items: center;
@@ -919,7 +940,7 @@ a {
   width: 1170px;
   height: 497px;
   top: 353px;
-  left: 375px;
+  left: 275px;
 }
 
 .element-home-page .overlap-10 {
@@ -1193,11 +1214,12 @@ a {
 }
 
 .element-home-page .group-12 {
-  position: absolute;
+  position: relative;
   width: 1442px;
   height: 435px;
-  top: 4729px;
+  top: 0;
   left: 140px;
+  margin-bottom: 100px;
 }
 
 .element-home-page .flexcontainer {
@@ -1836,11 +1858,12 @@ a {
 }
 
 .element-home-page .group-28 {
-  position: absolute;
+  position: relative;
   width: 1527px;
   height: 406px;
-  top: 6427px;
-  left: 237px;
+  top: 0;
+  left: 137px;
+  margin-bottom: 150px;
 }
 
 .element-home-page .group-29 {
@@ -2572,11 +2595,11 @@ a {
 }
 
 .element-home-page .group-42 {
-  position: absolute;
+  position: relative;
   width: 1244px;
   height: 335px;
-  top: 3144px;
-  left: 336px;
+  top: 0;
+  left: 236px;
 }
 
 .element-home-page .group-43 {
@@ -2852,9 +2875,8 @@ a {
 .element-home-page .group-52 {
   position: absolute;
   width: 705px;
-  height: 619px;
-  top: 1100px;
-  left: 975px;
+  top: 40px;
+  left: 775px;
 }
 
 .element-home-page .group-53 {
@@ -2953,27 +2975,27 @@ a {
 
 .element-home-page .dots-3 {
   width: 81px;
-  top: 2894px;
-  left: 1839px;
+  top: 500%;
+  left: 1600px;
   position: absolute;
   height: 161px;
 }
 
 .element-home-page .overlap-21 {
-  /* position: absolute; */
+  position: relative;
   width: 100%;
-  /* height: 950px; */
-  /* top: 0;
-  left: 0; */
+  height: 950px;
+  /* top: -60px; */
+  left: 0;
 }
 
 .element-home-page .rectangle-16 {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 900px;
   top: 50px;
   left: 0;
-  background-color: #f5f7fd;
+  // background-color: #f5f7fd;
 }
 
 .element-home-page .group-58 {
@@ -2989,7 +3011,7 @@ a {
   width: 641px;
   height: 612px;
   top: 235px;
-  left: 1279px;
+  left: 1079px;
 }
 
 .element-home-page .element-wrapper {
@@ -2997,7 +3019,7 @@ a {
   width: 281px;
   height: 331px;
   top: 186px;
-  left: 501px;
+  left: 451px;
 }
 
 .element-home-page .element-8 {
@@ -3021,7 +3043,7 @@ a {
   width: 560px;
   height: 12px;
   top: 418px;
-  left: 680px;
+  left: 580px;
 }
 
 .element-home-page .mouse {
@@ -3029,7 +3051,7 @@ a {
   width: 70px;
   height: 70px;
   top: 820px;
-  left: 925px;
+  left: 825px;
 }
 
 .element-home-page .group-60 {
@@ -3045,7 +3067,7 @@ a {
   width: 16px;
   height: 16px;
   top: 543px;
-  left: 494px;
+  left: 444px;
 }
 
 .element-home-page .ellipse-wrapper {
@@ -3053,7 +3075,7 @@ a {
   width: 19px;
   height: 19px;
   top: 602px;
-  left: 1432px;
+  left: 1382px;
   border-radius: 9.49px;
   border: 1px solid;
   border-color: #ffffff;
@@ -3071,10 +3093,10 @@ a {
 
 .element-home-page .group-62 {
   position: absolute;
-  /* width: 847px;
-  height: 468px; */
+  width: 747px;
+  height: 468px;
   top: 243px;
-  left: 538px;
+  left: 438px;
 }
 
 .element-home-page .sub-title {
@@ -3253,7 +3275,7 @@ a {
   width: 185px;
   height: 185px;
   top: 483px;
-  left: 1441px;
+  left: 1241px;
 }
 
 .element-home-page .group-66 {
@@ -3261,7 +3283,7 @@ a {
   width: 435px;
   height: 622px;
   top: 255px;
-  left: 1419px;
+  left: 1219px;
 }
 
 .element-home-page .group-67 {
@@ -3358,7 +3380,7 @@ a {
   width: 50px;
   height: 50px;
   top: 265px;
-  left: 1829px;
+  left: 1629px;
   background-color: #0eb332;
   border-radius: 25px;
 }
@@ -3372,7 +3394,7 @@ a {
 }
 
 .element-home-page .group-70 {
-  position: relative;
+  position: absolute;
   width: 202px;
   height: 242px;
   top: 568px;
@@ -5373,7 +5395,7 @@ a {
 
 .esport .esport-overlap-group-wrapper {
   position: absolute;
-  width: 1922px;
+  width: 100%;
   height: 168px;
   top: 4679px;
   left: 0;
