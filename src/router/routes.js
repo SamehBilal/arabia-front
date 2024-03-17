@@ -144,6 +144,14 @@ export default [
         component: () => import('../views/pages/website/influencers.vue')
     },
     {
+        path: '/influencer-marketing',
+        name: 'InfluencerMarketing',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/influencer-marketing.vue')
+    },
+    {
         path: '/cosplayers-all',
         name: 'AllCosplayers',
         meta: {

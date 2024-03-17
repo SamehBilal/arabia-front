@@ -19,6 +19,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    Background: {
+      type: String,
+      default: '',
+    },
     isFooterMultiple: {
       type: Boolean,
       default: true,
@@ -43,9 +47,9 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page influencers esport talents our-services about-us">
+    <div class="element-home-page influencers esport talents our-services about-us on-air influencer-marketing">
       <div class="element-home-page-v influencers-v">
-        <Header :header="isHeaderMultiple"></Header>
+        <Header :header="isHeaderMultiple" :Background="Background"></Header>
         <slot />
         <Partners :partners="partners"></Partners>
         <Footer :footer="isFooterMultiple"></Footer>

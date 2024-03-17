@@ -38,7 +38,9 @@ export default {
           <img class="page-group-4" src="https://c.animaapp.com/SvVqsHAI/img/group-1000003178.png" />
           <img class="page-content" src="https://c.animaapp.com/SvVqsHAI/img/content.png" />
           <div class="page-div">
+            <router-link to="/influencers-all">
             <img class="page-discover-the-list" src="https://c.animaapp.com/SvVqsHAI/img/discover-the-list@2x.png" />
+          </router-link>
             <div class="page-vuesax-bold-arrow-up-wrapper">
               <img
                 class="page-vuesax-bold-arrow-up"
@@ -48,7 +50,9 @@ export default {
           </div>
           <div class="page-group-wrapper">
             <div class="page-group-5">
-              <img class="page-meet-the-faces" src="https://c.animaapp.com/SvVqsHAI/img/meet-the-faces@2x.png" />
+              <router-link to="/on-air-all">
+                <img class="page-meet-the-faces" src="https://c.animaapp.com/SvVqsHAI/img/meet-the-faces@2x.png" />
+              </router-link>
               <div class="page-img-wrapper">
                 <img
                   class="page-vuesax-bold-arrow-up"

@@ -6,12 +6,18 @@ import Layout from "../../layouts/front.vue";
  */
 export default {
     components: { Layout },
+    props: {
+        Background: {
+            type: String,
+            default: "#f5f7fd",
+        },
+    },
 };
 
 </script>
 
 <template>
-    <Layout>
+    <Layout :Background="Background">
         <div class="overlap-21">
             <div class="rectangle-16"></div>
             <div class="rectangle-16"></div>
