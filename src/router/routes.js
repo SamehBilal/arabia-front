@@ -152,6 +152,30 @@ export default [
         component: () => import('../views/pages/website/influencer-marketing.vue')
     },
     {
+        path: '/influencer-celebrity',
+        name: 'InfluencerCelebrity',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/influencer-celebrity.vue')
+    },
+    {
+        path: '/talent-management',
+        name: 'talentManagement',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talent-management.vue')
+    },
+    {
+        path: '/case-studies-single',
+        name: 'CaseStudiesSingle',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/case-study-single.vue')
+    },
+    {
         path: '/cosplayers-all',
         name: 'AllCosplayers',
         meta: {

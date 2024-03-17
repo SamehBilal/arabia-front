@@ -47,7 +47,7 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page influencers esport talents our-services about-us on-air influencer-marketing">
+    <div class="element-home-page influencers esport talents our-services about-us on-air influencer-marketing influencer-cel talent-management case-studies case-study-page">
       <div class="element-home-page-v influencers-v">
         <Header :header="isHeaderMultiple" :Background="Background"></Header>
         <slot />

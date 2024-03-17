@@ -1,12 +1,13 @@
 <script>
 import Layout from "../../layouts/front.vue";
 import PageHeader from "../../pages/website/page-header.vue";
+import OurWork from "../../pages/website/our-work.vue";
 
 /**
  * Shops Component
  */
 export default {
-    components: { Layout, PageHeader },
+    components: { Layout, PageHeader,OurWork },
     data() {
         return {
             title: "Influencer Marketing",
@@ -15,7 +16,7 @@ export default {
                     text: "Homepage"
                 },
                 {
-                    text: "Talents",
+                    text: "Servies",
                 },
                 {
                     text: "Influencer Marketing Campaigns",
@@ -539,35 +540,7 @@ export default {
             </div>
             <img class="marketing-line-6" src="https://c.animaapp.com/G5LxjVCd/img/line-54-1@2x.png" />
         </div>
-        <div class="marketing-CTA">
-          <div class="marketing-overlap-11">
-            <div class="marketing-BG">
-              <div class="marketing-overlap-group-8">
-                <div class="marketing-overlap-12">
-                  <img class="marketing-dots-2" src="https://c.animaapp.com/G5LxjVCd/img/dots@2x.png" />
-                  <button class="marketing-button">
-                    <div class="marketing-text-wrapper-35">OUR WORK</div>
-                    <div class="marketing-group-51">
-                      <img
-                        class="marketing-vuesax-bold-arrow-up"
-                        src="https://c.animaapp.com/G5LxjVCd/img/vuesax-bold-arrow-up-6@2x.png"
-                      />
-                    </div>
-                  </button>
-                </div>
-                <img class="marketing-dots-3" src="https://c.animaapp.com/G5LxjVCd/img/dots-1@2x.png" />
-                <p class="marketing-text-wrapper-36">
-                  Driven by our passion for the industry, and our team’s creativity, Arabia Talents have created some of
-                  the most engaging influencer campaigns in gaming, esports, technology, and more.
-                </p>
-              </div>
-            </div>
-            <div class="marketing-title">
-              <div class="marketing-great-clients-great">Great Clients<br />Great Campaigns</div>
-            </div>
-            <div class="marketing-group-52"></div>
-          </div>
-        </div>
+        <OurWork />
         <img class="marketing-dots-4" src="https://c.animaapp.com/G5LxjVCd/img/dots-2@2x.png" />
         <img class="marketing-dots-5" src="https://c.animaapp.com/G5LxjVCd/img/dots-3@2x.png" />
        
