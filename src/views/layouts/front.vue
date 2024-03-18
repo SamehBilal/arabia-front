@@ -47,8 +47,9 @@ export default {
 
 <template>
   <!-- <div class="container"> -->
-    <div class="element-home-page influencers esport talents our-services about-us on-air influencer-marketing influencer-cel talent-management case-studies case-study-page">
-      <div class="element-home-page-v influencers-v">
+    <div class="element-home-page influencers esport talents our-services about-us on-air 
+    influencer-marketing influencer-cel talent-management case-studies case-study-page contact-us element-not-found">
+      <div class="element-home-page-v influencers-v privacy-policy terms-conditions">
         <Header :header="isHeaderMultiple" :Background="Background"></Header>
         <slot />
         <Partners :partners="partners"></Partners>

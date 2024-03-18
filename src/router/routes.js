@@ -176,6 +176,30 @@ export default [
         component: () => import('../views/pages/website/case-study-single.vue')
     },
     {
+        path: '/404',
+        name: 'Not Found',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/404.vue')
+    },
+    {
+        path: '/privacy-policy',
+        name: 'Privacy Policy',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/privacy-policy.vue')
+    },
+    {
+        path: '/terms-and-conditions',
+        name: 'Terms and Conditions',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/terms-conditions.vue')
+    },
+    {
         path: '/cosplayers-all',
         name: 'AllCosplayers',
         meta: {
