@@ -72,24 +72,190 @@ export default [
         },
     },
     {
-        path: '/',
-        name: 'Dashboard',
+        path: '/admin',
+        name: 'Overview',
         meta: {
             authRequired: true,
         },
-        component: () => import('../views/pages/dashboard/index.vue')
+        component: () => import('../views/pages/talents/overview.vue')
     },
     {
-        path: '/messages',
-        name: 'Messages',
+        path: '/admin/influencers',
+        name: 'Influencers List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/influencers/index.vue')
+    },
+    {
+        path: '/admin/influencers/create',
+        name: 'Create Influencers',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/influencers/update.vue')
+    },
+    {
+        path: '/admin/cosplayers/',
+        name: 'Cosplayers List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/cosplayers/index.vue')
+    },
+    {
+        path: '/admin/cosplayers/create',
+        name: 'Create Cosplayers',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/cosplayers/update.vue')
+    },
+    {
+        path: '/admin/on-air/',
+        name: 'On-air List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/on-air/index.vue')
+    },
+    {
+        path: '/admin/on-air/create',
+        name: 'Create On-air',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/talents/on-air/update.vue')
+    },
+    {
+        path: '/admin/case-studies/',
+        name: 'Case Studies List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/case-studies/index.vue')
+    },
+    {
+        path: '/admin/case-studies/create',
+        name: 'Create Case Study',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/case-studies/update.vue')
+    },
+    {
+        path: '/admin/pages/',
+        name: 'Pages List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/pages/index.vue')
+    },
+    {
+        path: '/admin/pages/create',
+        name: 'Create Page',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/pages/update.vue')
+    },
+    {
+        path: '/admin/sections/',
+        name: 'Sections List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/sections/index.vue')
+    },
+    {
+        path: '/admin/sections/create',
+        name: 'Create Section',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/sections/update.vue')
+    },
+    {
+        path: '/admin/services/',
+        name: 'Services List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/services/index.vue')
+    },
+    {
+        path: '/admin/services/create',
+        name: 'Create Service',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/services/update.vue')
+    },
+    {
+        path: '/admin/icons/',
+        name: 'Icons List',
+        meta: { authRequired: true },
+        component: () => import('../views/pages/icons/index.vue')
+    },
+    {
+        path: '/admin/icons/create',
+        name: 'Create Icons',
+        meta: { authRequired: true },
+        component: () => import('../views/pages/icons/update.vue')
+    },
+    {
+        path: '/admin/clients',
+        name: 'Clients/Brands List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/brands/index.vue')
+    },
+    {
+        path: '/admin/messages',
+        name: 'Messages List',
         meta: {
             authRequired: true,
         },
         component: () => import('../views/pages/messages/index.vue')
     },
     {
-        path: '/front',
-        name: 'Front',
+        path: '/admin/messages/single',
+        name: 'Messages Single',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/messages/reademail.vue')
+    },
+    {
+        path: '/admin/users',
+        name: 'Users List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/users/index.vue')
+    },
+    {
+        path: '/admin/roles',
+        name: 'Roles & Permissions List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/roles/index.vue')
+    },
+    {
+        path: '/admin/notifications',
+        name: 'Notifications List',
+        meta: {
+            authRequired: true,
+        },
+        component: () => import('../views/pages/notifications/index.vue')
+    },
+
+
+    {
+        path: '/',
+        name: 'Home',
         meta: {
             authRequired: false,
         },
@@ -97,23 +263,103 @@ export default [
     },
     {
         path: '/services',
-        name: 'ServicesFront',
+        name: 'Services',
         meta: {
             authRequired: false,
         },
-        component: () => import('../views/pages/website/services.vue')
+        component: () => import('../views/pages/website/services/index.vue')
+    },
+    {
+        path: '/services/influencer-marketing',
+        name: 'Influencer Marketing',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/services/influencer-marketing.vue')
+    },
+    {
+        path: '/services/talent-management',
+        name: 'Talent Management',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/services/talent-management.vue')
+    },
+    {
+        path: '/services/celebrity-collaboration',
+        name: 'Celebrity Collaboration',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/services/celebrity-collaboration.vue')
+    },
+    {
+        path: '/talents',
+        name: 'Talents',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/index.vue')
+    },
+    {
+        path: '/talents/influencers',
+        name: 'Influencers Talents',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/influencers.vue')
+    },
+    {
+        path: '/talents/cosplayers',
+        name: 'Cosplayers Talents',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/cosplayers.vue')
+    },
+    {
+        path: '/talents/on-air',
+        name: 'On-Air Talents',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/on-air.vue')
+    },
+    {
+        path: '/talents/influencers/single',
+        name: 'Influencers Profile',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/influencer-profile.vue')
+    },
+    {
+        path: '/talents/on-air/single',
+        name: 'On-Air Profile',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/talents/on-air-profile.vue')
     },
     {
         path: '/case-studies',
-        name: 'CaseStudiesFront',
+        name: 'Case Studies',
         meta: {
             authRequired: false,
         },
-        component: () => import('../views/pages/website/case-studies.vue')
+        component: () => import('../views/pages/website/case-studies/index.vue')
+    },
+    {
+        path: '/case-studies/single',
+        name: 'Single Case Study',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/case-studies/single.vue')
     },
     {
         path: '/about-us',
-        name: 'AboutUsFront',
+        name: 'About Us',
         meta: {
             authRequired: false,
         },
@@ -121,67 +367,11 @@ export default [
     },
     {
         path: '/contact-us',
-        name: 'ContactUsFront',
+        name: 'Let\'s Talk',
         meta: {
             authRequired: false,
         },
         component: () => import('../views/pages/website/contact-us.vue')
-    },
-    {
-        path: '/talents',
-        name: 'TalentsFront',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talents.vue')
-    },
-    {
-        path: '/influencers-all',
-        name: 'AllInfluncers',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/influencers.vue')
-    },
-    {
-        path: '/influencer-marketing',
-        name: 'InfluencerMarketing',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/influencer-marketing.vue')
-    },
-    {
-        path: '/influencer-celebrity',
-        name: 'InfluencerCelebrity',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/influencer-celebrity.vue')
-    },
-    {
-        path: '/talent-management',
-        name: 'talentManagement',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talent-management.vue')
-    },
-    {
-        path: '/case-studies-single',
-        name: 'CaseStudiesSingle',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/case-study-single.vue')
-    },
-    {
-        path: '/404',
-        name: 'Not Found',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/404.vue')
     },
     {
         path: '/privacy-policy',
@@ -193,156 +383,14 @@ export default [
     },
     {
         path: '/terms-and-conditions',
-        name: 'Terms and Conditions',
+        name: 'Terms & Conditions',
         meta: {
             authRequired: false,
         },
         component: () => import('../views/pages/website/terms-conditions.vue')
     },
-    {
-        path: '/cosplayers-all',
-        name: 'AllCosplayers',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/cosplayers.vue')
-    },
-    {
-        path: '/on-air-all',
-        name: 'AllOnAir',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/on-air.vue')
-    },
-    {
-        path: '/on-air-single',
-        name: 'OnAirProfile',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talents/on-air-profile.vue')
-    },
-    {
-        path: '/influencer-single',
-        name: 'InfluencerProfile',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talents/influencer-profile.vue')
-    },
-    {
-        path: '/on-air-single-1',
-        name: 'OnAirProfile1',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talents/on-air-profile-1.vue')
-    },
-    {
-        path: '/influencer-single-1',
-        name: 'InfluencerProfile1',
-        meta: {
-            authRequired: false,
-        },
-        component: () => import('../views/pages/website/talents/influencer-profile-1.vue')
-    },
-    {
-        path: '/users',
-        name: 'Users',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/users/index.vue')
-    },
-    {
-        path: '/clients',
-        name: 'Clients',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/brands/index.vue')
-    },
-    {
-        path: '/talent-overview',
-        name: 'talentOverview',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/talents/overview.vue')
-    },
-    {
-        path: '/talents/create',
-        name: 'AddTalent',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/talents/update.vue')
-    },
-    {
-        path: '/influencers',
-        name: 'Influencers',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/influencers/index.vue')
-    },
-    {
-        path: '/influencers/create',
-        name: 'AddInfluencer',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/influencers/update.vue')
-    },
-    {
-        path: '/cosplayers/',
-        name: 'Cosplayers',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/cosplayers/index.vue')
-    },
-    {
-        path: '/cosplayers/create',
-        name: 'AddCosplayers',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/cosplayers/update.vue')
-    },
-    {
-        path: '/on-air/',
-        name: 'On-air',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/on-air/index.vue')
-    },
-    {
-        path: '/on-air/create',
-        name: 'AddOn-air',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/on-air/update.vue')
-    },
-    {
-        path: '/roles',
-        name: 'Roles',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/roles/index.vue')
-    },
-    {
-        path: '/permissions',
-        name: 'Permissions',
-        meta: {
-            authRequired: true,
-        },
-        component: () => import('../views/pages/permissions/index.vue')
-    },
+    
+    
     {
         path: '/chat',
         name: 'Chat',
@@ -486,12 +534,6 @@ export default [
         component: () => import('../views/pages/utility/pricing/index.vue')
     },
     {
-        path: '/pages/error-404',
-        name: 'Error 404',
-        meta: { authRequired: true },
-        component: () => import('../views/pages/utility/error-404.vue')
-    },
-    {
         path: '/pages/error-500',
         name: 'Error 500',
         meta: { authRequired: true },
@@ -502,18 +544,6 @@ export default [
         name: 'Font Awesome 5',
         meta: { authRequired: true },
         component: () => import('../views/pages/icons/font-awesome/index.vue')
-    },
-    {
-        path: '/icons/',
-        name: 'Icons',
-        meta: { authRequired: true },
-        component: () => import('../views/pages/icons/index.vue')
-    },
-    {
-        path: '/icons/create',
-        name: 'CreateIcons',
-        meta: { authRequired: true },
-        component: () => import('../views/pages/icons/update.vue')
     },
     /* {
         path: '/icons/dripicons',
@@ -712,5 +742,13 @@ export default [
         name: 'Google Maps',
         meta: { authRequired: true },
         component: () => import('../views/pages/maps/google.vue')
+    },
+    { 
+        path: '/:pathMatch(.*)*', 
+        name: 'Not Found',
+        meta: {
+            authRequired: false,
+        },
+        component: () => import('../views/pages/website/404.vue') 
     },
 ];

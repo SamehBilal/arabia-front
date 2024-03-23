@@ -227,7 +227,7 @@
       }
     },
     "clients": {
-      "text": "Clients",
+      "text": "Clients/Brands",
       "list": {
         "clients": "List",
         "addclient": "Create",
@@ -241,7 +241,7 @@
         "addtalent": "Create",
         "trash": "Trash",
         "head": "Talents",
-        "overview": "Talents Overview"
+        "overview": "Overview"
       }
     },
     "case_studies": {
@@ -249,7 +249,17 @@
       "list": {
         "case_studies": "List",
         "addcase_studie": "Create",
-        "trash": "Trash"
+        "trash": "Trash",
+        "head": "Case Studies"
+      }
+    },
+    "website": {
+      "text": "Website",
+      "list": {
+        "case_studies": "List",
+        "addcase_studie": "Create",
+        "trash": "Trash",
+        "head": "Website"
       }
     },
     "ecommerce": {

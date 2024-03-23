@@ -1769,6 +1769,8 @@ a {
   line-height: var(--body-01-line-height);
   white-space: nowrap;
   font-style: var(--body-01-font-style);
+  cursor: pointer;
+  z-index: 99;
 }
 
 .element-home-page .text-wrapper-25 {
@@ -1809,6 +1811,8 @@ a {
   line-height: var(--body-01-line-height);
   white-space: nowrap;
   font-style: var(--body-01-font-style);
+  cursor: pointer;
+  z-index: 99;
 }
 
 .element-home-page .group-24 {
@@ -3544,6 +3548,7 @@ a {
   top: 14px;
   left: 1302px;
   cursor: pointer;
+  z-index: 99;
 }
 
 .element-home-page .group-75 {
@@ -24149,7 +24154,7 @@ a {
 .privacy-policy .page-privacy-overlap {
   position: relative;
   width: 100%;
-  height: 4001px;
+  height: 3251px;
   top: 0;
   left: 0;
   margin-bottom: 100px;
@@ -24214,4 +24219,13 @@ a {
   letter-spacing: 0;
   line-height: 30px;
   margin-bottom: 100px;
+}
+
+.terms-conditions .text-p{
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: var(--paragraph);
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 28px;
 }

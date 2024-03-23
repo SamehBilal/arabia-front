@@ -1,10 +1,10 @@
 <script>
 // import router from "@/router";
-import Header from "../pages/website/header.vue";
-import MainSection from "../pages/website/main-section.vue";
-import Footer from "../pages/website/footer.vue";
-import Partners from "../pages/website/partners.vue";
-import TopFooter from "../pages/website/top-footer.vue";
+import Header from "../pages/website/sections/header.vue";
+import MainSection from "../pages/website/sections/main-section.vue";
+import Footer from "../pages/website/sections/footer.vue";
+import Partners from "../pages/website/sections/partners.vue";
+import TopFooter from "../pages/website/sections/top-footer.vue";
 
 export default {
   components: {

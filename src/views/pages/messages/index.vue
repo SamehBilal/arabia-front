@@ -25,8 +25,8 @@ export default {
       title: "Messages",
       items: [
         {
-          text: "Dashboard",
-          href: "/"
+          text: "Overview",
+          href: "/admin"
         },
         {
           text: "Messages",
@@ -82,9 +82,9 @@ export default {
       <div class="col-12">
         <div class="email-rightbar mb-3">
           <div class="card">
-            <!-- <div class="btn-toolbar p-3">
+            <div class="btn-toolbar p-3">
               <Toolbar />
-            </div> -->
+            </div>
             <div class="mt-3">
               <ul class="message-list">
                 <li v-for="(email, index) in paginatedEmailData" :key="index" :class="{ 'unread': `${email.unread}` === 'true' }">

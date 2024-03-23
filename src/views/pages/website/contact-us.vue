@@ -1,6 +1,6 @@
 <script>
 import Layout from "../../layouts/front.vue";
-import PageHeader from "../../pages/website/page-header.vue";
+import PageHeader from "./sections/page-header.vue";
 
 /**
  * Shops Component

@@ -1,6 +1,272 @@
 export const menuItems = [
     {
         id: 1,
+        label: "menuitems.talents.list.head",
+        isTitle: true
+    },
+    {
+        id: 2,
+        label: 'menuitems.talents.list.overview',
+        icon: ' ri-pie-chart-line',
+        link: '/admin'
+    },
+    {
+        id: 3,
+        label: 'menuitems.influencers.text',
+        icon: 'ri-folder-user-line',
+        subItems: [
+            {
+                id: 4,
+                label: 'menuitems.influencers.list.influencers',
+                link: '/admin/influencers'
+            },
+            {
+                id: 5,
+                label: 'menuitems.influencers.list.addinfluencer',
+                link: '/admin/influencers/create'
+            },
+            // {
+            //     id: 6,
+            //     label: 'menuitems.influencers.list.trash',
+            //     link: '/admin/influencers-trash'
+            // },
+        ]
+    },
+    {
+        id: 7,
+        label: 'menuitems.cosplayers.text',
+        icon: 'ri-user-5-line',
+        subItems: [
+            {
+                id: 8,
+                label: 'menuitems.cosplayers.list.cosplayers',
+                link: '/admin/cosplayers'
+            },
+            {
+                id: 9,
+                label: 'menuitems.cosplayers.list.addcosplayer',
+                link: '/admin/cosplayers/create'
+            },
+            // {
+            //     id: 10,
+            //     label: 'menuitems.cosplayers.list.trash',
+            //     link: '/admin/cosplayers-trash'
+            // },
+        ]
+    },
+    {
+        id: 11,
+        label: 'menuitems.on_air.text',
+        icon: ' ri-mic-2-line',
+        subItems: [
+            {
+                id: 12,
+                label: 'menuitems.on_air.list.on_air',
+                link: '/admin/on-air'
+            },
+            {
+                id: 13,
+                label: 'menuitems.on_air.list.addon_air',
+                link: '/admin/on-air/create'
+            },
+            // {
+            //     id: 14,
+            //     label: 'menuitems.talents.list.trash',
+            //     link: '/admin/talents-trash'
+            // },
+        ]
+    },
+    {
+        id: 15,
+        label: "menuitems.case_studies.list.head",
+        isTitle: true
+    },
+    {
+        id: 16,
+        label: 'menuitems.case_studies.text',
+        icon: 'ri-file-edit-line',
+        subItems: [
+            {
+                id: 17,
+                label: 'menuitems.case_studies.list.case_studies',
+                link: '/admin/case-studies'
+            },
+            {
+                id: 18,
+                label: 'menuitems.case_studies.list.addcase_studie',
+                link: '/admin/case-studies/create'
+            },
+            // {
+            //     id: 19,
+            //     label: 'menuitems.case_studies.list.trash',
+            //     link: '/admin/case-studies-trash'
+            // },
+        ]
+    },
+    {
+        id: 20,
+        label: "menuitems.website.list.head",
+        isTitle: true
+    },
+    {
+        id: 21,
+        label: 'menuitems.pages.text',
+        icon: 'ri-side-bar-line',
+        subItems: [
+            {
+                id: 22,
+                label: 'menuitems.pages.list.pages',
+                link: '/admin/pages'
+            },
+            /* {
+                id: 23,
+                label: 'menuitems.pages.list.addpage',
+                link: '/admin/pages/create'
+            }, */
+            // {
+            //     id: 24,
+            //     label: 'menuitems.pages.list.trash',
+            //     link: '/admin/pages-trash'
+            // },
+        ]
+    },
+    {
+        id: 25,
+        label: 'menuitems.sections.text',
+        icon: 'ri-checkbox-multiple-blank-line',
+        subItems: [
+            {
+                id: 26,
+                label: 'menuitems.sections.list.sections',
+                link: '/admin/sections'
+            },
+            {
+                id: 27,
+                label: 'menuitems.sections.list.addsection',
+                link: '/admin/sections/create'
+            },
+            // {
+            //     id: 28,
+            //     label: 'menuitems.sections.list.trash',
+            //     link: '/admin/sections-trash'
+            // },
+        ]
+    },
+    /* {
+        id: 29,
+        label: 'menuitems.menus.text',
+        icon: 'ri-function-line',
+        subItems: [
+            {
+                id: 30,
+                label: 'menuitems.menus.list.menus',
+                link: '/admin/menus'
+            },
+            {
+                id: 31,
+                label: 'menuitems.menus.list.addmenu',
+                link: '/admin/menus/create'
+            },
+            {
+                id: 32,
+                label: 'menuitems.menus.list.trash',
+                link: '/admin/menus-trash'
+            },
+        ]
+    }, */
+    {
+        id: 33,
+        label: 'menuitems.services.text',
+        icon: 'ri-artboard-2-line',
+        subItems: [
+            {
+                id: 34,
+                label: 'menuitems.services.list.services',
+                link: '/admin/services'
+            },
+            {
+                id: 35,
+                label: 'menuitems.services.list.addservice',
+                link: '/admin/services/create'
+            },
+            // {
+            //     id: 36,
+            //     label: 'menuitems.services.list.trash',
+            //     link: '/admin/services-trash'
+            // },
+        ]
+    },
+    {
+        id: 37,
+        label: 'menuitems.icons.text',
+        icon: 'ri-brush-line',
+        subItems: [
+            
+            {
+                id: 38,
+                label: 'menuitems.icons.list.addicon',
+                link: '/admin/icons/create'
+            },
+            {
+                id: 39,
+                label: 'menuitems.icons.list.icons',
+                link: '/admin/icons'
+            },
+            // {
+            //     id: 40,
+            //     label: 'menuitems.icons.list.trash',
+            //     link: '/admin/icons-trash'
+            // },
+        ]
+    },
+    {
+        id: 41,
+        label: 'menuitems.clients.text',
+        icon: 'ri-team-line',
+        link: '/admin/clients'
+    },
+    {
+        id: 42,
+        label: 'menuitems.messages.text',
+        icon: 'ri-message-3-line',
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/admin/messages'
+    },
+    {
+        id: 43,
+        label: "menuitems.users.text",
+        isTitle: true
+    },
+    {
+        id: 44,
+        label: 'menuitems.users.text',
+        icon: 'ri-user-3-line',
+        link: '/admin/users'
+    },
+    {
+        id: 45,
+        label: 'menuitems.roles.list.rolesandpermissions',
+        icon: 'ri-user-settings-line',
+        link: '/admin/roles'
+    },
+    {
+        id: 46,
+        label: 'menuitems.notifications.text',
+        icon: 'ri-notification-2-line',
+        // badge: {
+        //     variant: "success",
+        //     text: "menuitems.dashboard.badge"
+        // },
+        link: '/admin/notifications'
+    },
+]
+
+/* export const menuItems = [
+    {
+        id: 1,
         label: "menuitems.menu.text",
         isTitle: true
     },
@@ -8,723 +274,392 @@ export const menuItems = [
         id: 2,
         label: 'menuitems.dashboard.text',
         icon: 'ri-dashboard-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
+        badge: {
+            variant: "success",
+            text: "menuitems.dashboard.badge"
+        },
         link: '/'
     },
     {
         id: 3,
-        label: 'menuitems.messages.text',
-        icon: 'ri-message-3-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/messages'
+        label: 'menuitems.calendar.text',
+        icon: 'ri-calendar-2-line',
+        link: '/calendar'
     },
     {
-        id: 16,
-        label: 'menuitems.notifications.text',
-        icon: 'ri-notification-2-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/notifications'
-    },
-    // {
-    //     id: 3,
-    //     label: "menuitems.users.text",
-    //     isTitle: true
-    // },
-    {
-        id: 16,
-        label: 'menuitems.users.text',
-        icon: 'ri-user-3-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/users'
-    },
-    // {
-    //     id: 4,
-    //     label: 'menuitems.users.text',
-    //     icon: 'ri-user-3-line',
-    //     subItems: [
-    //         {
-    //             id: 6,
-    //             label: 'menuitems.users.list.adduser',
-    //             link: '/users/create'
-    //         },
-    //         {
-    //             id: 5,
-    //             label: 'menuitems.users.list.users',
-    //             link: '/users'
-    //         },
-    //         // {
-    //         //     id: 7,
-    //         //     label: 'menuitems.users.list.trash',
-    //         //     link: '/users-trash'
-    //         // },
-    //     ]
-    // },
-    // {
-    //     id: 8,
-    //     label: 'menuitems.roles.text',
-    //     icon: 'ri-contacts-line',
-    //     subItems: [
-    //         {
-    //             id: 9,
-    //             label: 'menuitems.roles.list.rolesandpermissions',
-    //             link: '/roles'
-    //         },
-    //         {
-    //             id: 10,
-    //             label: 'menuitems.roles.list.addrole',
-    //             link: '/roles/create'
-    //         },
-    //     ]
-    // },
-    {
-        id: 8,
-        label: 'menuitems.roles.list.rolesandpermissions',
-        icon: 'ri-user-settings-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/roles'
+        id: 4,
+        label: 'menuitems.chat.text',
+        icon: 'ri-chat-1-line',
+        link: '/chat'
     },
     {
-        id: 17,
-        label: "menuitems.talents.list.head",
-        isTitle: true
-    },
-    {
-        id: 8,
-        label: 'menuitems.talents.list.overview',
-        icon: ' ri-pie-chart-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/talent-overview'
-    },
-    {
-        id: 24,
-        label: 'menuitems.influencers.text',
-        icon: 'ri-folder-user-line',
+        id: 5,
+        label: 'menuitems.ecommerce.text',
+        icon: 'ri-store-2-line',
         subItems: [
             {
-                id: 25,
-                label: 'menuitems.influencers.list.influencers',
-                link: '/influencers'
-            },
-            {
-                id: 26,
-                label: 'menuitems.influencers.list.addinfluencer',
-                link: '/influencers/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.influencers.list.trash',
-            //     link: '/influencers-trash'
-            // },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.cosplayers.text',
-        icon: 'ri-user-5-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.cosplayers.list.cosplayers',
-                link: '/cosplayers'
-            },
-            {
-                id: 26,
-                label: 'menuitems.cosplayers.list.addcosplayer',
-                link: '/cosplayers/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.cosplayers.list.trash',
-            //     link: '/cosplayers-trash'
-            // },
-        ]
-    },
-    {
-        id: 24,
-        label: 'menuitems.on_air.text',
-        icon: ' ri-mic-2-line',
-        subItems: [
-            {
-                id: 25,
-                label: 'menuitems.on_air.list.on_air',
-                link: '/on-air'
-            },
-            {
-                id: 26,
-                label: 'menuitems.on_air.list.addon_air',
-                link: '/on-air/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.talents.list.trash',
-            //     link: '/talents-trash'
-            // },
-        ]
-    },
-    {
-        id: 17,
-        label: "menuitems.structure.text",
-        isTitle: true
-    },
-    {
-        id: 18,
-        label: 'menuitems.icons.text',
-        icon: 'ri-brush-line',
-        subItems: [
-            
-            {
-                id: 20,
-                label: 'menuitems.icons.list.addicon',
-                link: '/icons/create'
-            },
-            {
-                id: 19,
-                label: 'menuitems.icons.list.icons',
-                link: '/icons'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.icons.list.trash',
-            //     link: '/icons-trash'
-            // },
-        ]
-    },
-    /* {
-        id: 18,
-        label: 'menuitems.menus.text',
-        icon: 'ri-function-line',
-        subItems: [
-            {
-                id: 19,
-                label: 'menuitems.menus.list.menus',
-                link: '/menus'
-            },
-            {
-                id: 20,
-                label: 'menuitems.menus.list.addmenu',
-                link: '/menus/create'
+                id: 6,
+                label: 'menuitems.ecommerce.list.products',
+                link: '/ecommerce/products'
             },
             {
                 id: 7,
-                label: 'menuitems.menus.list.trash',
-                link: '/menus-trash'
+                label: 'menuitems.ecommerce.list.productdetail',
+                link: '/ecommerce/product-detail'
             },
+            {
+                id: 8,
+                label: 'menuitems.ecommerce.list.orders',
+                link: '/ecommerce/orders'
+            },
+            {
+                id: 9,
+                label: 'menuitems.ecommerce.list.customers',
+                link: '/ecommerce/customers'
+            },
+            {
+                id: 10,
+                label: 'menuitems.ecommerce.list.cart',
+                link: '/ecommerce/cart'
+            },
+            {
+                id: 11,
+                label: 'menuitems.ecommerce.list.checkout',
+                link: '/ecommerce/checkout'
+            },
+            {
+                id: 12,
+                label: 'menuitems.ecommerce.list.shops',
+                link: '/ecommerce/shops'
+            },
+            {
+                id: 13,
+                label: 'menuitems.ecommerce.list.addproduct',
+                link: '/ecommerce/add-product'
+            }
         ]
-    }, */
+    },
     {
-        id: 21,
-        label: 'menuitems.sections.text',
-        icon: 'ri-checkbox-multiple-blank-line',
+        id: 14,
+        label: 'menuitems.email.text',
+        icon: 'ri-mail-send-line',
         subItems: [
             {
+                id: 15,
+                label: 'menuitems.email.list.inbox',
+                link: '/email/inbox'
+            },
+            {
+                id: 16,
+                label: 'menuitems.email.list.reademail',
+                link: '/email/read'
+            }
+        ]
+    },
+    {
+        id: 17,
+        label: 'menuitems.kanban.text',
+        icon: 'ri-artboard-2-line',
+        link: '/apps/kanban-board'
+    },
+    {
+        id: 18,
+        isLayout: true
+    },
+    {
+        id: 19,
+        label: 'menuitems.pages.text',
+        isTitle: true
+    },
+    {
+        id: 20,
+        label: 'menuitems.authentication.text',
+        icon: 'ri-account-circle-line',
+        subItems: [
+            {
+                id: 21,
+                label: 'menuitems.authentication.list.login',
+                link: '/auth/login-1'
+            },
+            {
                 id: 22,
-                label: 'menuitems.sections.list.sections',
-                link: '/sections'
+                label: 'menuitems.authentication.list.register',
+                link: '/auth/register-1'
             },
             {
                 id: 23,
-                label: 'menuitems.sections.list.addsection',
-                link: '/sections/create'
+                label: 'menuitems.authentication.list.recoverpwd',
+                link: '/auth/recoverpwd-1'
             },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.sections.list.trash',
-            //     link: '/sections-trash'
-            // },
+            {
+                id: 24,
+                label: 'menuitems.authentication.list.lockscreen',
+                link: '/auth/lock-screen-1'
+            }
         ]
     },
     {
-        id: 24,
-        label: 'menuitems.pages.text',
-        icon: 'ri-side-bar-line',
+        id: 25,
+        label: 'menuitems.utility.text',
+        icon: 'ri-profile-line',
         subItems: [
             {
-                id: 25,
-                label: 'menuitems.pages.list.pages',
-                link: '/pages'
+                id: 26,
+                label: 'menuitems.utility.list.starter',
+                link: '/pages/starter'
             },
             {
-                id: 26,
-                label: 'menuitems.pages.list.addpage',
-                link: '/pages/create'
+                id: 27,
+                label: 'menuitems.utility.list.maintenance',
+                link: '/pages/maintenance'
             },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.pages.list.trash',
-            //     link: '/pages-trash'
-            // },
+            {
+                id: 28,
+                label: 'menuitems.utility.list.comingsoon',
+                link: '/pages/coming-soon'
+            },
+            {
+                id: 29,
+                label: 'menuitems.utility.list.timeline',
+                link: '/pages/timeline'
+            },
+            {
+                id: 30,
+                label: 'menuitems.utility.list.faqs',
+                link: '/pages/faqs'
+            },
+            {
+                id: 31,
+                label: 'menuitems.utility.list.pricing',
+                link: '/pages/pricing'
+            },
+            {
+                id: 32,
+                label: 'menuitems.utility.list.error404',
+                link: '/pages/error-404'
+            },
+            {
+                id: 33,
+                label: 'menuitems.utility.list.error500',
+                link: '/pages/error-500'
+            },
         ]
     },
     {
-        id: 8,
-        label: 'menuitems.clients.text',
-        icon: 'ri-team-line',
-        // badge: {
-        //     variant: "success",
-        //     text: "menuitems.dashboard.badge"
-        // },
-        link: '/clients'
+        id: 36,
+        label: 'menuitems.components.text',
+        isTitle: true
     },
     {
-        id: 24,
-        label: 'menuitems.services.text',
-        icon: 'ri-artboard-2-line',
+        id: 37,
+        label: 'menuitems.uielements.text',
+        icon: 'ri-pencil-ruler-2-line',
         subItems: [
             {
-                id: 25,
-                label: 'menuitems.services.list.services',
-                link: '/services'
+                id: 38,
+                label: 'menuitems.uielements.list.alerts',
+                link: '/ui/alerts'
             },
             {
-                id: 26,
-                label: 'menuitems.services.list.addservice',
-                link: '/services/create'
+                id: 39,
+                label: 'menuitems.uielements.list.buttons',
+                link: '/ui/buttons'
+            },
+            {
+                id: 40,
+                label: 'menuitems.uielements.list.cards',
+                link: '/ui/cards'
+            },
+            {
+                id: 41,
+                label: 'menuitems.uielements.list.carousel',
+                link: '/ui/carousel'
+            },
+            {
+                id: 42,
+                label: 'menuitems.uielements.list.dropdowns',
+                link: '/ui/dropdowns'
+            },
+            {
+                id: 43,
+                label: 'menuitems.uielements.list.grid',
+                link: '/ui/grid'
+            },
+            {
+                id: 44,
+                label: 'menuitems.uielements.list.images',
+                link: '/ui/images'
+            },
+            {
+                id: 45,
+                label: 'menuitems.uielements.list.lightbox',
+                link: '/ui/lightbox'
+            }, {
+                id: 46,
+                label: 'menuitems.uielements.list.modals',
+                link: '/ui/modals'
+            }, {
+                id: 47,
+                label: 'menuitems.uielements.list.rangeslider',
+                link: '/ui/rangeslider'
+            }, {
+                id: 48,
+                label: 'menuitems.uielements.list.sessiontimeout',
+                link: '/ui/session-timeout'
+            },
+            {
+                id: 49,
+                label: 'menuitems.uielements.list.progressbar',
+                link: '/ui/progressbar'
+            }, {
+                id: 50,
+                label: 'menuitems.uielements.list.sweetalert',
+                link: '/ui/sweet-alert'
+            }, {
+                id: 51,
+                label: 'menuitems.uielements.list.tabs',
+                link: '/ui/tabs-accordion'
+            }, {
+                id: 52,
+                label: 'menuitems.uielements.list.typography',
+                link: '/ui/typography'
+            }, {
+                id: 53,
+                label: 'menuitems.uielements.list.video',
+                link: '/ui/video'
+            }, {
+                id: 54,
+                label: 'menuitems.uielements.list.general',
+                link: '/ui/general'
+            }, {
+                id: 56,
+                label: 'menuitems.uielements.list.notifications',
+                link: '/ui/notification'
+            }
+        ]
+    },
+    {
+        id: 57,
+        label: 'menuitems.forms.text',
+        icon: 'ri-eraser-fill',
+        badge: {
+            variant: 'danger',
+            text: 'menuitems.forms.badge'
+        },
+        subItems: [
+            {
+                id: 58,
+                label: 'menuitems.forms.list.elements',
+                link: '/form/elements'
+            },
+            {
+                id: 59,
+                label: 'menuitems.forms.list.validation',
+                link: '/form/validation'
+            },
+            {
+                id: 60,
+                label: 'menuitems.forms.list.advanced',
+                link: '/form/advanced'
+            },
+            {
+                id: 61,
+                label: 'menuitems.forms.list.editor',
+                link: '/form/editor'
+            },
+            {
+                id: 62,
+                label: 'menuitems.forms.list.fileupload',
+                link: '/form/uploads'
+            },
+            {
+                id: 63,
+                label: 'menuitems.forms.list.wizard',
+                link: '/form/wizard'
+            },
+            {
+                id: 64,
+                label: 'menuitems.forms.list.mask',
+                link: '/form/mask'
+            }
+        ]
+    },
+    {
+        id: 65,
+        label: 'menuitems.tables.text',
+        icon: 'ri-table-2',
+        subItems: [
+            {
+                id: 66,
+                label: 'menuitems.tables.list.basic',
+                link: '/tables/basic'
+            },
+            {
+                id: 67,
+                label: 'menuitems.tables.list.advanced',
+                link: '/tables/advanced'
             },
             // {
-            //     id: 7,
-            //     label: 'menuitems.services.list.trash',
-            //     link: '/services-trash'
+            //     id: 68,
+            //     label: 'Responsive Table',
+            //     link: ''
             // },
         ]
     },
     {
-        id: 24,
-        label: 'menuitems.case_studies.text',
-        icon: 'ri-file-edit-line',
+        id: 69,
+        label: 'menuitems.charts.text',
+        icon: 'ri-bar-chart-line',
         subItems: [
             {
-                id: 25,
-                label: 'menuitems.case_studies.list.case_studies',
-                link: '/case-studies'
+                id: 70,
+                label: 'menuitems.charts.list.apex',
+                link: '/charts/apex'
             },
             {
-                id: 26,
-                label: 'menuitems.case_studies.list.addcase_studie',
-                link: '/case-studies/create'
-            },
-            // {
-            //     id: 7,
-            //     label: 'menuitems.case_studies.list.trash',
-            //     link: '/case-studies-trash'
-            // },
+                id: 73,
+                label: "menuitems.charts.list.echart",
+                link: '/charts/echart'
+            }
         ]
     },
-]
-
-// export const menuItems = [
-//     {
-//         id: 1,
-//         label: "menuitems.menu.text",
-//         isTitle: true
-//     },
-//     {
-//         id: 2,
-//         label: 'menuitems.dashboard.text',
-//         icon: 'ri-dashboard-line',
-//         badge: {
-//             variant: "success",
-//             text: "menuitems.dashboard.badge"
-//         },
-//         link: '/'
-//     },
-//     {
-//         id: 3,
-//         label: 'menuitems.calendar.text',
-//         icon: 'ri-calendar-2-line',
-//         link: '/calendar'
-//     },
-//     {
-//         id: 4,
-//         label: 'menuitems.chat.text',
-//         icon: 'ri-chat-1-line',
-//         link: '/chat'
-//     },
-//     {
-//         id: 5,
-//         label: 'menuitems.ecommerce.text',
-//         icon: 'ri-store-2-line',
-//         subItems: [
-//             {
-//                 id: 6,
-//                 label: 'menuitems.ecommerce.list.products',
-//                 link: '/ecommerce/products'
-//             },
-//             {
-//                 id: 7,
-//                 label: 'menuitems.ecommerce.list.productdetail',
-//                 link: '/ecommerce/product-detail'
-//             },
-//             {
-//                 id: 8,
-//                 label: 'menuitems.ecommerce.list.orders',
-//                 link: '/ecommerce/orders'
-//             },
-//             {
-//                 id: 9,
-//                 label: 'menuitems.ecommerce.list.customers',
-//                 link: '/ecommerce/customers'
-//             },
-//             {
-//                 id: 10,
-//                 label: 'menuitems.ecommerce.list.cart',
-//                 link: '/ecommerce/cart'
-//             },
-//             {
-//                 id: 11,
-//                 label: 'menuitems.ecommerce.list.checkout',
-//                 link: '/ecommerce/checkout'
-//             },
-//             {
-//                 id: 12,
-//                 label: 'menuitems.ecommerce.list.shops',
-//                 link: '/ecommerce/shops'
-//             },
-//             {
-//                 id: 13,
-//                 label: 'menuitems.ecommerce.list.addproduct',
-//                 link: '/ecommerce/add-product'
-//             }
-//         ]
-//     },
-//     {
-//         id: 14,
-//         label: 'menuitems.email.text',
-//         icon: 'ri-mail-send-line',
-//         subItems: [
-//             {
-//                 id: 15,
-//                 label: 'menuitems.email.list.inbox',
-//                 link: '/email/inbox'
-//             },
-//             {
-//                 id: 16,
-//                 label: 'menuitems.email.list.reademail',
-//                 link: '/email/read'
-//             }
-//         ]
-//     },
-//     {
-//         id: 17,
-//         label: 'menuitems.kanban.text',
-//         icon: 'ri-artboard-2-line',
-//         link: '/apps/kanban-board'
-//     },
-//     {
-//         id: 18,
-//         isLayout: true
-//     },
-//     {
-//         id: 19,
-//         label: 'menuitems.pages.text',
-//         isTitle: true
-//     },
-//     {
-//         id: 20,
-//         label: 'menuitems.authentication.text',
-//         icon: 'ri-account-circle-line',
-//         subItems: [
-//             {
-//                 id: 21,
-//                 label: 'menuitems.authentication.list.login',
-//                 link: '/auth/login-1'
-//             },
-//             {
-//                 id: 22,
-//                 label: 'menuitems.authentication.list.register',
-//                 link: '/auth/register-1'
-//             },
-//             {
-//                 id: 23,
-//                 label: 'menuitems.authentication.list.recoverpwd',
-//                 link: '/auth/recoverpwd-1'
-//             },
-//             {
-//                 id: 24,
-//                 label: 'menuitems.authentication.list.lockscreen',
-//                 link: '/auth/lock-screen-1'
-//             }
-//         ]
-//     },
-//     {
-//         id: 25,
-//         label: 'menuitems.utility.text',
-//         icon: 'ri-profile-line',
-//         subItems: [
-//             {
-//                 id: 26,
-//                 label: 'menuitems.utility.list.starter',
-//                 link: '/pages/starter'
-//             },
-//             {
-//                 id: 27,
-//                 label: 'menuitems.utility.list.maintenance',
-//                 link: '/pages/maintenance'
-//             },
-//             {
-//                 id: 28,
-//                 label: 'menuitems.utility.list.comingsoon',
-//                 link: '/pages/coming-soon'
-//             },
-//             {
-//                 id: 29,
-//                 label: 'menuitems.utility.list.timeline',
-//                 link: '/pages/timeline'
-//             },
-//             {
-//                 id: 30,
-//                 label: 'menuitems.utility.list.faqs',
-//                 link: '/pages/faqs'
-//             },
-//             {
-//                 id: 31,
-//                 label: 'menuitems.utility.list.pricing',
-//                 link: '/pages/pricing'
-//             },
-//             {
-//                 id: 32,
-//                 label: 'menuitems.utility.list.error404',
-//                 link: '/pages/error-404'
-//             },
-//             {
-//                 id: 33,
-//                 label: 'menuitems.utility.list.error500',
-//                 link: '/pages/error-500'
-//             },
-//         ]
-//     },
-//     {
-//         id: 36,
-//         label: 'menuitems.components.text',
-//         isTitle: true
-//     },
-//     {
-//         id: 37,
-//         label: 'menuitems.uielements.text',
-//         icon: 'ri-pencil-ruler-2-line',
-//         subItems: [
-//             {
-//                 id: 38,
-//                 label: 'menuitems.uielements.list.alerts',
-//                 link: '/ui/alerts'
-//             },
-//             {
-//                 id: 39,
-//                 label: 'menuitems.uielements.list.buttons',
-//                 link: '/ui/buttons'
-//             },
-//             {
-//                 id: 40,
-//                 label: 'menuitems.uielements.list.cards',
-//                 link: '/ui/cards'
-//             },
-//             {
-//                 id: 41,
-//                 label: 'menuitems.uielements.list.carousel',
-//                 link: '/ui/carousel'
-//             },
-//             {
-//                 id: 42,
-//                 label: 'menuitems.uielements.list.dropdowns',
-//                 link: '/ui/dropdowns'
-//             },
-//             {
-//                 id: 43,
-//                 label: 'menuitems.uielements.list.grid',
-//                 link: '/ui/grid'
-//             },
-//             {
-//                 id: 44,
-//                 label: 'menuitems.uielements.list.images',
-//                 link: '/ui/images'
-//             },
-//             {
-//                 id: 45,
-//                 label: 'menuitems.uielements.list.lightbox',
-//                 link: '/ui/lightbox'
-//             }, {
-//                 id: 46,
-//                 label: 'menuitems.uielements.list.modals',
-//                 link: '/ui/modals'
-//             }, {
-//                 id: 47,
-//                 label: 'menuitems.uielements.list.rangeslider',
-//                 link: '/ui/rangeslider'
-//             }, {
-//                 id: 48,
-//                 label: 'menuitems.uielements.list.sessiontimeout',
-//                 link: '/ui/session-timeout'
-//             },
-//             {
-//                 id: 49,
-//                 label: 'menuitems.uielements.list.progressbar',
-//                 link: '/ui/progressbar'
-//             }, {
-//                 id: 50,
-//                 label: 'menuitems.uielements.list.sweetalert',
-//                 link: '/ui/sweet-alert'
-//             }, {
-//                 id: 51,
-//                 label: 'menuitems.uielements.list.tabs',
-//                 link: '/ui/tabs-accordion'
-//             }, {
-//                 id: 52,
-//                 label: 'menuitems.uielements.list.typography',
-//                 link: '/ui/typography'
-//             }, {
-//                 id: 53,
-//                 label: 'menuitems.uielements.list.video',
-//                 link: '/ui/video'
-//             }, {
-//                 id: 54,
-//                 label: 'menuitems.uielements.list.general',
-//                 link: '/ui/general'
-//             }, {
-//                 id: 56,
-//                 label: 'menuitems.uielements.list.notifications',
-//                 link: '/ui/notification'
-//             }
-//         ]
-//     },
-//     {
-//         id: 57,
-//         label: 'menuitems.forms.text',
-//         icon: 'ri-eraser-fill',
-//         badge: {
-//             variant: 'danger',
-//             text: 'menuitems.forms.badge'
-//         },
-//         subItems: [
-//             {
-//                 id: 58,
-//                 label: 'menuitems.forms.list.elements',
-//                 link: '/form/elements'
-//             },
-//             {
-//                 id: 59,
-//                 label: 'menuitems.forms.list.validation',
-//                 link: '/form/validation'
-//             },
-//             {
-//                 id: 60,
-//                 label: 'menuitems.forms.list.advanced',
-//                 link: '/form/advanced'
-//             },
-//             {
-//                 id: 61,
-//                 label: 'menuitems.forms.list.editor',
-//                 link: '/form/editor'
-//             },
-//             {
-//                 id: 62,
-//                 label: 'menuitems.forms.list.fileupload',
-//                 link: '/form/uploads'
-//             },
-//             {
-//                 id: 63,
-//                 label: 'menuitems.forms.list.wizard',
-//                 link: '/form/wizard'
-//             },
-//             {
-//                 id: 64,
-//                 label: 'menuitems.forms.list.mask',
-//                 link: '/form/mask'
-//             }
-//         ]
-//     },
-//     {
-//         id: 65,
-//         label: 'menuitems.tables.text',
-//         icon: 'ri-table-2',
-//         subItems: [
-//             {
-//                 id: 66,
-//                 label: 'menuitems.tables.list.basic',
-//                 link: '/tables/basic'
-//             },
-//             {
-//                 id: 67,
-//                 label: 'menuitems.tables.list.advanced',
-//                 link: '/tables/advanced'
-//             },
-//             // {
-//             //     id: 68,
-//             //     label: 'Responsive Table',
-//             //     link: ''
-//             // },
-//         ]
-//     },
-//     {
-//         id: 69,
-//         label: 'menuitems.charts.text',
-//         icon: 'ri-bar-chart-line',
-//         subItems: [
-//             {
-//                 id: 70,
-//                 label: 'menuitems.charts.list.apex',
-//                 link: '/charts/apex'
-//             },
-//             {
-//                 id: 73,
-//                 label: "menuitems.charts.list.echart",
-//                 link: '/charts/echart'
-//             }
-//         ]
-//     },
-//     {
-//         id: 74,
-//         label: "menuitems.icons.text",
-//         icon: 'ri-brush-line',
-//         subItems: [
-//             {
-//                 id: 75,
-//                 label: 'menuitems.icons.list.remix',
-//                 link: '/icons/remix'
-//             },
-//             {
-//                 id: 76,
-//                 label: "menuitems.icons.list.materialdesign",
-//                 link: '/icons/material-design'
-//             },
-//             {
-//                 id: 77,
-//                 label: "menuitems.icons.list.dripicons",
-//                 link: '/icons/dripicons'
-//             },
-//             {
-//                 id: 78,
-//                 label: "menuitems.icons.list.fontawesome",
-//                 link: '/icons/font-awesome'
-//             }
-//         ]
-//     },
-//     {
-//         id: 79,
-//         label: "menuitems.maps.text",
-//         icon: 'ri-map-pin-line',
-//         subItems: [
-//             {
-//                 id: 80,
-//                 label: "menuitems.maps.list.googlemap",
-//                 link: '/maps/google'
-//             },
-//         ]
-//     }
-// ]
+    {
+        id: 74,
+        label: "menuitems.icons.text",
+        icon: 'ri-brush-line',
+        subItems: [
+            {
+                id: 75,
+                label: 'menuitems.icons.list.remix',
+                link: '/icons/remix'
+            },
+            {
+                id: 76,
+                label: "menuitems.icons.list.materialdesign",
+                link: '/icons/material-design'
+            },
+            {
+                id: 77,
+                label: "menuitems.icons.list.dripicons",
+                link: '/icons/dripicons'
+            },
+            {
+                id: 78,
+                label: "menuitems.icons.list.fontawesome",
+                link: '/icons/font-awesome'
+            }
+        ]
+    },
+    {
+        id: 79,
+        label: "menuitems.maps.text",
+        icon: 'ri-map-pin-line',
+        subItems: [
+            {
+                id: 80,
+                label: "menuitems.maps.list.googlemap",
+                link: '/maps/google'
+            },
+        ]
+    }
+] */
