@@ -168,9 +168,9 @@ export default {
           status: "Inactive"
         },
         {
-          total_followers: "9M",
-          created_at: "04 Apr, 2024",
-          name: "Walter Brown",
+          total_followers: "28.6M",
+          created_at: "24 Mar, 2024",
+          name: "Nour Mar5",
           total: "$172",
           status: "Active"
         },
@@ -270,7 +270,7 @@ export default {
                           }">{{ ordersData.item.status }}</div>
                     </template>
                     <template v-slot:cell(action)="ordersData">
-                      <router-link to="influencer-single-1">
+                      <router-link to="/talents/influencers/single">
                       <a href="javascript:void(0);" class="me-3 text-primary" v-b-tooltip.hover title="View">
                             <i class="mdi mdi-eye font-size-18"></i>
                           </a>
