@@ -225,6 +225,17 @@ export default {
   setup() {
     return { v$: useVuelidate() };
   },
+  mounted() {
+    const file = document.querySelector('.dropzoneFile');
+    const reader = new FileReader();
+    reader.addEventListener("load", function () {
+      file.parentElement.parentElement.style.backgroundImage = `url(${ reader.result })`;
+    }, false);
+    file.addEventListener('change',function() {
+      const image = this.files[0];
+      if(image) reader.readAsDataURL(image);
+    }, false)
+  },
   validations: {
     form: {
       fname: {
@@ -317,8 +328,9 @@ export default {
     // eslint-disable-next-line no-unused-vars
     formSubmit(e) {
       this.submitted = true;
+      this.$router.push({path: '/admin/influencers'/* , query:{key: value} */})
       // stop here if form is invalid
-      this.v$.$touch();
+      //this.v$.$touch();
     },
 
     tooltipForm() {
@@ -387,6 +399,17 @@ export default {
       this.contacts = {};
     },
 
+    plus(event) {
+      var elem = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+      var id = elem.getAttribute("id");
+      var html = elem.innerHTML;
+      elem.innerHTML += html;
+    },
+
+    minus() {
+
+    },
+
     /**
      * Filter the data of search
      */
@@ -397,17 +420,18 @@ export default {
 <template>
   <Layout>
     <PageHeader :title="title" :items="items" />
-    <BRow>
-      <BCol lg="9">
-        <BCard no-body>
-          <BCardBody>
-            <!-- <BCardTitle>Bootstrap Validation - Normal</BCardTitle>
+    <BForm class="needs-validation" @submit.prevent="formSubmit">
+      <BRow>
+        <BCol lg="9">
+          <BCard no-body>
+            <BCardBody>
+              <!-- <BCardTitle>Bootstrap Validation - Normal</BCardTitle>
 
             <p class="card-title-desc">
               Provide valuable, actionable feedback to your users with HTML5
               form validation–available in all our supported browsers.
             </p> -->
-            <BForm class="needs-validation" @submit.prevent="formSubmit">
+
               <BRow>
                 <BCol md="12">
                   <BRow>
@@ -473,66 +497,67 @@ export default {
                       </BRow>
                     </BCol>
                   </BRow>
-                  <BRow>
-                    <BCol md="4">
-                      <div class="mb-3">
-                        <label>Platform</label>
-                        <Multiselect v-model="form.city" :class="{
+                  <BRow id="social_container">
+                      <BCol md="4">
+                        <div class="mb-3">
+                          <label>Platform</label>
+                          <Multiselect v-model="form.city" :class="{
       'is-invalid': submitted && v$.form.city.$error,
       'is-valid': submitted && !v$.form.city.$error,
     }" :options="options1"></Multiselect>
 
-                        <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
-                          <span v-if="v$.form.city.required.$message">{{
+                          <div v-if="submitted && v$.form.city.$error" class="invalid-feedback">
+                            <span v-if="v$.form.city.required.$message">{{
       v$.form.city.required.$message
     }}</span>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
-
-                    <BCol md="2">
-                      <div class="mb-3">
-                        <label>Stats</label>
-                        <BFormInput v-model="form.state" placeholder="Stats" :class="{
+                      </BCol>
+                      <BCol md="2">
+                        <div class="mb-3">
+                          <label>Stats</label>
+                          <BFormInput v-model="form.state" placeholder="Stats" :class="{
       'is-invalid': submitted && v$.form.state.$error,
       'is-valid': submitted && !v$.form.state.$error,
     }" />
-                        <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
-                          <span v-if="v$.form.state.required.$message">{{
+                          <div v-if="submitted && v$.form.state.$error" class="invalid-feedback">
+                            <span v-if="v$.form.state.required.$message">{{
       v$.form.state.required.$message
     }}</span>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
-                    <BCol md="4">
-                      <div class="mb-3">
-                        <label>Link</label>
-                        <BFormInput v-model="form.url" placeholder="Link" :class="{
+                      </BCol>
+                      <BCol md="4">
+                        <div class="mb-3">
+                          <label>Link</label>
+                          <BFormInput v-model="form.url" placeholder="Link" :class="{
       'is-invalid': submitted && v$.form.url.$error,
       'is-valid': submitted && !v$.form.url.$error,
     }" />
-                        <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
-                          <span v-if="v$.form.url.required.$message">{{
+                          <div v-if="submitted && v$.form.url.$error" class="invalid-feedback">
+                            <span v-if="v$.form.url.required.$message">{{
       v$.form.url.required.$message
     }}</span>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
-                    <BCol md="2">
-                      <div class="mb-3">
-                        <label>Action</label>
-                        <div>
-                          <BButtonGroup class="btn-group-example mb-3">
-                            <BButton variant="primary" class="w-xs">
-                              <i class="mdi mdi-plus"></i>
-                            </BButton>
-                            <BButton variant="light" class="w-xs">
-                              <i class="mdi mdi-minus"></i>
-                            </BButton>
-                          </BButtonGroup>
+                      </BCol>
+                      <BCol md="2">
+                        <div class="mb-3">
+                          <label>Action</label>
+                          <div>
+                            <BButtonGroup class="btn-group-example mb-3">
+                              <BButton variant="primary" class="w-xs" @click="plus($event)">
+                                <i class="mdi mdi-plus"></i>
+                              </BButton>
+                              <BButton variant="light" class="w-xs" @click="minus($event)">
+                                <i class="mdi mdi-minus"></i>
+                              </BButton>
+                            </BButtonGroup>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
+                      </BCol>
+                      </BRow>
+                    <BRow>
                     <BCol md="12">
                       <div class="mb-3">
                         <h5 class="font-size-14">Brand Collaborations</h5>
@@ -688,76 +713,76 @@ export default {
                       </div>
                     </div>
                   </div> -->
-                  <BRow>
-                    <BCol md="10">
-                      <div class="mb-3">
-                        <label>Videos</label>
-                        <div>
-                          <BFormInput v-model="typeform.url" placeholder="Videos" :class="{
+                  <BRow id="videos_container">
+                      <BCol md="10">
+                        <div class="mb-3">
+                          <label>Videos</label>
+                          <div>
+                            <BFormInput v-model="typeform.url" placeholder="Videos" :class="{
       'is-invalid': typesubmit && v$.typeform.url.$error,
       'is-valid': typesubmit && !v$.typeform.url.$error,
     }" />
-                          <div v-for="(item, index) in v$.typeform.url.$errors" :key="index" class="invalid-feedback">
-                            <span v-if="item.$message">{{ item.$message }}</span>
+                            <div v-for="(item, index) in v$.typeform.url.$errors" :key="index" class="invalid-feedback">
+                              <span v-if="item.$message">{{ item.$message }}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </BCol>
-                    <BCol md="1">
-                      <div class="mb-3">
-                        <label>Action</label>
+                      </BCol>
+                      <BCol md="1">
+                        <div class="mb-3">
+                          <label>Action</label>
 
-                        <div>
-                          <BButtonGroup class="btn-group-example mb-3">
-                            <BButton variant="primary" class="w-xs">
-                              <i class="mdi mdi-plus"></i>
-                            </BButton>
-                            <BButton variant="light" class="w-xs">
-                              <i class="mdi mdi-minus"></i>
-                            </BButton>
-                          </BButtonGroup>
+                          <div>
+                            <BButtonGroup class="btn-group-example mb-3">
+                              <BButton variant="primary" class="w-xs" @click="plus($event)">
+                                <i class="mdi mdi-plus"></i>
+                              </BButton>
+                              <BButton variant="light" class="w-xs" @click="minus($event)">
+                                <i class="mdi mdi-minus"></i>
+                              </BButton>
+                            </BButtonGroup>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
+                      </BCol>
                   </BRow>
-                  <BRow>
-                    <BCol md="10">
-                      <div class="mb-3">
-                        <label>Reels</label>
-                        <div>
-                          <BFormInput v-model="typeform.url" placeholder="Videos" :class="{
+                  <BRow id="reels_container">
+                      <BCol md="10">
+                        <div class="mb-3">
+                          <label>Reels</label>
+                          <div>
+                            <BFormInput v-model="typeform.url" placeholder="Reels" :class="{
       'is-invalid': typesubmit && v$.typeform.url.$error,
       'is-valid': typesubmit && !v$.typeform.url.$error,
     }" />
-                          <div v-for="(item, index) in v$.typeform.url.$errors" :key="index" class="invalid-feedback">
-                            <span v-if="item.$message">{{ item.$message }}</span>
+                            <div v-for="(item, index) in v$.typeform.url.$errors" :key="index" class="invalid-feedback">
+                              <span v-if="item.$message">{{ item.$message }}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </BCol>
-                    <BCol md="1">
-                      <div class="mb-3">
-                        <label>Action</label>
+                      </BCol>
+                      <BCol md="1">
+                        <div class="mb-3">
+                          <label>Action</label>
 
-                        <div>
-                          <BButtonGroup class="btn-group-example mb-3">
-                            <BButton variant="primary" class="w-xs">
-                              <i class="mdi mdi-plus"></i>
-                            </BButton>
-                            <BButton variant="light" class="w-xs">
-                              <i class="mdi mdi-minus"></i>
-                            </BButton>
-                          </BButtonGroup>
+                          <div>
+                            <BButtonGroup class="btn-group-example mb-3">
+                              <BButton variant="primary" class="w-xs" @click="plus($event)">
+                                <i class="mdi mdi-plus"></i>
+                              </BButton>
+                              <BButton variant="light" class="w-xs" @click="minus($event)">
+                                <i class="mdi mdi-minus"></i>
+                              </BButton>
+                            </BButtonGroup>
+                          </div>
                         </div>
-                      </div>
-                    </BCol>
+                      </BCol>
                   </BRow>
-                  <BRow>
+                  <BRow id="posts_container">
                     <BCol md="10">
                       <div class="mb-3">
                         <label>Posts</label>
                         <div>
-                          <BFormInput v-model="typeform.url" placeholder="Videos" :class="{
+                          <BFormInput v-model="typeform.url" placeholder="Posts" :class="{
       'is-invalid': typesubmit && v$.typeform.url.$error,
       'is-valid': typesubmit && !v$.typeform.url.$error,
     }" />
@@ -773,10 +798,10 @@ export default {
 
                         <div>
                           <BButtonGroup class="btn-group-example mb-3">
-                            <BButton variant="primary" class="w-xs">
+                            <BButton variant="primary" class="w-xs" @click="plus($event)">
                               <i class="mdi mdi-plus"></i>
                             </BButton>
-                            <BButton variant="light" class="w-xs">
+                            <BButton variant="light" class="w-xs" @click="minus($event)">
                               <i class="mdi mdi-minus"></i>
                             </BButton>
                           </BButtonGroup>
@@ -792,21 +817,20 @@ export default {
                 </BCol>
               </BRow>
 
-              <BButton variant="primary" type="submit">Submit form</BButton>
-            </BForm>
-          </BCardBody>
-        </BCard>
-      </BCol>
+              <!-- <BButton variant="primary" type="submit">Submit form</BButton> -->
+            </BCardBody>
+          </BCard>
+        </BCol>
 
-      <BCol lg="3">
-        <BCard no-body>
-          <BCardBody>
-            <div class="mb-3">
-              <label>Cover</label>
-              <!-- file upload -->
-              <DropZone />
-            </div>
-            <BForm class="needs-validation" @submit.prevent="tooltipForm">
+        <BCol lg="3">
+          <BCard no-body>
+            <BCardBody>
+              <div class="mb-3">
+                <label>Cover</label>
+                <!-- file upload -->
+                <DropZone />
+              </div>
+              <!-- <BForm class="needs-validation" @submit.prevent="tooltipForm"> -->
               <BRow>
                 <!-- <BCol md="4">
                   <div class="mb-3 position-relative">
@@ -880,11 +904,11 @@ export default {
 
               </BRow>
               <BButton variant="primary" type="submit">Submit form</BButton>
-            </BForm>
-          </BCardBody>
-        </BCard>
-      </BCol>
-    </BRow>
+            </BCardBody>
+          </BCard>
+        </BCol>
+      </BRow>
+    </BForm>
 
     <!-- Modal -->
     <BModal id="modal-1" v-model="showmodal" title="Add Brand" title-class="text-dark font-18" hide-footer>

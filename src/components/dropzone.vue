@@ -1,10 +1,10 @@
 
 <template>
     <div @dragenter.prevent="toggleActive" @dragleave.prevent="toggleActive" @dragover.prevent @drop.prevent="toggleActive" :class="{ 'active-dropzone': active }" class="dropzone">
-        <div class="dz-message needsclick text-center">
+        <div class="dz-message needsclick text-center" >
             <div class="mb-3"> <i class="display-4 text-muted bx bxs-cloud-upload"></i> </div>
-            <h6>Drop files here or click to upload.</h6>
-            <label for="dropzoneFile" class="stretched-link btn btn-light">Upload</label>
+            <!-- <h6>Drop files here or click to upload.</h6>-->
+            <label for="dropzoneFile" class="stretched-link btn btn-light">Upload</label> 
             <input type="file" id="dropzoneFile" class="dropzoneFile btn btn-light" />
         </div>
     </div>
